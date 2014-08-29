@@ -929,13 +929,13 @@
     <JP-Name>「軽空母」戦隊、出撃せよ！</JP-Name>
     <TR-Name>Deploy the light carrier fleet!</TR-Name>
     <JP-Detail>軽空母1～2隻、軽巡1隻、駆逐艦3～4隻の艦隊でカムラン半島の敵を撃滅せよ！</JP-Detail>
-    <TR-Detail>Consist of 1~2 CVL, 1CL, 3~4 DD. Score a victory against World 2-1 Boss!</TR-Detail>
+    <TR-Detail>Requires 1~2 CVL, 1 CL and 3~4 DD. Obtain victory at the boss node. (CLTs won't count.) </TR-Detail>
   </Quest>
   <Quest>
     <ID>255</ID>
     <JP-Name>「水雷戦隊」バシー島沖緊急展開</JP-Name>
-    <TR-Name>Deployment torpedo squadron</TR-Name>
+    <TR-Name>Bashi Islands emergency development! Deploy a Torpedo Squadron and sortie to the 2-2.</TR-Name>
     <JP-Detail>軽巡を旗艦とした水雷戦隊(軽巡最大2隻他駆逐艦)でバシー島沖の敵を撃滅せよ！</JP-Detail>
-    <TR-Detail>Have a CL as flagship, 1 other CL (optional), remains are DDs. Score a victory against World 2-2 Boss!</TR-Detail>
+    <TR-Detail>Requires 1~2 CL and 4~5 DD with a CL as the flagship. Obtain victory at the boss node.</TR-Detail>
   </Quest>
 </Quests>
