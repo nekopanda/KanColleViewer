@@ -394,7 +394,7 @@ namespace Grabacr07.KanColleViewer.Plugins.ViewModels
 
 			this.SortieExp = (int)Math.Round( SeaExpTable[this.SelectedSea] * Multiplier );
 			this.RemainingExp = this.TargetExp - this.CurrentExp;
-			this.RunCount = (int)Math.Round( this.RemainingExp / (double)this.SortieExp );
+			this.RunCount = (int)Math.Ceiling( this.RemainingExp / (double)this.SortieExp );
 		}
 	}
 }
