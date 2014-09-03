@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.7">
+<Equipment Version="1.0.8">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -439,5 +439,9 @@
   <Item>
     <JP-Name>天山(六〇一空)</JP-Name>
     <TR-Name>Tenzan (601 Air Group)</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>22号対水上電探改四</JP-Name>
+    <TR-Name>Type 22 Surface RADAR Kai 4</TR-Name>
   </Item>
 </Equipment>

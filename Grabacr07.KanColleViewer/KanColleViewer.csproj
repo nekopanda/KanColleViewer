@@ -233,6 +233,7 @@
     <Compile Include="Views\Controls\OrientationModeSelector.xaml.cs">
       <DependentUpon>OrientationModeSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Converters\MaxConverter.cs" />
     <Compile Include="Views\Converters\BooleanToWidthConverter.cs" />
     <Compile Include="Views\Contents\StateDetailIndicator.xaml.cs">
       <DependentUpon>StateDetailIndicator.xaml</DependentUpon>
@@ -374,7 +375,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\AdjustConverter.xaml">
+    <Page Include="Themes\Converters.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -423,10 +424,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Orientation.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\PreviewSizeConverter.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

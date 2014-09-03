@@ -15,68 +15,79 @@
 			 d:DataContext="{d:DesignInstance viewModels:ShipyardViewModel}"
              MinWidth="{Binding Source={x:Static properties:Settings.Default}, Path=UIContentWidth, Mode=OneTime}">
 	<UserControl.Resources>
-		<Style TargetType="{x:Type GroupBox}">
-			<Setter Property="OverridesDefaultStyle"
+		<ResourceDictionary>
+			<Style TargetType="{x:Type GroupBox}">
+				<Setter Property="OverridesDefaultStyle"
 					Value="True" />
-			<Setter Property="BorderThickness"
+				<Setter Property="BorderThickness"
 					Value="1" />
-			<Setter Property="BorderBrush"
+				<Setter Property="BorderBrush"
 					Value="{DynamicResource BorderBrushKey}" />
-			<Setter Property="Background"
+				<Setter Property="Background"
 					Value="{DynamicResource BorderBrushKey}" />
-			<Setter Property="TextOptions.TextFormattingMode"
+				<Setter Property="TextOptions.TextFormattingMode"
 					Value="Display" />
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type GroupBox}">
-						<Border BorderThickness="{TemplateBinding BorderThickness}"
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type GroupBox}">
+							<Border BorderThickness="{TemplateBinding BorderThickness}"
 								BorderBrush="{TemplateBinding BorderBrush}">
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="Auto" />
-									<ColumnDefinition />
-								</Grid.ColumnDefinitions>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto" />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
 
-								<Border Background="{TemplateBinding Background}">
-									<ContentPresenter Content="{TemplateBinding Header}"
+									<Border Background="{TemplateBinding Background}">
+										<ContentPresenter Content="{TemplateBinding Header}"
 													  ContentTemplate="{TemplateBinding HeaderTemplate}"
 													  ContentStringFormat="{TemplateBinding HeaderStringFormat}"
 													  SnapsToDevicePixels="True">
-										<ContentPresenter.LayoutTransform>
-											<RotateTransform Angle="-90" />
-										</ContentPresenter.LayoutTransform>
-									</ContentPresenter>
-								</Border>
+											<ContentPresenter.LayoutTransform>
+												<RotateTransform Angle="-90" />
+											</ContentPresenter.LayoutTransform>
+										</ContentPresenter>
+									</Border>
 
-								<ContentPresenter Grid.Column="1"
+									<ContentPresenter Grid.Column="1"
 												  Content="{TemplateBinding Content}"
 												  ContentTemplate="{TemplateBinding ContentTemplate}"
 												  ContentStringFormat="{TemplateBinding ContentStringFormat}"
 												  Margin="{TemplateBinding Padding}" />
-							</Grid>
-						</Border>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
+								</Grid>
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
 
-			<Setter Property="HeaderTemplate">
-				<Setter.Value>
-					<DataTemplate>
-						<Border Margin="9,5">
-							<TextBlock Text="{Binding}"
+				<Setter Property="HeaderTemplate">
+					<Setter.Value>
+						<DataTemplate>
+							<Border Margin="9,5">
+								<TextBlock Text="{Binding}"
 									   FontSize="{DynamicResource EmphaticFontSizeKey}"
 									   Foreground="{DynamicResource ForegroundBrushKey}"
 									   HorizontalAlignment="Center" />
-						</Border>
-					</DataTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
+							</Border>
+						</DataTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../Themes/Converters.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
 	</UserControl.Resources>
 
 	<ScrollViewer VerticalScrollBarVisibility="Auto"
 				  PanningMode="Both"
 				  Grid.IsSharedSizeScope="True">
+		<ScrollViewer.MaxWidth>
+			<MultiBinding Converter="{StaticResource MaxConverter}">
+				<Binding RelativeSource="{RelativeSource AncestorType={x:Type ScrollContentPresenter}}" Path="ActualWidth" Mode="OneWay"/>
+				<Binding Source="{x:Static properties:Settings.Default}" Path="UIContentWidth" Mode="OneWay"/>
+			</MultiBinding>
+		</ScrollViewer.MaxWidth>
 		<StackPanel VerticalAlignment="Top"
 					d:DataContext="{d:DesignData /SampleData/ShipyardViewModelSampleData.xaml}">
 			<GroupBox Header="{Binding Resources.Shipyard_RepairDock, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
@@ -219,7 +230,7 @@
 				<Grid>
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition />
-						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" MaxWidth="200"/>
 					</Grid.ColumnDefinitions>
 
 					<StackPanel>
@@ -235,13 +246,13 @@
 								</Grid.Resources>
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"
-													  SharedSizeGroup="Number" />
+													  SharedSizeGroup="Number2" />
 									<ColumnDefinition Width="Auto"
-													  SharedSizeGroup="ShipName" />
+													  SharedSizeGroup="ShipName2" />
 									<ColumnDefinition Width="Auto"
-													  SharedSizeGroup="CompleteTime" />
+													  SharedSizeGroup="CompleteTime2" />
 									<ColumnDefinition Width="Auto"
-													  SharedSizeGroup="RemainingTime" />
+													  SharedSizeGroup="RemainingTime2" />
 								</Grid.ColumnDefinitions>
 
 								<TextBlock Grid.Row="0"
@@ -272,13 +283,13 @@
 										<Grid>
 											<Grid.ColumnDefinitions>
 												<ColumnDefinition Width="Auto"
-																  SharedSizeGroup="Number" />
+																  SharedSizeGroup="Number2" />
 												<ColumnDefinition Width="Auto"
-																  SharedSizeGroup="ShipName" />
+																  SharedSizeGroup="ShipName2" />
 												<ColumnDefinition Width="Auto"
-																  SharedSizeGroup="CompleteTime" />
+																  SharedSizeGroup="CompleteTime2" />
 												<ColumnDefinition Width="Auto"
-																  SharedSizeGroup="RemainingTime" />
+																  SharedSizeGroup="RemainingTime2" />
 											</Grid.ColumnDefinitions>
 
 											<TextBlock Text="{Binding Id, Mode=OneWay}" />
@@ -389,60 +400,62 @@
 								</Border>
 								<DockPanel HorizontalAlignment="Left"
 										   Margin="8,0">
-									<TextBlock Padding="4,2"
+									<TextBlock TextWrapping="Wrap">
+										<TextBlock Padding="4,2"
 											   Margin="0,2,0,0">
-										<TextBlock.Style>
-											<Style TargetType="{x:Type TextBlock}"
+											<TextBlock.Style>
+												<Style TargetType="{x:Type TextBlock}"
 												   BasedOn="{StaticResource DefaultTextStyleKey}">
-												<Setter Property="Text"
+													<Setter Property="Text"
 														Value="{Binding Resources.Shipyard_Development_Result_Success, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-												<Setter Property="Foreground"
+													<Setter Property="Foreground"
 														Value="{DynamicResource AccentForegroundBrushKey}" />
-												<Setter Property="Background"
+													<Setter Property="Background"
 														Value="{DynamicResource AccentBrushKey}" />
-												<Style.Triggers>
-													<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
+													<Style.Triggers>
+														<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
 																 Value="False">
-														<Setter Property="Text"
+															<Setter Property="Text"
 																Value="{Binding Resources.Shipyard_Development_Result_Failure, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-														<Setter Property="Foreground"
+															<Setter Property="Foreground"
 																Value="{DynamicResource ForegroundBrushKey}" />
-														<Setter Property="Background"
+															<Setter Property="Background"
 																Value="{DynamicResource BackgroundBrushKey}" />
-													</DataTrigger>
-													<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
+														</DataTrigger>
+														<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
 																 Value="{x:Null}">
-														<Setter Property="Text"
+															<Setter Property="Text"
 																Value="{Binding Resources.Shipyard_Development_Result_None, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-														<Setter Property="Foreground"
+															<Setter Property="Foreground"
 																Value="{DynamicResource ForegroundBrushKey}" />
-														<Setter Property="Background"
+															<Setter Property="Background"
 																Value="{DynamicResource BackgroundBrushKey}" />
-													</DataTrigger>
-												</Style.Triggers>
-											</Style>
-										</TextBlock.Style>
-									</TextBlock>
-									<Border Width="4" />
-									<TextBlock Margin="0,6"
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</TextBlock.Style>
+										</TextBlock>
+										<Border Width="4" />
+										<TextBlock Margin="0,6"
 											   Text="{Binding CreatedSlotItem.Name}">
-										<TextBlock.Style>
-											<Style TargetType="{x:Type TextBlock}"
+											<TextBlock.Style>
+												<Style TargetType="{x:Type TextBlock}"
 												   BasedOn="{StaticResource EmphaticTextStyleKey}">
-												<Style.Triggers>
-													<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
+													<Style.Triggers>
+														<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
 																 Value="False">
-														<Setter Property="Opacity"
+															<Setter Property="Opacity"
 																Value="0.5" />
-													</DataTrigger>
-													<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
+														</DataTrigger>
+														<DataTrigger Binding="{Binding CreatedSlotItem.Succeed}"
 																 Value="{x:Null}">
-														<Setter Property="Opacity"
+															<Setter Property="Opacity"
 																Value="0.5" />
-													</DataTrigger>
-												</Style.Triggers>
-											</Style>
-										</TextBlock.Style>
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</TextBlock.Style>
+										</TextBlock>
 									</TextBlock>
 								</DockPanel>
 							</StackPanel>

@@ -36,8 +36,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Themes/Orientation.xaml" />
-                <ResourceDictionary Source="../Themes/AdjustConverter.xaml" />
-                <ResourceDictionary Source="../Themes/PreviewSizeConverter.xaml" />
+                <ResourceDictionary Source="../Themes/Converters.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </metro:MetroWindow.Resources>

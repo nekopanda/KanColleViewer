@@ -33,11 +33,8 @@
             </ObjectDataProvider>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Common.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Styles/Icons.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Themes/Dark.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Themes/Accents/Purple.xaml" />
 
                 <ResourceDictionary Source="pack://application:,,,/Desktop.Metro;component/Styles/Controls.xaml" />
 
@@ -84,6 +81,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,0,0"
                            VerticalAlignment="Center"
 						   Text="{Binding Resources.Tools_Calculator_CurrentLevel, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
@@ -107,6 +105,7 @@
 									 IsReadOnly="True" />
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,0,0"
 						   Grid.Column="0"
 						   Grid.Row="1"
@@ -143,6 +142,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,8,0"
                            VerticalAlignment="Center"
 						   Text="{Binding Resources.Tools_Calculator_Map, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
@@ -157,6 +157,7 @@
 									  Grid.Column="1" />
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="8,0"
 						   Grid.Column="2"
                            VerticalAlignment="Center"
@@ -191,6 +192,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="12,0,8,0"
                            VerticalAlignment="Center"
 						   Text="{Binding Resources.Tools_Calculator_SortieExp, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
@@ -205,6 +207,7 @@
 									 IsReadOnly="True" />
 
                 <TextBlock Margin="5,0"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
                            VerticalAlignment="Center"
 						   Grid.Column="2">x</TextBlock>
 
@@ -218,6 +221,7 @@
 									 IsReadOnly="True" />
 
                 <TextBlock HorizontalAlignment="Left"
+						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="12,0,8,0"
 						   Grid.Row="1"
                            VerticalAlignment="Center"

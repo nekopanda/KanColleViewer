@@ -29,9 +29,9 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Themes/Orientation.xaml" />
-                <ResourceDictionary Source="../Themes/TabViewHorizontal.xaml" />
-                <ResourceDictionary Source="../Themes/AdjustConverter.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../Themes/TabViewHorizontal.xaml" />
+				<ResourceDictionary Source="../Themes/Converters.xaml" />
+			</ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
 

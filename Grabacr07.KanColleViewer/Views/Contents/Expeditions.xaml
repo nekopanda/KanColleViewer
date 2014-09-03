@@ -71,14 +71,21 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../Themes/Converters.xaml" />
+			</ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
     
     <ScrollViewer DataContext="{Binding Fleets}"
                   VerticalScrollBarVisibility="Auto"
-                  MinWidth="{Binding Source={x:Static properties:Settings.Default}, Path=UIContentWidth, Mode=OneTime}"
-                  Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type ScrollContentPresenter}}, Path=ActualWidth, Mode=OneWay}"
                   PanningMode="Both">
+		<ScrollViewer.MaxWidth>
+			<MultiBinding Converter="{StaticResource MaxConverter}">
+				<Binding RelativeSource="{RelativeSource AncestorType={x:Type ScrollContentPresenter}}" Path="ActualWidth" Mode="OneWay"/>
+				<Binding Source="{x:Static properties:Settings.Default}" Path="UIContentWidth" Mode="OneWay"/>
+			</MultiBinding>
+		</ScrollViewer.MaxWidth>
 		<ItemsControl ItemsSource="{Binding Fleets}"
 					  Margin="5,0,5,5"
 					  d:DataContext="{d:DesignData /SampleData/FleetsViewModelSampleData.xaml}">

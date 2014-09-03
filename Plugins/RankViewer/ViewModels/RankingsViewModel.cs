@@ -160,14 +160,15 @@ namespace Grabacr07.KanColleViewer.Plugins.ViewModels
             this.TotalRanked = KanColleClient.Current.Homeport.Rankings.TotalRanked;
             this.TotalPages = KanColleClient.Current.Homeport.Rankings.TotalPages;
             this.CurrentPage = KanColleClient.Current.Homeport.Rankings.CurrentPage;
+			
+			if (this.Rankings.Any(x => x.NickName.Equals(KanColleClient.Current.Homeport.Admiral.Nickname)))
+			{
+				if (this.MyRankingsPage != this.CurrentPage) this.CurrentData.Clear();
+				this.MyRankingsPage = this.CurrentPage;
+			}
 
 			if (this.CurrentData.Keys.Any(x => x == this.CurrentPage)) this.CurrentData.Clear();
 			this.CurrentData.GetOrAdd(this.CurrentPage, this.Rankings);
-
-			if (this.Rankings.Any(x => x.NickName.Equals(KanColleClient.Current.Homeport.Admiral.Nickname)))
-			{
-				this.MyRankingsPage = this.CurrentPage;
-			}
         }
 
         public RankingsViewModel()

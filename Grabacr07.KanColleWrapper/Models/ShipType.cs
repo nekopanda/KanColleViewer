@@ -36,24 +36,7 @@ namespace Grabacr07.KanColleWrapper.Models
 		{
 			get
 			{
-				switch ((ShipTypeId)this.Id)
-				{
-					case ShipTypeId.Submarine:
-						return 0.5;
-					case ShipTypeId.HeavyCruiser:
-					case ShipTypeId.RepairShip:
-					case ShipTypeId.FastBattleship:
-					case ShipTypeId.LightAircraftCarrier:
-						return 1.5;
-					case ShipTypeId.Battleship:
-					case ShipTypeId.Superdreadnought:
-					case ShipTypeId.AerialBattleship:
-					case ShipTypeId.AircraftCarrier:
-					case ShipTypeId.ArmoredAircraftCarrier:
-						return 2;
-					default:
-						return 1;
-				}
+				return this.RawData.api_scnt * 0.5;
 			}
 		}
 
