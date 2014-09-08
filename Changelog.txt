@@ -2,6 +2,10 @@
 	KCV Change Log
 ========================
 
+v3.3.0 r509 - 9/8/2014
+	* Fix ranking plugins
+	* Fix repair time calculator
+
 v3.3.0 r508 - 8/29/2014
 	* Remove function support event
 	* Change icon of menu

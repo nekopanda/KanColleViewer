@@ -163,11 +163,11 @@ namespace Grabacr07.KanColleViewer.Plugins.ViewModels
 			
 			if (this.Rankings.Any(x => x.NickName.Equals(KanColleClient.Current.Homeport.Admiral.Nickname)))
 			{
-				if (this.MyRankingsPage != this.CurrentPage) this.CurrentData.Clear();
+				//if (this.MyRankingsPage != this.CurrentPage) this.CurrentData.Clear();
 				this.MyRankingsPage = this.CurrentPage;
 			}
 
-			if (this.CurrentData.Keys.Any(x => x == this.CurrentPage)) this.CurrentData.Clear();
+			//if (this.CurrentData.Keys.Any(x => x == this.CurrentPage)) this.CurrentData.Clear();
 			this.CurrentData.GetOrAdd(this.CurrentPage, this.Rankings);
         }
 
