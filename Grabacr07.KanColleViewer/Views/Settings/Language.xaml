@@ -41,8 +41,8 @@
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}"
 				   Margin="0,10" />
 
-		<CheckBox Content="{Binding Source={x:Static properties:Resources.Settings_Translations_Enable}, Mode=OneWay}" IsChecked="{Binding EnableTranslations}" Height="17" Margin="15,0,0,10"/>
-		<CheckBox Content="{Binding Source={x:Static properties:Resources.Settings_Translations_Add_Enable}, Mode=OneWay}" IsChecked="{Binding EnableAddUntranslated}" Height="17" Margin="15,0,0,10"/>
+		<CheckBox Content="{Binding Resources.Settings_Translations_Enable, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding EnableTranslations}" Height="17" Margin="15,0,0,10"/>
+		<CheckBox Content="{Binding Resources.Settings_Translations_Add_Enable, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding EnableAddUntranslated}" Height="17" Margin="15,0,0,10"/>
 
 	</StackPanel>
 </UserControl>

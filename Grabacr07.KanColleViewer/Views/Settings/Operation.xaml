@@ -20,11 +20,11 @@
 	</UserControl.Resources>
 
 	<StackPanel>
-		<TextBlock Text="Sortie condition"
+		<TextBlock Text="{Binding Resources.Settings_Operation_SortieCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}" />
 
 		<StackPanel Margin="20,0,0,0">
-			<TextBlock Text="Minimum fleet condition to be considered ready for sorties." />
+			<TextBlock Text="{Binding Resources.Settings_Operation_SortieCondition_Title, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 
 			<Grid Margin="0,10">
 				<Grid.ColumnDefinitions>
@@ -48,7 +48,7 @@
 				</metro:PromptTextBox>
 				<TextBlock Grid.Column="2"
 						   Style="{DynamicResource DetailTextStyleKey}">
-					<Run Text="※Value must be within the range of 40 and 49. (Default: 40)" />
+					<Run Text="{Binding Resources.Settings_Operation_SortieCondition_Description, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 				</TextBlock>
 			</Grid>
 		</StackPanel>
@@ -56,31 +56,31 @@
 		<Rectangle Height="1"
 				   Style="{DynamicResource SeparatorRectangleStyleKey}" />
 
-		<TextBlock Text="{Binding Resources.Settings_FleetCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+		<TextBlock Text="{Binding Resources.Settings_Operation_SortieCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}"
 				   Margin="0,10"/>
-		<CheckBox Content="{Binding Source={x:Static properties:Resources.Settings_Notify_CriticalCondition}, Mode=OneWay}" IsChecked="{Binding EnableCriticalNotify}" Height="17" Margin="15,0,0,10"/>
-		<!-- <CheckBox Content="{Binding Source={x:Static properties:Resources.Settings_Accent_CriticalCondition}, Mode=OneWay}" IsChecked="{Binding EnableCriticalAccent}" Height="17" Margin="15,0,0,10"/> -->
+		<CheckBox Content="{Binding Resources.Settings_Notifications_CriticalCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding EnableCriticalNotify}" Height="17" Margin="15,0,0,10"/>
+		<!-- <CheckBox Content="{Binding Resources.Settings_Accent_CriticalCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding EnableCriticalAccent}" Height="17" Margin="15,0,0,10"/> -->
 
 		<Rectangle Height="1"
 				   Style="{DynamicResource SeparatorRectangleStyleKey}" />
 
-		<TextBlock Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoSCalculation}, Mode=OneWay}"
+		<TextBlock Text="{Binding Resources.Settings_Operation_LoSCalculation, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}"
 				   Margin="0,10" />
 
 		<StackPanel Margin="20,0,0,0">
-			<TextBlock Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_Title}, Mode=OneWay}" />
+			<TextBlock Text="{Binding Resources.Settings_Operation_LoS_Title, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 
 			<StackPanel Margin="0,5">
 				<RadioButton IsChecked="{Binding ViewRangeType1}"
 							 Margin="0,5">
 					<TextBlock Style="{DynamicResource DefaultTextStyleKey}"
 							   LineHeight="16">
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_Simple}, Mode=OneWay}"
+						<Run Text="{Binding Resources.Settings_Operation_LoS_Simple, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 							 Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}" />
 						<LineBreak />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_Simple_Description}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_Simple_Description, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 					</TextBlock>
 				</RadioButton>
 
@@ -88,21 +88,21 @@
 							 Margin="0,5">
 					<TextBlock Style="{DynamicResource DefaultTextStyleKey}"
 							   LineHeight="18">
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_New}, Mode=OneWay}"
+						<Run Text="{Binding Resources.Settings_Operation_LoS_New, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 							 Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}" />
 						<LineBreak />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_New_Desc}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_New_Desc, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 						<LineBreak />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_Recon}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_Recon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 						<Run Text="…" />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_SeaplaneRecon}, Mode=OneWay}"
-							 ToolTip="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_SeaplaneRecon_Tooltip}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_SeaplaneRecon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+							 ToolTip="{Binding Resources.Settings_Operation_LoS_SeaplaneRecon_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 						<Run Text="・" />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_SeaplaneBomber}, Mode=OneWay}"
-							 ToolTip="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_SeaplaneBomber_Tooltip}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_SeaplaneBomber, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+							 ToolTip="{Binding Resources.Settings_Operation_LoS_SeaplaneBomber_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 						<Run Text="・" />
-						<Run Text="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_CarrierBasedRecon}, Mode=OneWay}"
-							 ToolTip="{Binding Source={x:Static properties:Resources.Settings_Operation_LoS_CarrierBasedRecon_Tooltip}, Mode=OneWay}" />
+						<Run Text="{Binding Resources.Settings_Operation_LoS_CarrierBasedRecon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+							 ToolTip="{Binding Resources.Settings_Operation_LoS_CarrierBasedRecon_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 					</TextBlock>
 				</RadioButton>
 			</StackPanel>

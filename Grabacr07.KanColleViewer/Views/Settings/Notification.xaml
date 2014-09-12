@@ -102,12 +102,12 @@
 		<Rectangle Height="1"
 				   Style="{DynamicResource SeparatorRectangleStyleKey}" />
 
-        <TextBlock Text="Notification plugin"
+        <TextBlock Text="{Binding Resources.Settings_Notifications_NotificationPlugin, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}"
 				   Margin="0,10,0,8" />
 
 		<StackPanel Margin="20,0,0,0">
-            <TextBlock Text="Notification plugins active"
+            <TextBlock Text="{Binding Resources.Settings_Notifications_ActiveNotificationPlugin, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 					   Style="{DynamicResource DetailTextStyleKey}"
 					   Foreground="{DynamicResource ActiveForegroundBrushKey}" />
 

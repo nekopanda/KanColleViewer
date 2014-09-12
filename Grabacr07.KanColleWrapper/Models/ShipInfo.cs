@@ -40,13 +40,13 @@ namespace Grabacr07.KanColleWrapper.Models
 		}
 
 		/// <summary>
-		/// Get the untranslated version of the name. If it is untranslated, return nothing.
+		/// Get the untranslated version of the name.
 		/// </summary>
 		public string UntranslatedName
 		{
 			get
 			{
-				return this.Name != RawData.api_name ? RawData.api_name : "";
+				return RawData.api_name;
 			}
 		}
 

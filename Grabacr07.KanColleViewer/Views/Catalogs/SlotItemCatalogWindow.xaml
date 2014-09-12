@@ -16,6 +16,7 @@
 				   xmlns:controls="clr-namespace:Grabacr07.KanColleViewer.Views.Controls"
 				   xmlns:contents="clr-namespace:Grabacr07.KanColleViewer.Views.Contents"
 				   xmlns:catalogs="clr-namespace:Grabacr07.KanColleViewer.Views.Catalogs"
+				   xmlns:models="clr-namespace:Grabacr07.KanColleViewer.Models"
 				   x:Name="GlowMetroWindow"
 				   mc:Ignorable="d"
 				   d:DataContext="{d:DesignInstance viewModels:SlotItemCatalogViewModel}"
@@ -67,7 +68,7 @@
 		<DockPanel Grid.Row="1">
 			<Border DockPanel.Dock="Top"
 					Margin="8,0">
-				<metro2:CallMethodButton Content="Refresh"
+				<metro2:CallMethodButton Content="{Binding Resources.CommonCatalog_Refresh, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 										 Padding="40,6"
 										 MethodName="Update"
 										 HorizontalAlignment="Left" />
@@ -128,7 +129,7 @@
 						<GridView>
 							<GridViewColumn Width="180">
 								<GridViewColumn.Header>
-									<TextBlock Text="Eq. Name" />
+									<TextBlock Text="{Binding Resources.SlotItemCatalog_EqipName, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 								</GridViewColumn.Header>
 								<GridViewColumn.CellTemplate>
 									<DataTemplate DataType="{x:Type viewModels:SlotItemViewModel}">
@@ -154,8 +155,8 @@
 							<GridViewColumn Width="82">
 								<GridViewColumn.Header>
 									<TextBlock>
-										<Run Text="Owned" />
-										<Run Text="(Extra)"
+										<Run Text="{Binding Resources.SlotItemCatalog_Owned, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<Run Text="{Binding Resources.SlotItemCatalog_Extra, StringFormat=({0}), Mode=OneWay}"
 											 FontSize="10" />
 									</TextBlock>
 								</GridViewColumn.Header>
@@ -174,7 +175,7 @@
 							<GridViewColumn Width="100">
 								<GridViewColumn.Header>
 									<TextBlock>
-										<Run Text="Stats" />
+										<Run Text="{Binding Resources.SlotItemCatalog_Stats, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 									</TextBlock>
 								</GridViewColumn.Header>
 								<GridViewColumn.CellTemplate>
@@ -190,7 +191,7 @@
 
 							<GridViewColumn Width="500">
 								<GridViewColumn.Header>
-									<TextBlock Text="Equipped Ship Girls" />
+									<TextBlock Text="{Binding Resources.SlotItemCatalog_EquippedShipGirls, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 								</GridViewColumn.Header>
 								<GridViewColumn.CellTemplate>
 									<DataTemplate DataType="{x:Type viewModels:SlotItemViewModel}">
@@ -235,7 +236,7 @@
 				Padding="20"
 				Visibility="{Binding IsReloading, Converter={StaticResource BooleanToVisibilityConverter}}"
 				d:IsHidden="True">
-			<TextBlock Text="Generating list…"
+			<TextBlock Text="{Binding Resources.CommonCatalog_GeneratingList, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 					   Style="{DynamicResource EmphaticTextStyleKey}"
 					   FontSize="16"
 					   Background="{DynamicResource ThemeBrushKey}"

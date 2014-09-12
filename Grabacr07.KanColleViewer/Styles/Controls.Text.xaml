@@ -31,7 +31,7 @@
 
 
 
-	<FontFamily x:Key="DefaultFontFamilyKey">Meiryo UI, Segoe UI</FontFamily>
+	<FontFamily x:Key="DefaultFontFamilyKey">Segoe UI, Meiryo UI</FontFamily>
 	<s:Double x:Key="DefaultFontSizeKey">12</s:Double>
 	<Style x:Key="DefaultTextStyleKey"
 		   TargetType="{x:Type TextBlock}"
@@ -60,7 +60,7 @@
 
 
 
-	<FontFamily x:Key="DetailFontFamilyKey">Meiryo UI, Segoe UI</FontFamily>
+	<FontFamily x:Key="DetailFontFamilyKey">Segoe UI, Meiryo UI</FontFamily>
 	<s:Double x:Key="DetailFontSizeKey">10.5</s:Double>
 	<Style x:Key="DetailTextStyleKey"
 		   TargetType="{x:Type TextBlock}"
@@ -89,7 +89,7 @@
 
 
 
-	<FontFamily x:Key="EmphaticFontFamilyKey">Meiryo UI, Segoe UI</FontFamily>
+	<FontFamily x:Key="EmphaticFontFamilyKey">Segoe UI, Meiryo UI</FontFamily>
 	<s:Double x:Key="EmphaticFontSizeKey">15</s:Double>
 	<Style x:Key="EmphaticTextStyleKey"
 		   TargetType="{x:Type TextBlock}"
@@ -118,7 +118,7 @@
 
 
 
-	<FontFamily x:Key="CaptionFontFamilyKey">Meiryo UI, Segoe UI Light</FontFamily>
+	<FontFamily x:Key="CaptionFontFamilyKey">Segoe UI Light, Meiryo UI</FontFamily>
 	<s:Double x:Key="CaptionFontSizeKey">16</s:Double>
 	<Style x:Key="CaptionTextStyleKey"
 		   TargetType="{x:Type TextBlock}"
@@ -147,7 +147,7 @@
 
 
 
-	<FontFamily x:Key="HeaderFontFamilyKey">Meiryo UI, Segoe UI Light</FontFamily>
+	<FontFamily x:Key="HeaderFontFamilyKey">Segoe UI, Meiryo UI</FontFamily>
 	<s:Double x:Key="HeaderFontSizeKey">14</s:Double>
 	<Style x:Key="HeaderTextStyleKey"
 		   TargetType="{x:Type TextBlock}"

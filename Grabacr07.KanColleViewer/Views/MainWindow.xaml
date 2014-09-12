@@ -118,7 +118,7 @@
                     </Border>
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModels:MainContentViewModel}">
-                    <views:Info Margin="4,5" />
+					<views:Info Margin="4,-5,4,5"/>
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

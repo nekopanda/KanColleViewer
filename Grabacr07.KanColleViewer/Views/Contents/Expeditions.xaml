@@ -119,11 +119,6 @@
 									   Visibility="Collapsed" />
 
                             <StackPanel x:Name="ExpeditionInfo">
-                                <StackPanel.ToolTip>
-                                    <ToolTip 
-                                      Content="{Binding Expedition.Mission.Id, Mode=OneWay}"
-                                      ContentStringFormat="{}Expedition: {0}" />
-                                </StackPanel.ToolTip>
                                 <TextBlock Text="{Binding Expedition.Mission.Title}"
 										   Style="{DynamicResource EmphaticTextStyleKey}" />
 								<Border Height="4" />

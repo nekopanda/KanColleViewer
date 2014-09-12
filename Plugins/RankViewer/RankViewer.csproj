@@ -144,10 +144,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="SampleData\RankingsViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Rankings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

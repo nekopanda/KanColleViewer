@@ -22,6 +22,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 				{
 					this._Type = value;
 					this.RaisePropertyChanged();
+					this.RaisePropertyChanged("Type2");
 				}
 			}
 		}
@@ -142,6 +143,20 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 
 		#endregion
 
+		public QuestType Type2
+		{
+			get
+			{
+				switch (this.Type)
+				{
+					case QuestType.Special1:
+					case QuestType.Special2:
+						return QuestType.Daily;
+					default:
+						return this.Type;
+				}
+			}
+		}
 
 		public QuestViewModel(Quest quest)
 		{

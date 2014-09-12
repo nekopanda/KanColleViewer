@@ -95,7 +95,7 @@
 
 				<Border Panel.ZIndex="100"
 						Grid.Column="1">
-					<TextBlock Text="{Binding Resources.Tools_Rankings_RankingsList, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+					<TextBlock Text="Current Rankings"
 						   Style="{DynamicResource HeaderTextStyleKey}" />
 				</Border>
 			</Grid>
@@ -104,8 +104,9 @@
                 <Border BorderBrush="{DynamicResource BorderBrushKey}"
 						BorderThickness="1">
                     <ListView ItemsSource="{Binding Rankings}"
-							  ItemContainerStyle="{DynamicResource GridViewItemContainerStyleKey}"
-							  d:DataContext="{d:DesignData /SampleData/RankingsViewModelSampleData.xaml}">
+							  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+							  ScrollViewer.VerticalScrollBarVisibility="Disabled"
+							  ItemContainerStyle="{DynamicResource GridViewItemContainerStyleKey}">
                         <ListView.Resources>
                             <Style TargetType="{x:Type GridViewColumnHeader}">
                                 <Setter Property="OverridesDefaultStyle"
@@ -144,9 +145,9 @@
                                     </Setter.Value>
                                 </Setter>
                             </Style>
-                        </ListView.Resources>
-
-                        <ListView.View>
+						</ListView.Resources>
+						
+						<ListView.View>
                             <GridView>
                                 <GridViewColumn Width="50">
                                     <GridViewColumn.Header>
@@ -164,7 +165,7 @@
 
                                 <GridViewColumn Width="110">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_User, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="User" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -178,7 +179,7 @@
 
                                 <GridViewColumn Width="120">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_Comment, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="Comment" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -192,7 +193,7 @@
 
                                 <GridViewColumn Width="40">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_Rank, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="Rank" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -206,7 +207,7 @@
 
                                 <GridViewColumn Width="40">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_Rate, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="Rate" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -220,7 +221,7 @@
 
                                 <GridViewColumn Width="40">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_Level, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="Level" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -234,7 +235,7 @@
 
                                 <GridViewColumn Width="75">
                                     <GridViewColumn.Header>
-                                        <TextBlock Text="{Binding Resources.Tools_Rankings_Experience, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+										<TextBlock Text="Experience" />
                                     </GridViewColumn.Header>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate DataType="{x:Type tools:RankingsViewModel}">
@@ -261,14 +262,14 @@
                 <TextBlock Grid.Column="0"
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="8,2">
-					<Run Text="{Binding Resources.Tools_Rankings_TotalRanked, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" /> <Run Text="{Binding TotalRanked, Mode=OneWay}" FontSize="16" />
+					<Run Text="Total Ranked" /> <Run Text="{Binding TotalRanked, Mode=OneWay}" FontSize="16" />
                 </TextBlock>
 
                 <TextBlock Grid.Column="1"
 						   HorizontalAlignment="Center"
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="8,2">
-					<Run Text="{Binding Resources.Tools_Rankings_Page, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" /> <Run Text="{Binding CurrentPage, Mode=OneWay}" FontSize="16" /> / <Run Text="{Binding TotalPages, Mode=OneWay}" FontSize="16" />
+					<Run Text="Page:" /> <Run Text="{Binding CurrentPage, Mode=OneWay}" FontSize="16" /> / <Run Text="{Binding TotalPages, Mode=OneWay}" FontSize="16" />
                 </TextBlock>
 
             </Grid>
@@ -303,6 +304,12 @@
 				</metro2:CallMethodButton>
 			</Grid>
 
+
+			<!-- avoid dupllicate scrollview -->
+			<Border Grid.Row="1" Grid.RowSpan="2" Margin="0,17,0,0">
+				<TextBlock Text="" />
+			</Border>
+			
 			<Border Grid.Row="1"
 					Grid.RowSpan="2"
 					Background="{DynamicResource ThemeBrushKey}"

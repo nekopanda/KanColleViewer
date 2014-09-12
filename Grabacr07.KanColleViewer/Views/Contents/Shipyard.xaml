@@ -230,7 +230,7 @@
 				<Grid>
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition />
-						<ColumnDefinition Width="Auto" MaxWidth="200"/>
+						<ColumnDefinition Width="Auto" />
 					</Grid.ColumnDefinitions>
 
 					<StackPanel>
@@ -380,6 +380,7 @@
 					</StackPanel>
 
 					<Border Grid.Column="1"
+							MaxWidth="200"
 							BorderBrush="{DynamicResource BorderBrushKey}"
 							BorderThickness="1,1,0,0">
 						<DockPanel>

@@ -16,6 +16,19 @@
 			 d:DesignHeight="300"
 			 d:DataContext="{d:DesignInstance vm:ToolsViewModel}">
 
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<Style x:Key="TabHeaderTextStyleKey"
+				   TargetType="{x:Type TextBlock}"
+				   BasedOn="{StaticResource DefaultTextStyleKey}">
+				<Setter Property="Foreground"
+						Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type TabItem}}, Path=Foreground}" />
+				<Setter Property="FontSize"
+						Value="14" />
+			</Style>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
     <ScrollViewer VerticalScrollBarVisibility="Auto"
 				  PanningMode="Both"
                   MinWidth="{Binding Source={x:Static properties:Settings.Default}, Path=UIContentWidth, Mode=OneTime}">
@@ -84,7 +97,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="1"
 								   Text="{Binding ToolName}"
-								   Style="{DynamicResource HeaderTextStyleKey}"
+								   Style="{DynamicResource TabHeaderTextStyleKey}"
 								   Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Path=Foreground}"
 								   TextTrimming="CharacterEllipsis" />
                         </Grid>

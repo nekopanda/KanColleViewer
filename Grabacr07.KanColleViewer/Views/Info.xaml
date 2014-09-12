@@ -22,6 +22,7 @@
 			 xmlns:dev="clr-namespace:Grabacr07.KanColleViewer.Views.Dev"
 			 mc:Ignorable="d"
 			 d:DesignWidth="1366"
+			 d:DesignHeight="54"
 			 Background="{DynamicResource ThemeBrushKey}">
     <Grid>
         <Grid.ColumnDefinitions>

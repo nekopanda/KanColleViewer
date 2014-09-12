@@ -49,7 +49,7 @@
 
         <metro:PromptComboBox Margin="0,8"
 							  HorizontalAlignment="Left"
-							  Prompt="{Binding Resources.Tools_Calculator_ListPrompt, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+							  Prompt="Select a Ship Girl"
 							  ItemsSource="{Binding Ships}"
 							  DisplayMemberPath="Ship.NameLv"
 							  SelectedValuePath="Ship"
@@ -84,7 +84,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,0,0"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_CurrentLevel, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Current Level" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding Source={StaticResource EnumerableRange}}"
@@ -110,7 +110,7 @@
 						   Grid.Column="0"
 						   Grid.Row="1"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_TargetLevel, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Target Level" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding Source={StaticResource EnumerableRange}}"
@@ -145,7 +145,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,8,0"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_Map, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Map" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding SeaList}"
@@ -161,7 +161,7 @@
 						   Margin="8,0"
 						   Grid.Column="2"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_Result, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Result" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding ResultList}"
@@ -195,7 +195,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="12,0,8,0"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_SortieExp, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Sortie Exp" />
 
                 <metro:PromptTextBox Grid.Column="1"
 									 Text="{Binding SortieExp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
@@ -225,7 +225,7 @@
 						   Margin="12,0,8,0"
 						   Grid.Row="1"
                            VerticalAlignment="Center"
-						   Text="{Binding Resources.Tools_Calculator_RemainingExp, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						   Text="Remaining" />
 
                 <metro:PromptTextBox Grid.Column="1"
 									 Grid.Row="1"
@@ -242,8 +242,8 @@
             <StackPanel Grid.Column="1"
 						Grid.RowSpan="2"
 						VerticalAlignment="Center">
-                <CheckBox Content="{Binding Resources.Tools_Calculator_Flagship, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding IsFlagship}" Height="17" Margin="8,0,0,10"/>
-                <CheckBox Content="{Binding Resources.Tools_Calculator_MVP, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" IsChecked="{Binding IsMVP}" Height="17" Margin="8,0,0,10"/>
+				<CheckBox Content="Flagship" IsChecked="{Binding IsFlagship}" Height="17" Margin="8,0,0,10"/>
+				<CheckBox Content="MVP" IsChecked="{Binding IsMVP}" Height="17" Margin="8,0,0,10"/>
             </StackPanel>
 
         </Grid>

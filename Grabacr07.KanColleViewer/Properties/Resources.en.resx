@@ -271,7 +271,7 @@
     <value>Active Quests</value>
   </data>
   <data name="Quests_Daily" xml:space="preserve">
-    <value>Daily Quests</value>
+    <value>Daily</value>
   </data>
   <data name="Quests_Notice" xml:space="preserve">
     <value>※ The indicators (50%, 80%) mirror in-game indicators. Enemy fleet kills, successful expeditions, etc are not actively counted.</value>
@@ -280,7 +280,7 @@
     <value>Please open the in-game Quests menu to populate the Quest list.</value>
   </data>
   <data name="Quests_Weekly" xml:space="preserve">
-    <value>Weekly Quests</value>
+    <value>Weekly</value>
   </data>
   <data name="Quest_Detail_Untaken" xml:space="preserve">
     <value>Please visit all of the quest pages.</value>
@@ -525,10 +525,7 @@
   <data name="Settings_Accent_CriticalCondition" xml:space="preserve">
     <value>Change window color when a ship is in critical condition</value>
   </data>
-  <data name="Settings_FleetCondition" xml:space="preserve">
-    <value>Fleet Condition</value>
-  </data>
-  <data name="Settings_Notify_CriticalCondition" xml:space="preserve">
+  <data name="Settings_Notifications_CriticalCondition" xml:space="preserve">
     <value>Give a notification for ships in critical condition</value>
   </data>
   <data name="Settings_Updates" xml:space="preserve">
@@ -762,13 +759,13 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>When repairs finish</value>
   </data>
   <data name="Settings_Operation_SortieCondition" xml:space="preserve">
-    <value>出撃コンディション</value>
+    <value>Sortie condition</value>
   </data>
   <data name="Settings_Operation_SortieCondition_Description" xml:space="preserve">
-    <value>※通常は、間宮アイコンが消灯する 40 か、自然回復上限の 49 に設定します。</value>
+    <value>※Value must be within the range of 40 and 49. (Default: 40)</value>
   </data>
   <data name="Settings_Operation_SortieCondition_Title" xml:space="preserve">
-    <value>艦隊内の全艦のコンディションが次の数値以上になったとき、出撃可能と判断する</value>
+    <value>Minimum fleet condition to be considered ready for sorties.</value>
   </data>
   <data name="Settings_Network_Proxy_Auth_Password" xml:space="preserve">
     <value>Password</value>
@@ -907,5 +904,155 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="StateDetail_ShortSupply" xml:space="preserve">
     <value>There are ships in your fleet that need resupplying.</value>
+  </data>
+  <data name="Quests_Monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="CommonCatalog_GeneratingList" xml:space="preserve">
+    <value>Generating list…</value>
+  </data>
+  <data name="CommonCatalog_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Quests_NoQuest" xml:space="preserve">
+    <value>There are no current missions.</value>
+  </data>
+  <data name="Settings_Notifications_ActiveNotificationPlugin" xml:space="preserve">
+    <value>Active notification plugins</value>
+  </data>
+  <data name="Settings_Notifications_NotificationPlugin" xml:space="preserve">
+    <value>Notification plugin</value>
+  </data>
+  <data name="Settings_Updates_Option" xml:space="preserve">
+    <value>Update options</value>
+  </data>
+  <data name="ShipCatalog_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ShipCatalog_AntiAir" xml:space="preserve">
+    <value>Anti-Air</value>
+  </data>
+  <data name="ShipCatalog_AntiSub" xml:space="preserve">
+    <value>AntiSub</value>
+  </data>
+  <data name="ShipCatalog_Armor" xml:space="preserve">
+    <value>Armor</value>
+  </data>
+  <data name="ShipCatalog_Equips" xml:space="preserve">
+    <value>Equips</value>
+  </data>
+  <data name="ShipCatalog_Evasion" xml:space="preserve">
+    <value>Evasion</value>
+  </data>
+  <data name="ShipCatalog_ExcludeShipOnExpedition" xml:space="preserve">
+    <value>Exclude ships on expeditions</value>
+  </data>
+  <data name="ShipCatalog_ExcludeShiptype" xml:space="preserve">
+    <value>Does not include ship types!</value>
+  </data>
+  <data name="ShipCatalog_Expedition" xml:space="preserve">
+    <value>Expedition</value>
+  </data>
+  <data name="ShipCatalog_Fast" xml:space="preserve">
+    <value>Fast</value>
+  </data>
+  <data name="ShipCatalog_FilterSettings" xml:space="preserve">
+    <value>Filter &amp; Settings</value>
+  </data>
+  <data name="ShipCatalog_Firepower" xml:space="preserve">
+    <value>Firepower</value>
+  </data>
+  <data name="ShipCatalog_Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ShipCatalog_Level2Up" xml:space="preserve">
+    <value>Lv.2 and up</value>
+  </data>
+  <data name="ShipCatalog_Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="ShipCatalog_Locked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="ShipCatalog_LoS" xml:space="preserve">
+    <value>LoS</value>
+  </data>
+  <data name="ShipCatalog_Luck" xml:space="preserve">
+    <value>Luck</value>
+  </data>
+  <data name="ShipCatalog_Modernization" xml:space="preserve">
+    <value>Modernization</value>
+  </data>
+  <data name="ShipCatalog_ModernizationComplete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="ShipCatalog_ModernizationIncomplete" xml:space="preserve">
+    <value>Incomplete</value>
+  </data>
+  <data name="ShipCatalog_Name" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+  <data name="ShipCatalog_RemodelIncomplete" xml:space="preserve">
+    <value>Incomplete</value>
+  </data>
+  <data name="ShipCatalog_Remodel" xml:space="preserve">
+    <value>Remodels</value>
+  </data>
+  <data name="ShipCatalog_RemodelComplete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="ShipCatalog_ResetFilterSettings" xml:space="preserve">
+    <value>Reset Filters</value>
+  </data>
+  <data name="ShipCatalog_SaveFilterSettings" xml:space="preserve">
+    <value>Save Filter Settings</value>
+  </data>
+  <data name="ShipCatalog_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="ShipCatalog_ShipType" xml:space="preserve">
+    <value>Ship Types</value>
+  </data>
+  <data name="ShipCatalog_ShowAdditionalShipStats" xml:space="preserve">
+    <value>Show Additional Ship Stats</value>
+  </data>
+  <data name="ShipCatalog_Slow" xml:space="preserve">
+    <value>Slow</value>
+  </data>
+  <data name="ShipCatalog_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="ShipCatalog_Torpedo" xml:space="preserve">
+    <value>Torpedo</value>
+  </data>
+  <data name="ShipCatalog_Unlocked" xml:space="preserve">
+    <value>Unlocked</value>
+  </data>
+  <data name="SlotItemCatalog_EqipName" xml:space="preserve">
+    <value>Eq. Name</value>
+  </data>
+  <data name="SlotItemCatalog_EquippedShipGirls" xml:space="preserve">
+    <value>Equipped Ship Girls</value>
+  </data>
+  <data name="SlotItemCatalog_Extra" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="SlotItemCatalog_Owned" xml:space="preserve">
+    <value>Owned</value>
+  </data>
+  <data name="SlotItemCatalog_Stats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="Settings_CustomSound" xml:space="preserve">
+    <value>Custom Sound Notifications</value>
+  </data>
+  <data name="Settings_CustomSound_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Ship_RepairDockToolTip" xml:space="preserve">
+    <value>Dock: {0}</value>
+  </data>
+  <data name="Ship_RepairFacilityToolTip" xml:space="preserve">
+    <value>Facility: {0}</value>
   </data>
 </root>

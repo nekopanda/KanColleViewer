@@ -121,7 +121,8 @@
 																	  Margin="0,2,4,1" />
                                             <TextBlock x:Name="FleetName"
 												   Text="{Binding Id, StringFormat='/{0}'}"
-												   Foreground="{DynamicResource ActiveForegroundBrushKey}" />
+												   Foreground="{DynamicResource ActiveForegroundBrushKey}"
+													   Style="{DynamicResource EmphaticTextStyleKey}"/>
                                         </StackPanel>
                                     </Border>
                                     <DataTemplate.Triggers>
@@ -231,7 +232,7 @@
 												  Margin="8,2,8,0">
                                                 <Border Background="{DynamicResource FleetRepairingBrushKey}"
 														Opacity=".4" />
-                                                <TextBlock Text="In dock"
+												<TextBlock Text="{Binding Resources.Ship_Repairing, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 														   Style="{DynamicResource EmphaticTextStyleKey}"
 														   HorizontalAlignment="Center" />
                                             </Grid>
@@ -418,18 +419,18 @@
                 <Border Grid.Row="0"
 						Grid.Column="0">
                     <StackPanel>
-                        <TextBlock Text="Data" />
+                        <TextBlock Text="{Binding Resources.Overview_Data, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 
                         <Rectangle Height="1"
 								   Margin="0,3,0,0"
 								   Style="{DynamicResource SeparatorRectangleStyleKey}" />
 
-                        <metro2:CallMethodButton Content="Ship List"
+                        <metro2:CallMethodButton Content="{Binding Resources.Overview_ShipList, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 												 Padding="12,8"
 												 Margin="0,5,0,8"
 												 MethodName="ShowShipCatalog" />
 
-                        <metro2:CallMethodButton Content="Eq. List"
+                        <metro2:CallMethodButton Content="{Binding Resources.Overview_EquipmentList, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 												 Padding="12,8"
 												 MethodName="ShowSlotItemCatalog" />
                     </StackPanel>
@@ -549,7 +550,7 @@
 										 MethodName="Jump"
 										 MethodParameter="Dockyard">
                     <StackPanel DataContext="{Binding Content.Shipyard}">
-                        <TextBlock Text="{Binding Resources.Shipyard_RepairDock, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+						<TextBlock Text="{Binding Resources.Shipyard_ConstructionDock, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 
                         <Rectangle Height="1"
 								   Margin="0,3,0,0"
