@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.0.9">
+<Quests Version="1.0.10">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -488,7 +488,7 @@
     <JP-Name>敵北方艦隊主力を撃滅せよ！</JP-Name>
     <TR-Name>Weekly Sortie 7</TR-Name>
     <JP-Detail>北方海域の深部に出撃し、敵北方艦隊の主力艦隊を捕捉、これを撃滅せよ！</JP-Detail>
-    <TR-Detail>Defeat 5 bosses in World 3-3 and 3-4. </TR-Detail>
+    <TR-Detail>Defeat 5 bosses in World 3-3, 3-4 or 3-5. </TR-Detail>
   </Quest>
   <Quest>
     <ID>Bw8</ID>
