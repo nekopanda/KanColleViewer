@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.8">
+<Equipment Version="1.0.9">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -443,5 +443,13 @@
   <Item>
     <JP-Name>22号対水上電探改四</JP-Name>
     <TR-Name>Type 22 Surface RADAR Kai 4</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>38cm連装砲改</JP-Name>
+    <TR-Name>38cm Twin Gun Mount Kai</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>Ar196改</JP-Name>
+    <TR-Name>Ar196 Kai</TR-Name>
   </Item>
 </Equipment>
