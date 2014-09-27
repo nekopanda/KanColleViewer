@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.0.10">
+<Quests Version="1.0.11">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -937,5 +937,26 @@
     <TR-Name>Bashi Islands emergency development! Deploy a Torpedo Squadron and sortie to the 2-2.</TR-Name>
     <JP-Detail>軽巡を旗艦とした水雷戦隊(軽巡最大2隻他駆逐艦)でバシー島沖の敵を撃滅せよ！</JP-Detail>
     <TR-Detail>Requires 1~2 CL and 4~5 DD with a CL as the flagship. Obtain victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>617</ID>
+    <JP-Name>「伊良湖」の準備</JP-Name>
+    <TR-Name>Prepair for Ira lake</TR-Name>
+    <JP-Detail>「工廠」で不要な装備アイテムをいくつか「廃棄」して、新型給糧艦召喚の準備をしましょう！</JP-Detail>
+    <TR-Detail>Scrap equipment 10 times.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>256</ID>
+    <JP-Name>「潜水艦隊」出撃せよ！</JP-Name>
+    <TR-Name>Sortie a Submarine Fleet!</TR-Name>
+    <JP-Detail>潜水艦戦力を中核とした艦隊で中部海域哨戒線へ反復出撃、敵戦力を漸減せよ！</JP-Detail>
+    <TR-Detail>You MUST deploy to world 6-1, and obtain an S rank victory at the boss three times.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>257</ID>
+    <JP-Name>「水雷戦隊」南西へ！</JP-Name>
+    <TR-Name>Deploy a Torpedo Squadron!</TR-Name>
+    <JP-Detail>軽巡旗艦の水雷戦隊(軽巡最大3隻他駆逐艦)を急派、南西諸島防衛線で敵を撃滅せよ！</JP-Detail>
+    <TR-Detail>Requires 1~3 CL, the rest must be DDs. Flagship must be a CL. You MUST deploy to world 1-4, and obtain an S rank victory at the boss.</TR-Detail>
   </Quest>
 </Quests>

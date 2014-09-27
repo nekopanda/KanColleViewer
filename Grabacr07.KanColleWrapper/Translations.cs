@@ -161,7 +161,7 @@ namespace Grabacr07.KanColleWrapper
 
 		public void ChangeCulture(string Culture)
 		{
-			CurrentCulture = Culture == "en-US" || Culture == "en" ? "" : (Culture + "\\");
+			CurrentCulture = Culture == "en-US" || Culture == "en" ? "" : (Culture == "ja-JP" || Culture == "ja" ? "ja-JP" : (Culture + "\\"));
 
 			ShipsXML = null;
 			ShipTypesXML = null;
@@ -171,7 +171,10 @@ namespace Grabacr07.KanColleWrapper
             ExpeditionsXML = null;
 
 			if (!EnableTranslations || CurrentCulture == "ja-JP")
+			{
+				this.RaisePropertyChanged("CurrentCulture");
 				return;
+			}
 
 			try
 			{
@@ -190,6 +193,8 @@ namespace Grabacr07.KanColleWrapper
 			{
 				Debug.WriteLine(ex);
 			}
+
+			this.RaisePropertyChanged("CurrentCulture");
 		}
 
 		private void GetVersions()

@@ -234,7 +234,7 @@
       <DependentUpon>OrientationModeSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Converters\MaxConverter.cs" />
-    <Compile Include="Views\Converters\BooleanToWidthConverter.cs" />
+    <Compile Include="Views\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Views\Contents\StateDetailIndicator.xaml.cs">
       <DependentUpon>StateDetailIndicator.xaml</DependentUpon>
     </Compile>

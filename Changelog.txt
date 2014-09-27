@@ -2,6 +2,11 @@
 	KCV Change Log
 ========================
 
+v3.4.0 r513 - 9/27/2014
+	* Fix for 2014/09/26 update
+	* Restraint D&D for WebBrowser
+	* Fix when there are no mission
+	
 v3.3.0 r512 - 9/12/2014
 	* Add monthly quests group
 	* Special quest that appear at special day are regarded as daily quests

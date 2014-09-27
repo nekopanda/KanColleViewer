@@ -6,6 +6,7 @@ using Grabacr07.KanColleWrapper;
 using Grabacr07.KanColleWrapper.Models;
 using Livet;
 using Livet.EventListeners;
+using Grabacr07.KanColleViewer.Models;
 
 namespace Grabacr07.KanColleViewer.ViewModels.Contents.Fleets
 {
@@ -49,6 +50,18 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents.Fleets
 		{
 			this.source = expedition;
 			this.CompositeDisposable.Add(new PropertyChangedEventListener(expedition, (sender, args) => this.RaisePropertyChanged(args.PropertyName)));
+						
+			if (Helper.IsInDesignMode) return;
+
+			this.CompositeDisposable.Add(new PropertyChangedEventListener(KanColleClient.Current.Translations)
+			{
+				{ "CurrentCulture", (sender, args) => {
+					if (this.Mission != null) {
+						this.Mission.Update();
+						this.RaisePropertyChanged("Mission");
+					}
+				}},
+			});
 		}
 	}
 }

@@ -154,10 +154,15 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0,4,0,0">
-                                        <!--<StackPanel.Resources>
+                                        <StackPanel.Resources>
                                             <Style TargetType="{x:Type TextBlock}"
-												   BasedOn="{StaticResource DefaultTextStyleKey}" />
-                                        </StackPanel.Resources>-->
+												   BasedOn="{StaticResource DefaultTextStyleKey}" >
+												<Setter Property="TextWrapping"
+													Value="NoWrap" />
+											</Style>
+                                        </StackPanel.Resources>
+
+
 
                                         <Rectangle Height="1"
 												   Margin="0,0,0,4"
