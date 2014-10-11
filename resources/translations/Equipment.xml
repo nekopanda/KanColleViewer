@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.10">
+<Equipment Version="1.0.11">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -455,5 +455,21 @@
   <Item>
     <JP-Name>九七式艦攻(九三一空)</JP-Name>
     <TR-Name>Type 97 Torpedo Bomber (931 Air Group)</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>一式徹甲弾</JP-Name>
+    <TR-Name>Type 1 Armor-Piercing (AP) Shell</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>試製46cm連装砲</JP-Name>
+    <TR-Name>46cm Twin Gun Mount Prototype</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>紫雲</JP-Name>
+    <TR-Name>Shiun</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>紫雲</JP-Name>
+    <TR-Name>Shiun</TR-Name>
   </Item>
 </Equipment>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.0.11">
+<Quests Version="1.0.12">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -958,5 +958,40 @@
     <TR-Name>Deploy a Torpedo Squadron!</TR-Name>
     <JP-Detail>軽巡旗艦の水雷戦隊(軽巡最大3隻他駆逐艦)を急派、南西諸島防衛線で敵を撃滅せよ！</JP-Detail>
     <TR-Detail>Requires 1~3 CL, the rest must be DDs. Flagship must be a CL. You MUST deploy to world 1-4, and obtain an S rank victory at the boss.</TR-Detail>
+  </Quest>  
+  <Quest>
+    <ID>144</ID>
+    <JP-Name>主力戦艦部隊「第二戦隊」を編成せよ！</JP-Name>
+    <TR-Name>Organize the main battleship force: "The 2nd Squadron"!</TR-Name>
+    <JP-Detail>長門型2隻及び扶桑型2隻の計4隻の主力戦艦からなる第二戦隊を編成せよ！</JP-Detail>
+    <TR-Detail>Have Nagato, Mutsu, Fusou & Yamashiro in your main fleet.</TR-Detail>
+  </Quest>  
+  <Quest>
+    <ID>145</ID>
+    <JP-Name>戦艦を主力とした水上打撃部隊を編成せよ！</JP-Name>
+    <TR-Name>Organize the main battleship ship force!</TR-Name>
+    <JP-Detail>大和型・長門型・伊勢型・扶桑型のいずれか3隻と軽巡1隻他の水上打撃部隊を配備せよ！</JP-Detail>
+    <TR-Detail>Have 3 slow Battleship and 1 Light Cruiser in your main fleet.</TR-Detail>
+  </Quest>  
+  <Quest>
+    <ID>B31</ID>
+    <JP-Name>「第二戦隊」抜錨！</JP-Name>
+    <TR-Name>Sortie the 2nd Squadron!</TR-Name>
+    <JP-Detail>「第二戦隊」を基幹とした艦隊でカレー洋に進出、反復出撃により敵海上兵力を撃破せよ！</JP-Detail>
+    <TR-Detail>Must have Nagato, Mutsu, Fusou, Yamashiro in your fleet you can add 2 more ships and gain S-rank at 4-2 boss 2 times.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>B32</ID>
+    <JP-Name>「戦艦部隊」北方海域に突入せよ！</JP-Name>
+    <TR-Name>Sortie the Battleship Squadron in the Northern Waters!</TR-Name>
+    <JP-Detail>戦艦2隻と直援軽空母1隻(正規空母無し)基幹の艦隊で北方AL海域に突入、敵を撃滅せよ！</JP-Detail>
+    <TR-Detail>Requires 2 BB and 1 CVL you can add 3 more ships and gain S-rank at 3-5 boss. MUST ONLY HAVE 1 CVL adding CV or more CVL will not work. Adding BBV will also not work.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>Bm4</ID>
+    <JP-Name>「水上打撃部隊」南方へ！</JP-Name>
+    <TR-Name>Deploy a Battleship Squadron.</TR-Name>
+    <JP-Detail>戦艦3隻軽巡1隻他を基幹とした水上打撃部隊で南方海域へ進出、敵艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Requires 3 Slow BB and 1 CL you can add 2 more ships. Deploy to world 5-1 and obtain an S rank victory at the boss.</TR-Detail>
   </Quest>
 </Quests>
