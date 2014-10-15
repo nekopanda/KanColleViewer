@@ -558,7 +558,7 @@
 							<GridViewColumn Width="50">
 								<GridViewColumn.Header>
 									<metro2:SortButton Direction="{Binding SortWorker.IdColumn.Direction}"
-													   MethodName="{Binding Resources.CommonCatalog_Refresh, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
+													   MethodName="Update">
 										<metro2:SortButton.MethodParameter>
 											<viewModels:ShipCatalogSortTarget>Id</viewModels:ShipCatalogSortTarget>
 										</metro2:SortButton.MethodParameter>

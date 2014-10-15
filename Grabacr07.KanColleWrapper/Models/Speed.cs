@@ -19,6 +19,6 @@ namespace Grabacr07.KanColleWrapper.Models
 		/// <summary>
 		/// 高速。
 		/// </summary>
-		Fast = 1,
+		Fast = 10,
 	}
 }

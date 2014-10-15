@@ -2,6 +2,10 @@
 	KCV Change Log
 ========================
 
+v3.4.0 r514 - 10/15/2014
+	* Fix alway show slow fleet
+	* Fix crash when sort by id in ship list
+
 v3.4.0 r513 - 9/27/2014
 	* Fix for 2014/09/26 update
 	* Restraint D&D for WebBrowser
