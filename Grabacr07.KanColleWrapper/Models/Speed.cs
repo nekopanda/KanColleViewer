@@ -14,7 +14,7 @@ namespace Grabacr07.KanColleWrapper.Models
 		/// <summary>
 		/// 低速。
 		/// </summary>
-		Low = 0,
+		Low = 5,
 
 		/// <summary>
 		/// 高速。
