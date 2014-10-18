@@ -739,7 +739,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>建造</value>
   </data>
   <data name="Shipyard_Development" xml:space="preserve">
-    <value>装備開発</value>
+    <value>装備開発・ドロップ</value>
   </data>
   <data name="Shipyard_Development_Result_Failure" xml:space="preserve">
     <value>失敗</value>
@@ -989,5 +989,8 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="SlotItemCatalog_Stats" xml:space="preserve">
     <value>統計</value>
+  </data>
+  <data name="Shipyard_Drop" xml:space="preserve">
+    <value>ドロップ</value>
   </data>
 </root>

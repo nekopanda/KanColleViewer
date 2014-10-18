@@ -82,6 +82,28 @@ namespace Grabacr07.KanColleWrapper
 
 		#endregion
 
+		#region DroppedShip 変更通知プロパティ
+
+		private DroppedShip _DroppedShip;
+
+		/// <summary>
+		/// New dropped ship
+		/// </summary>
+		public DroppedShip DroppedShip
+		{
+			get { return this._DroppedShip; }
+			set
+			{
+				if (this._DroppedShip != value)
+				{
+					this._DroppedShip = value;
+					this.RaisePropertyChanged();
+				}
+			}
+		}
+
+		#endregion
+
 		
 		public Organization(Homeport parent, KanColleProxy proxy)
 		{
@@ -111,6 +133,8 @@ namespace Grabacr07.KanColleWrapper
 			proxy.api_req_kousyou_getship.TryParse<kcsapi_kdock_getship>().Subscribe(x => this.GetShip(x.Data));
 			proxy.api_req_kousyou_destroyship.TryParse<kcsapi_destroyship>().Subscribe(this.DestoryShip);
 			proxy.api_req_member_updatedeckname.TryParse().Subscribe(this.UpdateFleetName);
+
+			proxy.api_req_sortie_battleresult.TryParse<kcsapi_battleresult>().Subscribe(x => this.DropShip(x.Data));
 
 			proxy.api_req_hensei_combined.TryParse<kcsapi_hensei_combined>()
 				.Subscribe(x => this.Combined = x.Data.api_combined == 1);
@@ -354,6 +378,13 @@ namespace Grabacr07.KanColleWrapper
 			{
 				target.Homing();
 			}
+		}
+
+		private void DropShip(kcsapi_battleresult source)
+		{
+			if (source.api_get_ship == null) return;
+
+			this.DroppedShip = new DroppedShip(source.api_get_ship);
 		}
 	}
 }

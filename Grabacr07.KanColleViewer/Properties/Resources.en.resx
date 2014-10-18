@@ -792,7 +792,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>Construction</value>
   </data>
   <data name="Shipyard_Development" xml:space="preserve">
-    <value>Development</value>
+    <value>Development / Drop</value>
   </data>
   <data name="Shipyard_Development_Result_Failure" xml:space="preserve">
     <value>Failure</value>
@@ -1054,5 +1054,8 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Ship_RepairFacilityToolTip" xml:space="preserve">
     <value>Facility: {0}</value>
+  </data>
+  <data name="Shipyard_Drop" xml:space="preserve">
+    <value>Drop</value>
   </data>
 </root>

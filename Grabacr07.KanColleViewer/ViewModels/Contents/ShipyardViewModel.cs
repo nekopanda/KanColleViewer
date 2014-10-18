@@ -86,11 +86,35 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
         #endregion
 
 		public CreatedSlotItemViewModel CreatedSlotItem { get; private set; }
+		public DroppedShipViewModel DroppedShip { get; private set; }
 
+		#region NewItem 変更通知プロパティ
+
+		private NewItemViewModel _NewItem;
+
+		public NewItemViewModel NewItem
+		{
+			get { return this._NewItem; }
+			set
+			{
+				if (!Equals(this._NewItem, value))
+				{
+					this._NewItem = value;
+					this.RaisePropertyChanged();
+				}
+			}
+		}
+
+		#endregion
 
 		public ShipyardViewModel()
 		{
 			this.CreatedSlotItem = new CreatedSlotItemViewModel();
+			this.DroppedShip = new DroppedShipViewModel();
+			this.CompositeDisposable.Add(new PropertyChangedEventListener(KanColleClient.Current.Homeport.Organization)
+			{
+				{ "DroppedShip", (sender, args) => this.UpdateDroppedShip() },
+			});
 
 			this.CompositeDisposable.Add(new PropertyChangedEventListener(KanColleClient.Current.Homeport.Repairyard)
 			{
@@ -104,6 +128,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 				{ "CreatedSlotItem", (sender, args) => this.UpdateSlotItem() },
 			});
 			this.UpdateBuildingDocks();
+			this.NewItem = this.CreatedSlotItem;
 		}
 
 
@@ -122,6 +147,13 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 		private void UpdateSlotItem()
 		{
 			this.CreatedSlotItem.Update(KanColleClient.Current.Homeport.Dockyard.CreatedSlotItem);
+			this.NewItem = this.CreatedSlotItem;
+		}
+
+		private void UpdateDroppedShip()
+		{
+			this.DroppedShip.Update(KanColleClient.Current.Homeport.Organization.DroppedShip);
+			this.NewItem = this.DroppedShip;
 		}
 	}
 }

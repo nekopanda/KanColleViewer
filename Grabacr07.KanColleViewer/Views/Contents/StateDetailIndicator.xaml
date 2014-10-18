@@ -54,10 +54,16 @@
                     </DataTrigger>
                     <DataTrigger Binding="{Binding Fleet.IsRepairling}"
 								 Value="True">
-                        <Setter TargetName="Text"
-								Property="Text"
-								Value="{Binding Reparing.Remaining, StringFormat=In dock - {0}, Mode=OneWay}" />
-                    </DataTrigger>
+						<Setter TargetName="Text"
+								Property="Text">
+							<Setter.Value>
+								<MultiBinding StringFormat="{}{0} - {1}">
+									<Binding Source="{x:Static models:ResourceService.Current}" Path="Resources.StateDetail_Repairing" />
+									<Binding Path="Reparing.Remaining" />
+								</MultiBinding>
+							</Setter.Value>
+						</Setter>
+					</DataTrigger>
                     <DataTrigger Binding="{Binding Fleet.IsReady}"
 								 Value="True">
 						<Setter TargetName="Border"

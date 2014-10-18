@@ -100,6 +100,7 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="Counter.cs" />
     <Compile Include="Dockyard.cs" />
+    <Compile Include="Models\DroppedShip.cs" />
     <Compile Include="Models\Mission.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Itemyard.cs" />

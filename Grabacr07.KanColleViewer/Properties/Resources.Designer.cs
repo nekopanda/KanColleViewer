@@ -2193,7 +2193,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 装備開発.
+        ///   Looks up a localized string similar to 装備開発・ドロップ.
         /// </summary>
         public static string Shipyard_Development {
             get {
@@ -2225,6 +2225,15 @@ namespace Grabacr07.KanColleViewer.Properties {
         public static string Shipyard_Development_Result_Success {
             get {
                 return ResourceManager.GetString("Shipyard_Development_Result_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ドロップ.
+        /// </summary>
+        public static string Shipyard_Drop {
+            get {
+                return ResourceManager.GetString("Shipyard_Drop", resourceCulture);
             }
         }
         

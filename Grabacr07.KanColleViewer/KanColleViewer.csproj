@@ -184,7 +184,9 @@
     <Compile Include="ViewModels\Contents\AdmiralViewModel.cs" />
     <Compile Include="ViewModels\Contents\BuildingDockViewModel.cs" />
     <Compile Include="ViewModels\Contents\CreatedSlotItemViewModel.cs" />
+    <Compile Include="ViewModels\Contents\DroppedShipViewModel.cs" />
     <Compile Include="ViewModels\Contents\Fleets\RepairingViewModel.cs" />
+    <Compile Include="ViewModels\Contents\NewItemViewModel.cs" />
     <Compile Include="ViewModels\Contents\RepairingDockViewModel.cs" />
     <Compile Include="ViewModels\Contents\ExpeditionsViewModel.cs" />
     <Compile Include="ViewModels\Contents\Fleets\ConditionViewModel.cs" />
