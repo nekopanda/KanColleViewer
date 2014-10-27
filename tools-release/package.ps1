@@ -10,7 +10,7 @@
  
         $targetKeywords = '*.exe','*.dll','*.exe.config','*.txt'
         $ignoreKeywords = '*.vshost.*','Microsoft.*.resources.dll','ExPlugin.*.dll'
-	$languages = 'en','de','ko-KR','zh-CN'
+        $languages = 'en','de','ko-KR','zh-CN'
  
         $exeSource  = 'KanColleViewer.exe'
  

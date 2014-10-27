@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.0.12">
+<Quests Version="1.0.13">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -788,7 +788,7 @@
     <ID>411</ID>
     <JP-Name>南方への鼠輸送を継続実施せよ！</JP-Name>
     <TR-Name>Weekly Expedition 3</TR-Name>
-    <JP-Detail>今週中に「東京急行」系遠征を継続的に実施、同種作戦を7回成功せさよう！</JP-Detail>
+    <JP-Detail>今週中に「東京急行」系遠征を継続的に実施、同種作戦を7回成功させよう！</JP-Detail>
     <TR-Detail>Complete expedition 37 or 38 a total of 7 times in a week</TR-Detail>
   </Quest>
   <Quest>
@@ -843,7 +843,7 @@
   <Quest>
     <ID>249</ID>
     <JP-Name>「第五戦隊」出撃せよ！</JP-Name>
-    <TR-Name>Deploy the 5th Fleet</TR-Name>
+    <TR-Name>Monthly Sortie 1</TR-Name>
     <JP-Detail>「第五戦隊」は沖ノ島沖の戦闘哨戒を実施、敵艦隊主力を捕捉、これを撃滅せよ！</JP-Detail>
     <TR-Detail>Deploy a fleet that consists of Myoukou (妙高), Nachi  (那智) and Haguro (羽黒). Score a S rank victory against World 2-5 Boss.</TR-Detail>
   </Quest>
@@ -948,31 +948,31 @@
   <Quest>
     <ID>256</ID>
     <JP-Name>「潜水艦隊」出撃せよ！</JP-Name>
-    <TR-Name>Sortie a Submarine Fleet!</TR-Name>
+    <TR-Name>Monthly Sortie 2</TR-Name>
     <JP-Detail>潜水艦戦力を中核とした艦隊で中部海域哨戒線へ反復出撃、敵戦力を漸減せよ！</JP-Detail>
     <TR-Detail>You MUST deploy to world 6-1, and obtain an S rank victory at the boss three times.</TR-Detail>
   </Quest>
   <Quest>
     <ID>257</ID>
     <JP-Name>「水雷戦隊」南西へ！</JP-Name>
-    <TR-Name>Deploy a Torpedo Squadron!</TR-Name>
+    <TR-Name>Monthly Sortie 3</TR-Name>
     <JP-Detail>軽巡旗艦の水雷戦隊(軽巡最大3隻他駆逐艦)を急派、南西諸島防衛線で敵を撃滅せよ！</JP-Detail>
     <TR-Detail>Requires 1~3 CL, the rest must be DDs. Flagship must be a CL. You MUST deploy to world 1-4, and obtain an S rank victory at the boss.</TR-Detail>
-  </Quest>  
+  </Quest>
   <Quest>
     <ID>144</ID>
     <JP-Name>主力戦艦部隊「第二戦隊」を編成せよ！</JP-Name>
     <TR-Name>Organize the main battleship force: "The 2nd Squadron"!</TR-Name>
     <JP-Detail>長門型2隻及び扶桑型2隻の計4隻の主力戦艦からなる第二戦隊を編成せよ！</JP-Detail>
     <TR-Detail>Have Nagato, Mutsu, Fusou and Yamashiro in your main fleet.</TR-Detail>
-  </Quest>  
+  </Quest>
   <Quest>
     <ID>145</ID>
     <JP-Name>戦艦を主力とした水上打撃部隊を編成せよ！</JP-Name>
     <TR-Name>Organize the main battleship ship force!</TR-Name>
     <JP-Detail>大和型・長門型・伊勢型・扶桑型のいずれか3隻と軽巡1隻他の水上打撃部隊を配備せよ！</JP-Detail>
     <TR-Detail>Have 3 slow Battleship and 1 Light Cruiser in your main fleet.</TR-Detail>
-  </Quest>  
+  </Quest>
   <Quest>
     <ID>B31</ID>
     <JP-Name>「第二戦隊」抜錨！</JP-Name>
@@ -990,8 +990,50 @@
   <Quest>
     <ID>Bm4</ID>
     <JP-Name>「水上打撃部隊」南方へ！</JP-Name>
-    <TR-Name>Deploy a Battleship Squadron.</TR-Name>
+    <TR-Name>Monthly Sortie 4</TR-Name>
     <JP-Detail>戦艦3隻軽巡1隻他を基幹とした水上打撃部隊で南方海域へ進出、敵艦隊を撃滅せよ！</JP-Detail>
     <TR-Detail>Requires 3 Slow BB and 1 CL you can add 2 more ships. Deploy to world 5-1 and obtain an S rank victory at the boss.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>146</ID>
+    <JP-Name>改修工廠を準備せよ！</JP-Name>
+    <TR-Name>Prepair for Improvement Arsenal!</TR-Name>
+    <JP-Detail>第一艦隊の旗艦に工作艦「明石」を配備、改修工廠の準備を実施せよ！</JP-Detail>
+    <TR-Detail>Have Akashi (明石) as flagship in your main fleet.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>147</ID>
+    <JP-Name>「西村艦隊」を再編成せよ！</JP-Name>
+    <TR-Name>Organize the Nishimura Fleet!</TR-Name>
+    <JP-Detail>「扶桑」「山城」「最上」「時雨」「満潮」を基幹とした西村艦隊を編成せよ！</JP-Detail>
+    <TR-Detail>Have Fusou, Yamashiro, Mogami, Shigure, Michishio in your main fleet</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>618</ID>
+    <JP-Name>はじめての「装備改修」！</JP-Name>
+    <TR-Name>First equipment modernization</TR-Name>
+    <JP-Detail>「改修工廠」で「装備」を改修してみましょう！明石さん、お願いします！</JP-Detail>
+    <TR-Detail>Do equipment modernization 1 time</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>619</ID>
+    <JP-Name>装備の改修強化</JP-Name>
+    <TR-Name>Daily equipment modernization</TR-Name>
+    <JP-Detail>「改修工廠」で「装備」の改修強化に努めます。</JP-Detail>
+    <TR-Detail>Do equipment modernization 1 time</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>B33</ID>
+    <JP-Name>「西村艦隊」南方海域へ進出せよ！</JP-Name>
+    <TR-Name>Deploy the Nishimura Fleet</TR-Name>
+    <JP-Detail>「西村艦隊」を南方海域へ進出させ、敵主力艦隊へ突入、これを撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Fusou, Michishio, Mogami, Shigure, and Yamashiro. You may add up to one additional ship. You MUST deploy to World 5-1, and obtain an S-rank victory at the boss node</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>Bw10</ID>
+    <JP-Name>海上輸送路の安全確保に努めよ！</JP-Name>
+    <TR-Name>Weekly Sortie 10</TR-Name>
+    <JP-Detail>鎮守府正面の対潜哨戒を反復実施し、安全な海上輸送路を確保せよ！</JP-Detail>
+    <TR-Detail>Sortie to 1-5 and get at least A-rank at the boss node 3 times.</TR-Detail>
   </Quest>
 </Quests>
