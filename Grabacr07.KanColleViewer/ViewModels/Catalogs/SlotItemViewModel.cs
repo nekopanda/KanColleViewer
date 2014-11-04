@@ -42,19 +42,19 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 					string AddDetail = "";
 					if (this.Ship.Info.UntranslatedName != "")
 						AddDetail += this.Ship.Info.UntranslatedName + "\n";
-					AddDetail += string.Format("{0}: {1} ({2})\n", Resources.Stats_Firepower, this.Ship.Firepower.Current, (this.Ship.Firepower.IsMax ? @"MAX" : "+" + (this.Ship.Firepower.Max - this.Ship.Firepower.Current).ToString()));
-					AddDetail += string.Format("{0}: {1} ({2})\n", Resources.Stats_Torpedo, this.Ship.Torpedo.Current, (this.Ship.Torpedo.IsMax ? @"MAX" : "+" + (this.Ship.Torpedo.Max - this.Ship.Torpedo.Current).ToString()));
-					AddDetail += string.Format("{0}: {1} ({2})\n", Resources.Stats_AntiAir, this.Ship.AA.Current, (this.Ship.AA.IsMax ? @"MAX" : "+" + (this.Ship.AA.Max - this.Ship.AA.Current).ToString()));
-					AddDetail += string.Format("{0}: {1} ({2})\n", Resources.Stats_Armor, this.Ship.Armer.Current, (this.Ship.Armer.IsMax ? @"MAX" : "+" + (this.Ship.Armer.Max - this.Ship.Armer.Current).ToString()));
-					AddDetail += string.Format("{0}: {1} ({2})", Resources.Stats_Luck, this.Ship.Luck.Current, (this.Ship.Luck.IsMax ? @"MAX" : "+" + (this.Ship.Luck.Max - this.Ship.Luck.Current).ToString()));
 
-					return AddDetail;
+					foreach (SlotItem s in this.Ship.SlotItems) {
+						AddDetail += String.Format("{0}{1}\n",s.Info.Name,s.Level > 0 ? " +" + s.Level : "");
+					}
+
+					return AddDetail.TrimEnd('\n');
 				}
 			}
 		}
 
 
 		public SlotItemInfo SlotItem { get; set; }
+		public int Level { get; set; }
 
 		public int Count
 		{
@@ -74,6 +74,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 		{
 			this.Ships = new List<Counter>();
 			this.SlotItem = item;
+			this.Level = 0;
 		}
 
 		public void AddShip(Ship ship)
@@ -96,7 +97,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 			get
 			{
 				string _Detail = this.Detail;
-				return this.SlotItem.Name + (_Detail != "" ? "\n" + _Detail : "");
+				return this.SlotItem.Name + (this.Level > 0 ? " +"+this.Level : "") + (_Detail != "" ? "\n" + _Detail : "");
 			}
 		}
 

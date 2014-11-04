@@ -2,6 +2,12 @@
 	KCV Change Log
 ========================
 
+v3.4.0 r517 - 11/4/2014
+	* Fix Quest translate wrong when there are 2 or more quests with the same title
+	* Show Improvement Materials instead of Instant repair in homeport
+	* Show item's level when hover item's name (if item improved)
+	* Show items that ship is equipping when hover ship's name in item catalog
+
 v3.4.0 r515 - 10/18/2014
 	* Show new dropped ship in shipyard
 	* Fix bugs

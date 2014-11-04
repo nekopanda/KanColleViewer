@@ -324,6 +324,8 @@ namespace Grabacr07.KanColleWrapper
 				return false;
 			});
 
+			bool FoundWrongId = false;
+			int n;
 			foreach (XElement el in FoundTranslation)
 			{
 				// #if DEBUG
@@ -338,33 +340,43 @@ namespace Grabacr07.KanColleWrapper
 						string t = JPString.Substring(0, JPString.Length - el.Element(JPChildElement).Value.Length);
 						if (GetTranslation(t, TranslationList, JPChildElement, TRChildElement, -1, ref t))
 						{
-							if (ID >= 0 && el.Element("ID") != null && Convert.ToInt32(el.Element("ID").Value) == ID)
-							{
-								if ((el.Attribute("suffixType") != null) && el.Attribute("suffixType").Value.Equals("pre")) translate = el.Element(TRChildElement).Value + t;
-								else translate = t + el.Element(TRChildElement).Value;
-								return true;
-							}
-							else if (ID < 0)
-							{
-								if ((el.Attribute("suffixType") != null) && el.Attribute("suffixType").Value.Equals("pre")) translate = el.Element(TRChildElement).Value + t;
-								else translate = t + el.Element(TRChildElement).Value;
-								return true;
-							}
+							if ((el.Attribute("suffixType") != null) && el.Attribute("suffixType").Value.Equals("pre")) translate = el.Element(TRChildElement).Value + t;
+							else translate = t + el.Element(TRChildElement).Value;
+							return true;
 						}
 					}
 					continue;
 				}
 
-				if (ID >= 0 && el.Element("ID") != null && Convert.ToInt32(el.Element("ID").Value) == ID) 
+				if (ID >= 0)
+				{
+					if (!Int32.TryParse(el.Element("ID").Value, out n))
+					{
+						FoundWrongId = true;
+						translate = el.Element(TRChildElement).Value;
+					}
+					else
+					{
+						if (ID >= 0 && el.Element("ID") != null && Convert.ToInt32(el.Element("ID").Value) == ID)
+						{
+							translate = el.Element(TRChildElement).Value;
+							return true;
+						}
+					}
+				}				
+				else
 				{
 					translate = el.Element(TRChildElement).Value;
 					return true;
 				}
-				else if (ID < 0)
-				{
-					translate = el.Element(TRChildElement).Value;
-					return true;
-				}
+			}
+
+			if (FoundWrongId)
+			{
+				// #if DEBUG
+				// 					Debug.WriteLine(string.Format("Wrong ID: {0,-20} {1,-20} {2}", JPString, translate, ID));
+				// #endif
+				return true;
 			}
 						
 			return false;
@@ -495,33 +507,61 @@ namespace Grabacr07.KanColleWrapper
 						if (QuestData == null)
 							return;
 
-						IEnumerable<XElement> FoundTranslationDetail = QuestsXML.Descendants("Quest").Where(b => b.Element("JP-Detail").Value.Equals(QuestData.api_detail));
-						IEnumerable<XElement> FoundTranslationTitle = QuestsXML.Descendants("Quest").Where(b => b.Element("JP-Name").Value.Equals(QuestData.api_title));
+						IEnumerable<XElement> FoundTranslation = QuestsXML.Descendants("Quest").Where(b => b.Element("ID").Value.Equals(QuestData.api_no.ToString()));
 
-						// Check the current list for any errors and fix them before writing a whole new element.
-						if (Type == TranslationType.QuestTitle && FoundTranslationDetail != null && FoundTranslationDetail.Any())
+						if (FoundTranslation != null && FoundTranslation.Any())
 						{
-							// The title is wrong, but the detail is right. Fix the title.
-							foreach (XElement el in FoundTranslationDetail)
+							foreach (XElement el in FoundTranslation)
+							{
 								el.Element("JP-Name").Value = QuestData.api_title;
-
-						}
-						else if (Type == TranslationType.QuestDetail && FoundTranslationTitle != null && FoundTranslationTitle.Any())
-						{
-							// We found an existing detail, the title must be broken. Fix it.
-							foreach (XElement el in FoundTranslationTitle)
 								el.Element("JP-Detail").Value = QuestData.api_detail;
+							}
 						}
 						else
 						{
-							// The quest doesn't exist at all. Add it.
-							QuestsXML.Root.Add(new XElement("Quest",
-								new XElement("ID", QuestData.api_no),
-								new XElement("JP-Name", QuestData.api_title),
-								new XElement("TR-Name", QuestData.api_title),
-								new XElement("JP-Detail", QuestData.api_detail),
-								new XElement("TR-Detail", QuestData.api_detail)
-								));
+							int n;
+							bool need_add = true;
+							IEnumerable<XElement> FoundTranslationDetail = QuestsXML.Descendants("Quest").Where(b => b.Element("JP-Detail").Value.Equals(QuestData.api_detail));
+							IEnumerable<XElement> FoundTranslationTitle = QuestsXML.Descendants("Quest").Where(b => b.Element("JP-Name").Value.Equals(QuestData.api_title));
+
+							// Check the current list for any errors and fix them before writing a whole new element.
+							if (Type == TranslationType.QuestTitle && FoundTranslationDetail != null && FoundTranslationDetail.Any())
+							{
+								// The title is wrong, but the detail is right. Fix the title.
+								foreach (XElement el in FoundTranslationDetail)
+								{
+									if (!Int32.TryParse(el.Element("ID").Value, out n))
+									{
+										el.Element("JP-Name").Value = QuestData.api_title;
+										need_add = false;
+									}
+								}
+
+							}
+							else if (Type == TranslationType.QuestDetail && FoundTranslationTitle != null && FoundTranslationTitle.Any())
+							{
+								// We found an existing detail, the title must be broken. Fix it.
+								foreach (XElement el in FoundTranslationTitle)
+								{
+									if (!Int32.TryParse(el.Element("ID").Value, out n))
+									{
+										el.Element("JP-Detail").Value = QuestData.api_detail;
+										need_add = false;
+									}
+								}									
+							}
+							
+							if (need_add)
+							{
+								// The quest doesn't exist at all. Add it.
+								QuestsXML.Root.Add(new XElement("Quest",
+									new XElement("ID", QuestData.api_no),
+									new XElement("JP-Name", QuestData.api_title),
+									new XElement("TR-Name", QuestData.api_title),
+									new XElement("JP-Detail", QuestData.api_detail),
+									new XElement("TR-Detail", QuestData.api_detail)
+									));
+							}
 						}
 
 						QuestsXML.Save("Translations\\" + CurrentCulture + "Quests.xml");
@@ -542,22 +582,17 @@ namespace Grabacr07.KanColleWrapper
                         if (ExpeditionData == null)
 							return;
 
-                        IEnumerable<XElement> FoundTranslationExpeditionDetail = ExpeditionsXML.Descendants("Expedition").Where(b => b.Element("JP-Detail").Value.Equals(ExpeditionData.api_details));
-                        IEnumerable<XElement> FoundTranslationExpeditionTitle = ExpeditionsXML.Descendants("Expedition").Where(b => b.Element("JP-Name").Value.Equals(ExpeditionData.api_name));
+                        IEnumerable<XElement> FoundTranslationExpedition = ExpeditionsXML.Descendants("Expedition").Where(b => b.Element("ID").Value.Equals(ExpeditionData.api_id.ToString()));
                         
                         // Check the current list for any errors and fix them before writing a whole new element.
-                        if (Type == TranslationType.ExpeditionTitle && FoundTranslationExpeditionDetail != null && FoundTranslationExpeditionDetail.Any())
+						if (FoundTranslationExpedition != null && FoundTranslationExpedition.Any())
                         {
-                            // The title is wrong, but the detail is right. Fix the title.
-                            foreach (XElement el in FoundTranslationExpeditionDetail)
-                                el.Element("JP-Name").Value = ExpeditionData.api_name;
+							foreach (XElement el in FoundTranslationExpedition)
+							{
+								el.Element("JP-Name").Value = ExpeditionData.api_name;
+								el.Element("JP-Detail").Value = ExpeditionData.api_details;
+							}
 
-                        }
-                        else if (Type == TranslationType.ExpeditionDetail && FoundTranslationExpeditionTitle != null && FoundTranslationExpeditionTitle.Any())
-                        {
-                            // We found an existing detail, the title must be broken. Fix it.
-                            foreach (XElement el in FoundTranslationExpeditionTitle)
-                                el.Element("JP-Detail").Value = ExpeditionData.api_details;
                         }
                         else
                         {

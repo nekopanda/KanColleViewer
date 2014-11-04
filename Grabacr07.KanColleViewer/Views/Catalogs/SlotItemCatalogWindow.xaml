@@ -156,7 +156,7 @@
 								<GridViewColumn.Header>
 									<TextBlock>
 										<Run Text="{Binding Resources.SlotItemCatalog_Owned, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-										<Run Text="{Binding Resources.SlotItemCatalog_Extra, StringFormat=({0}), Mode=OneWay}"
+										<Run Text="{Binding Resources.SlotItemCatalog_Extra, StringFormat=({0}), Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 											 FontSize="10" />
 									</TextBlock>
 								</GridViewColumn.Header>

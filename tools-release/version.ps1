@@ -22,6 +22,10 @@ function Main
 	process
 	{
 		$app_version = (Get-Content $(Join-Path $projectPath 'Properties/AssemblyInfo.cs') | Select-String -Pattern '\("[0-9]+\.[0-9]+\.[0-9]+\.([0-9]+)"\)' -list).tostring().split('"')[1]
+		
+		$av = $app_version.split('.')
+		$app_version_tag = "v" + $av[0] + "." + $av[1] +"." + $av[2] + "r" + $av[3]
+		
 		$settings = [xml] (get-content $(Join-Path $projectPath 'Properties/Settings.settings'))
 		$ns = New-Object System.Xml.XmlNamespaceManager($settings.NameTable)
 		$ns.AddNamespace("ns", $settings["SettingsFile"].Attributes["xmlns"].Value)
@@ -35,7 +39,7 @@ function Main
 		$tc.set_InnerText($app_version)
 		$t.AppendChild($tc)
 		$tc = $data.CreateElement("URL")
-		$tc.set_InnerText($update_url + "v" + $app_version)
+		$tc.set_InnerText($update_url + $app_version_tag)
 		$t.AppendChild($tc)
 		$data["Versions"].AppendChild($t)
 			

@@ -34,7 +34,7 @@ namespace Grabacr07.KanColleWrapper.Models
 		{
 			get
 			{
-				return (this.RawData.api_name != this.Name ? this.RawData.api_name : "");
+				return this.RawData.api_name;
 			}
 		}
 

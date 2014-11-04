@@ -200,6 +200,14 @@ namespace Grabacr07.KanColleWrapper
 		}
 
 		/// <summary>
+		/// エンド ポイント "/kcsapi/api_req_kousyou/remodel_slot" からのセッションを配信します。
+		/// </summary>
+		public IObservable<Session> api_req_kousyou_remodel_slot
+		{
+			get { return this.ApiSessionSource.Where(x => x.PathAndQuery == "/kcsapi/api_req_kousyou/remodel_slot"); }
+		}
+
+		/// <summary>
 		/// エンド ポイント "/kcsapi/api_req_nyukyo/start" からのセッションを配信します。
 		/// </summary>
 		public IObservable<Session> api_req_nyukyo_start

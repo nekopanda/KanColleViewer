@@ -993,4 +993,7 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="Shipyard_Drop" xml:space="preserve">
     <value>ドロップ</value>
   </data>
+  <data name="Homeport_ImprovementMaterial" xml:space="preserve">
+    <value>改修資材:</value>
+  </data>
 </root>

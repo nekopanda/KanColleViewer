@@ -430,6 +430,15 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 改修資材:.
+        /// </summary>
+        public static string Homeport_ImprovementMaterial {
+            get {
+                return ResourceManager.GetString("Homeport_ImprovementMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 高速建造材:.
         /// </summary>
         public static string Homeport_InstantBuild {

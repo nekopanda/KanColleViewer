@@ -1058,4 +1058,7 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="Shipyard_Drop" xml:space="preserve">
     <value>Drop</value>
   </data>
+  <data name="Homeport_ImprovementMaterial" xml:space="preserve">
+    <value>Remodel Kits:</value>
+  </data>
 </root>

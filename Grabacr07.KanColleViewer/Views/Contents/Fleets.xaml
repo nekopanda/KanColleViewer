@@ -222,7 +222,7 @@
                                             <DataTemplate>
                                                     <Border ToolTip="{Binding DetailedToolTip}"
 														Background="Transparent">
-                                                    <controls:SlotItemIcon x:Name="SlotItem" Type="{Binding SlotItem.IconType}"
+                                                    <controls:SlotItemIcon x:Name="SlotItem" Type="{Binding Info.IconType}"
 																		   Margin="3,0" />
                                                     </Border>
                                                 <DataTemplate.Triggers>
