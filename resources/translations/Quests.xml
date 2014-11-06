@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.1">
+<Quests Version="1.1.2">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1035,5 +1035,19 @@
     <TR-Name>Weekly Sortie 10</TR-Name>
     <JP-Detail>鎮守府正面の対潜哨戒を反復実施し、安全な海上輸送路を確保せよ！</JP-Detail>
     <TR-Detail>Sortie to 1-5 and get at least A-rank at the boss node 3 times.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>414</ID>
+    <JP-Name>遠洋潜水艦作戦を実施せよ！</JP-Name>
+    <TR-Name>Carry out the deep sea submarine fleet!</TR-Name>
+    <JP-Detail>「遠洋潜水艦作戦」を実施し、潜水艦隊の練度向上と敵艦隊漸減に努めよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 39</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>415</ID>
+    <JP-Name>遠洋潜水艦作戦の成果を拡大せよ！</JP-Name>
+    <TR-Name>Let's keep the deep sea submarine fleet's good result rolling!</TR-Name>
+    <JP-Detail>「遠洋潜水艦作戦」を継続実施し、潜水艦隊の練度向上と敵艦隊漸減に努めよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 39 two more times</TR-Detail>
   </Quest>
 </Quests>
