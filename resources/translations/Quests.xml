@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.2">
+<Quests Version="1.1.3">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -808,9 +808,9 @@
   <Quest>
     <ID>248</ID>
     <JP-Name>「第三十駆逐隊」対潜哨戒！</JP-Name>
-    <TR-Name>Deploy the Second Carrier Division.</TR-Name>
-    <JP-Detail>航空戦艦2隻を基幹とする艦隊で、西方海域カスガダマ島の敵勢力を撃破せよ！</JP-Detail>
-    <TR-Detail>Consists of Hiryuu Kai2 as flagship, Souryuu, and 2 destroyers.  You may add up to 2 additional ships. You MUST deploy to World 5-2, and obtain an S-rank victory at the boss node.</TR-Detail>
+    <TR-Name>Deploy Destroyer Division 30 (2nd Gen.)</TR-Name>
+    <JP-Detail>「第三十駆逐隊(第二次)」は直ちに抜錨！鎮守府正面の対潜哨戒を実施せよ！</JP-Detail>
+    <TR-Detail>Consists of Mutsuki, Yayoi, Uzuki, and Mochizuki. You MUST deploy to World 1-5, and encounter the boss node (at least C rank needed - D rank or below doesn't count).</TR-Detail>
   </Quest>
   <Quest>
     <ID>136</ID>
