@@ -1062,13 +1062,13 @@
     <JP-Name>海上護衛強化月間</JP-Name>
     <TR-Name>Escort missions enhancement month</TR-Name>
     <JP-Detail>鎮守府正面海域の対潜哨戒を強化し、敵潜水艦を制圧、安全な海上輸送体制を確立せよ！</JP-Detail>
-    <TR-Detail>You MUST deploy to World 1-5, and obtain an A-rank or S-rank victory at the boss node.</TR-Detail>
+    <TR-Detail>You MUST deploy to World 1-5, and obtain an A-rank or S-rank victory at the boss node 10 times.</TR-Detail>
   </Quest>
   <Quest>
     <ID>264</ID>
     <JP-Name>「空母機動部隊」西へ！</JP-Name>
     <TR-Name>Carrier Task Force goes west!</TR-Name>
     <JP-Detail>航空母艦2隻(随伴駆逐艦2隻)を基幹とする空母機動部隊で、カレー洋の敵艦隊を撃滅せよ！</JP-Detail>
-    <TR-Detail>Consists of 2 CV. Deploy to World 4-2, and obtain anS-rank victory at the boss node</TR-Detail>
+    <TR-Detail>Consists of 2 CV. Deploy to World 4-2, and obtain anS-rank victory at the boss node.</TR-Detail>
   </Quest>
 </Quests>
