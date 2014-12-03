@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.3">
+<Quests Version="1.1.4">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1049,5 +1049,26 @@
     <TR-Name>Let's keep the deep sea submarine fleet's good result rolling!</TR-Name>
     <JP-Detail>「遠洋潜水艦作戦」を継続実施し、潜水艦隊の練度向上と敵艦隊漸減に努めよ！</JP-Detail>
     <TR-Detail>Complete Expedition 39 two more times</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>263</ID>
+    <JP-Name>「第六戦隊」南西海域へ出撃せよ！</JP-Name>
+    <TR-Name>Deploy the Sixth Squadron!</TR-Name>
+    <JP-Detail>「古鷹」「加古」「青葉」「衣笠」を基幹とした「第六戦隊」で、沖ノ島沖の敵艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Furutaka, Kako, Aoba, and Kinugasa. You may add up to two additional ships. You MUST deploy to World 2-5, and obtain an S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>265</ID>
+    <JP-Name>海上護衛強化月間</JP-Name>
+    <TR-Name>Escort missions enhancement month</TR-Name>
+    <JP-Detail>鎮守府正面海域の対潜哨戒を強化し、敵潜水艦を制圧、安全な海上輸送体制を確立せよ！</JP-Detail>
+    <TR-Detail>You MUST deploy to World 1-5, and obtain an A-rank or S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>264</ID>
+    <JP-Name>「空母機動部隊」西へ！</JP-Name>
+    <TR-Name>Carrier Task Force goes west!</TR-Name>
+    <JP-Detail>航空母艦2隻(随伴駆逐艦2隻)を基幹とする空母機動部隊で、カレー洋の敵艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of 2 CV. Deploy to World 4-2, and obtain anS-rank victory at the boss node</TR-Detail>
   </Quest>
 </Quests>

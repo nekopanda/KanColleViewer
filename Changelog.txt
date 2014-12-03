@@ -2,7 +2,10 @@
 	KCV Change Log
 ========================
 
-v3.4.0 r517 - 11/4/2014
+v3.4.0 r519 - 12/3/2014
+	* Add AntiAircraftFireDirector icon
+
+v3.4.0 r518 - 11/4/2014
 	* Fix Quest translate wrong when there are 2 or more quests with the same title
 	* Show Improvement Materials instead of Instant repair in homeport
 	* Show item's level when hover item's name (if item improved)

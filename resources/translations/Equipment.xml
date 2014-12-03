@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.11">
+<Equipment Version="1.0.12">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -469,7 +469,27 @@
     <TR-Name>Shiun</TR-Name>
   </Item>
   <Item>
-    <JP-Name>紫雲</JP-Name>
-    <TR-Name>Shiun</TR-Name>
+    <JP-Name>14cm連装砲</JP-Name>
+    <TR-Name>14cm Twin Gun Mount</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>91式高射装置</JP-Name>
+    <TR-Name>Type 91 Anti-Aircraft Fire Director</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>94式高射装置</JP-Name>
+    <TR-Name>Type 94 Anti-Aircraft Fire Director</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>10cm連装高角砲+高射装置</JP-Name>
+    <TR-Name>10cm Twin High-angle Mount + Anti-Aircraft Fire Director</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>SKC34 20.3cm連装砲</JP-Name>
+    <TR-Name>SKC34 20.3cm Twin Cannon</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>FuMO25 レーダー</JP-Name>
+    <TR-Name>FuMO25 Radar</TR-Name>
   </Item>
 </Equipment>
