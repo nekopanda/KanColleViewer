@@ -319,10 +319,10 @@
     <value>入渠中の艦</value>
   </data>
   <data name="Repairyard_TimeComplete" xml:space="preserve">
-    <value>Completion</value>
+    <value>完成時刻</value>
   </data>
   <data name="Repairyard_TimeRemaining" xml:space="preserve">
-    <value>Remaining</value>
+    <value>建造完了まで</value>
   </data>
   <data name="Reparyard_Unused" xml:space="preserve">
     <value>未使用</value>
@@ -540,9 +540,6 @@
   <data name="Settings_Notifications_CriticalCondition" xml:space="preserve">
     <value>クリティカル時に通知する</value>
   </data>
-  <data name="Settings_Accent_CriticalCondition" xml:space="preserve">
-    <value>Change window color when a ship is in critical condition</value>
-  </data>
   <data name="Tools" xml:space="preserve">
     <value>ツール</value>
   </data>
@@ -571,7 +568,7 @@
     <value>Download Translations</value>
   </data>
   <data name="Settings_Updates_UpdateTransBtn_ToolTip" xml:space="preserve">
-    <value>Downloads translations only for selected UI language!</value>
+    <value>Downloads new translations</value>
   </data>
   <data name="Updater_Notification_CheckFailed" xml:space="preserve">
     <value>KCV was unable to check for updates!</value>
@@ -995,5 +992,14 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Homeport_ImprovementMaterial" xml:space="preserve">
     <value>改修資材:</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="Settings_Updates_ForceUpdateTransBtn" xml:space="preserve">
+    <value>Force download</value>
+  </data>
+  <data name="Settings_Updates_ForceUpdateTransBtn_ToolTip" xml:space="preserve">
+    <value>Download all translatations without check version!</value>
   </data>
 </root>

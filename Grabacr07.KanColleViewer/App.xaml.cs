@@ -52,7 +52,7 @@ namespace Grabacr07.KanColleViewer
 			KanColleClient.Current.Translations.ChangeCulture(Settings.Current.Culture);
 
 			// Update notification and download new translations (if enabled)
-			if (KanColleClient.Current.Updater.LoadVersion(AppSettings.Default.KCVUpdateUrl.AbsoluteUri))
+			if (KanColleClient.Current.Updater.LoadVersion(AppSettings.Default.KCVUpdateUrl.AbsoluteUri, AppSettings.Default.KCVUpdateTransUrl.AbsoluteUri))
 			{
 				if (Settings.Current.EnableUpdateNotification && KanColleClient.Current.Updater.IsOnlineVersionGreater(0, ProductInfo.Version.ToString()))
 				{
@@ -64,7 +64,7 @@ namespace Grabacr07.KanColleViewer
 
 				if (Settings.Current.EnableUpdateTransOnStart)
 				{
-					if (KanColleClient.Current.Updater.UpdateTranslations(AppSettings.Default.XMLTransUrl.AbsoluteUri, Settings.Current.Culture, KanColleClient.Current.Translations) > 0)
+					if (KanColleClient.Current.Updater.UpdateTranslations(KanColleClient.Current.Translations) > 0)
 					{
 						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
 							KanColleViewer.Properties.Resources.Updater_Notification_Title,

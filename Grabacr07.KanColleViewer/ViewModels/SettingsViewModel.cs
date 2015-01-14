@@ -21,6 +21,7 @@ using Livet.Messaging;
 using Livet.Messaging.IO;
 using MetroRadiance;
 using Settings = Grabacr07.KanColleViewer.Models.Settings;
+using System.Threading;
 
 namespace Grabacr07.KanColleViewer.ViewModels
 {
@@ -854,7 +855,7 @@ namespace Grabacr07.KanColleViewer.ViewModels
 
 		public void CheckForUpdates()
 		{
-			if (KanColleClient.Current.Updater.LoadVersion(Properties.Settings.Default.KCVUpdateUrl.AbsoluteUri))
+			if (KanColleClient.Current.Updater.LoadVersion(Properties.Settings.Default.KCVUpdateUrl.AbsoluteUri, Properties.Settings.Default.KCVUpdateTransUrl.AbsoluteUri))
 			{
 				AppOnlineVersionURL = KanColleClient.Current.Updater.GetOnlineVersion(TranslationType.App, true);
 				EquipmentOnlineVersionURL = KanColleClient.Current.Updater.GetOnlineVersion(TranslationType.Equipment, true);
@@ -883,31 +884,68 @@ namespace Grabacr07.KanColleViewer.ViewModels
 
 		public void UpdateTranslations()
 		{
-			int UpdateStatus = KanColleClient.Current.Updater.UpdateTranslations(Properties.Settings.Default.XMLTransUrl.AbsoluteUri, Culture, KanColleClient.Current.Translations);
-			
-			if (UpdateStatus > 0)
-			{
-				PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
-					Resources.Updater_Notification_Title,
-					Resources.Updater_Notification_TransUpdate_Success,
-					() => App.ViewModelRoot.Activate());
-			}
-			else if (UpdateStatus < 0)
-			{
-				PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
-					Resources.Updater_Notification_Title,
-					Resources.Updater_Notification_TransUpdate_Fail,
-					() => App.ViewModelRoot.Activate());
-			}
-			else
-			{
-				PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
-					Resources.Updater_Notification_Title,
-					Resources.Updater_Notification_TransUpdate_Same,
-					() => App.ViewModelRoot.Activate());
-			}
-				
-			KanColleClient.Current.Translations.ChangeCulture(Culture);
+			TaskScheduler ts = TaskScheduler.FromCurrentSynchronizationContext();
+			Task.Factory.StartNew(
+				() =>
+				{
+					int UpdateStatus = KanColleClient.Current.Updater.UpdateTranslations(KanColleClient.Current.Translations);
+
+					if (UpdateStatus > 0)
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Success,
+							() => App.ViewModelRoot.Activate());
+					}
+					else if (UpdateStatus < 0)
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Fail,
+							() => App.ViewModelRoot.Activate());
+					}
+					else
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Same,
+							() => App.ViewModelRoot.Activate());
+					}
+				}).ContinueWith(t => KanColleClient.Current.Translations.ChangeCulture(Culture), ts);
+
+		}
+
+		public void DownloadTranslations()
+		{
+			TaskScheduler ts = TaskScheduler.FromCurrentSynchronizationContext();
+			Task.Factory.StartNew(
+				() =>
+				{
+					int UpdateStatus = KanColleClient.Current.Updater.UpdateTranslations(KanColleClient.Current.Translations, false);
+
+					if (UpdateStatus > 0)
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Success,
+							() => App.ViewModelRoot.Activate());
+					}
+					else if (UpdateStatus < 0)
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Fail,
+							() => App.ViewModelRoot.Activate());
+					}
+					else
+					{
+						PluginHost.Instance.GetNotifier().Show(NotifyType.Other,
+							Resources.Updater_Notification_Title,
+							Resources.Updater_Notification_TransUpdate_Same,
+							() => App.ViewModelRoot.Activate());
+					}
+				}).ContinueWith(t => KanColleClient.Current.Translations.ChangeCulture(Culture), ts);
+
 		}
 
 		public void OpenKCVLink()

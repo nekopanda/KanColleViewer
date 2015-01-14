@@ -2,6 +2,9 @@
 	KCV Change Log
 ========================
 
+v3.4.0 r520 - 1/14/2015
+	* Support use other's translation
+
 v3.4.0 r519 - 12/3/2014
 	* Add AntiAircraftFireDirector icon
 

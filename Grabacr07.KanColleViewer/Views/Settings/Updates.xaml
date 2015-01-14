@@ -51,7 +51,7 @@
 									 MethodName="CheckForUpdates"
 									 Margin="6,0,0,8"
 									 Padding="3"
-									 Grid.Row="1"
+									 Grid.Row="0"
 									 Grid.RowSpan="2"/>
 
 			<metro2:CallMethodButton Width="140"
@@ -60,7 +60,7 @@
 									 MethodName="OpenKCVLink"
 									 Margin="6,0,0,8"
 									 Padding="3"
-									 Grid.Row="3"
+									 Grid.Row="2"
 									 Grid.RowSpan="2"/>
 
 			<metro2:CallMethodButton Width="140"
@@ -69,7 +69,16 @@
 									 MethodName="UpdateTranslations"
 									 Margin="6,0,0,8"
 									 Padding="3"
-									 Grid.Row="5"
+									 Grid.Row="4"
+									 Grid.RowSpan="2"/>
+			
+			<metro2:CallMethodButton Width="140"
+									 Content="{Binding Resources.Settings_Updates_ForceUpdateTransBtn, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+									 ToolTip="{Binding Resources.Settings_Updates_ForceUpdateTransBtn_ToolTip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+									 MethodName="DownloadTranslations"
+									 Margin="6,0,0,8"
+									 Padding="3"
+									 Grid.Row="6"
 									 Grid.RowSpan="2"/>
 
 			<TextBlock Grid.Column="3"

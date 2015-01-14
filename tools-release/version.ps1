@@ -5,6 +5,7 @@ function Main
 		$output = '../resources/Version.xml'
 		$resources = '../resources/translations'
 		$projectPath = '../Grabacr07.KanColleViewer'
+		$baseTransURL = 'http://yuyuvn.github.io/KanColleViewer/resources/translations'
 		$update_url = 'https://github.com/yuyuvn/KanColleViewer/releases/tag/'
 		$xdoc = new-object System.Xml.XmlDocument
 		
@@ -29,7 +30,7 @@ function Main
 		$settings = [xml] (get-content $(Join-Path $projectPath 'Properties/Settings.settings'))
 		$ns = New-Object System.Xml.XmlNamespaceManager($settings.NameTable)
 		$ns.AddNamespace("ns", $settings["SettingsFile"].Attributes["xmlns"].Value)
-		$url = $settings.SelectSingleNode("//ns:Setting[@Name='XMLTransUrl']",$ns).InnerText
+		$url = $baseTransURL
 		
 		$t = $data.CreateElement("Item")
 		$tc = $data.CreateElement("Name")

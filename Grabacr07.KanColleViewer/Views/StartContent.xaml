@@ -145,7 +145,7 @@
                     </TabControl.Resources>
                     <TabItem DataContext="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type views:StartContent}}, Path=DataContext}">
                         <TabItem.Header>
-                            <TextBlock Text="Information"
+							<TextBlock Text="{Binding Resources.Information, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 										   Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type TabItem}}, Path=Foreground}"
 										   Margin="12,0"
 										   FontSize="14" />
