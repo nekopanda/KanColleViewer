@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.5">
+<Quests Version="1.1.7">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1070,5 +1070,54 @@
     <TR-Name>Monthly Sortie 6</TR-Name>
     <JP-Detail>航空母艦2隻(随伴駆逐艦2隻)を基幹とする空母機動艦隊で、カレー洋の敵艦隊を撃滅せよ！</JP-Detail>
     <TR-Detail>Dispatch a fleet consisting of 2 CV, 2 DD and additional 2 ships to 4-2. You must reach the boss an achieve S-rank Victory.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>148</ID>
+    <JP-Name>軽快な「水上反撃部隊」を編成せよ！</JP-Name>
+    <TR-Name>Organize a light surface counterattack fleet</TR-Name>
+    <JP-Detail>駆逐艦「霞」を旗艦とした重巡「足柄」及び軽巡1隻駆逐艦4隻の水上挺身部隊を編成せよ！</JP-Detail>
+    <TR-Detail>Have 1 CA 1 CL 4 DD in your main fleet. Flagship must be Kasumi, CA must be Ashigara.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>266</ID>
+    <JP-Name>「水上反撃部隊」突入せよ！</JP-Name>
+    <TR-Name>Sortie the Surface Counterattack Squadron </TR-Name>
+    <JP-Detail>駆逐艦を旗艦とした重巡1隻軽巡1隻駆逐艦4隻からなる水上挺身部隊、沖ノ島沖に突入せよ！</JP-Detail>
+    <TR-Detail>Consists of 1 CA 1 CL 4 DD. You MUST deploy to World 2-5, and obtain an S-Rank victory at the boss node. Flagship MUST be DD.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>149</ID>
+    <JP-Name>「第十一駆逐隊」を編成せよ！</JP-Name>
+    <TR-Name>Organize the 11th Destroyer Division!</TR-Name>
+    <JP-Detail>特Ⅰ型駆逐艦「吹雪」「白雪」「初雪」「叢雲」4隻による第十一駆逐隊を編成せよ！</JP-Detail>
+    <TR-Detail>Form a Fleet with the 4 Special-Class Destroyers: Fubuki, Shirayuki, Hatsuyuki and Murakumo.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>150</ID>
+    <JP-Name>「第二一駆逐隊」を編成せよ！他</JP-Name>
+    <TR-Name>Organize the 21st Destroyer Division! Other</TR-Name>
+    <JP-Detail>「初春」「子日」「若葉」「初霜」4隻による「第二一駆逐隊」を編成せよ！</JP-Detail>
+    <TR-Detail>Form a fleet consisting of Hatsuharu, Nenohi, Wakaba and Hatsushimo.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>267</ID>
+    <JP-Name>「第十一駆逐隊」出撃せよ！</JP-Name>
+    <TR-Name>Deploy the 11th Destroyer Division!</TR-Name>
+    <JP-Detail>「第十一駆逐隊」を含む艦隊で出撃し、オリョール海の敵を撃破せよ！</JP-Detail>
+    <TR-Detail>Deploy Fubuki, Shirayuki, Hatsuyuki, Murakumo and up to two wildcards to 2-3 and score a victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>268</ID>
+    <JP-Name>「第十一駆逐隊」対潜哨戒！</JP-Name>
+    <TR-Name>Send the 11th Destroyer Division on ASW patrolling!</TR-Name>
+    <JP-Detail>「第十一駆逐隊」を含む艦隊で鎮守府正面へ展開、対潜哨戒を実施せよ！</JP-Detail>
+    <TR-Detail>Deploy Fubuki, Shirayuki, Hatsuyuki and Murakumo to 1-5 and get at least a C-Rank at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>269</ID>
+    <JP-Name>「第二一駆逐隊」出撃せよ！</JP-Name>
+    <TR-Name>Sortie the 21st Destroyer Division</TR-Name>
+    <JP-Detail>「第二一駆逐隊」を含む艦隊で出撃し、北方海域モーレイ海の敵を撃滅せよ！</JP-Detail>
+    <TR-Detail>Deploy a fleet consisting of Hatsuharu, Nenohi, Wakaba, Hatsushimo and up to two wildcards to 3-1 and get an S-Rank at the boss node.</TR-Detail>
   </Quest>
 </Quests>

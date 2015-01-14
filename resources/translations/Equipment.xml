@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.12">
+<Equipment Version="1.0.13">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -491,5 +491,9 @@
   <Item>
     <JP-Name>FuMO25 レーダー</JP-Name>
     <TR-Name>FuMO25 Radar</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>61cm三連装(酸素)魚雷</JP-Name>
+    <TR-Name>61cm Triple (Oxygen) Torpedo Mount</TR-Name>
   </Item>
 </Equipment>
