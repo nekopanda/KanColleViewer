@@ -1064,4 +1064,16 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="Information" xml:space="preserve">
     <value>Information</value>
   </data>
+  <data name="Settings_Browser_ResetZoomDescription" xml:space="preserve">
+    <value>(when zoomed incorrectly)</value>
+  </data>
+  <data name="Settings_Browser_ResetZoom_Pre" xml:space="preserve">
+    <value>Return game to </value>
+  </data>
+  <data name="Settings_Browser_ResetZoom_Suf" xml:space="preserve">
+    <value>% scale</value>
+  </data>
+  <data name="Settings_Browser_ZoomDescription" xml:space="preserve">
+    <value>You can change the display size of the game (IE) with the zoom button at the top of the window. Screenshots are not affected by this setting and will always be taken at 100% scale.</value>
+  </data>
 </root>

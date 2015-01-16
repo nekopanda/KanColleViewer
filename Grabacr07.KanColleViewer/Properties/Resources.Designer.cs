@@ -988,6 +988,42 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ゲーム画面を .
+        /// </summary>
+        public static string Settings_Browser_ResetZoom_Pre {
+            get {
+                return ResourceManager.GetString("Settings_Browser_ResetZoom_Pre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to % に戻す.
+        /// </summary>
+        public static string Settings_Browser_ResetZoom_Suf {
+            get {
+                return ResourceManager.GetString("Settings_Browser_ResetZoom_Suf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (誤ってズームしたとき用).
+        /// </summary>
+        public static string Settings_Browser_ResetZoomDescription {
+            get {
+                return ResourceManager.GetString("Settings_Browser_ResetZoomDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ウィンドウ上部のボタンでゲーム画面 (Internet Explorer) の表示サイズを変更できます。スクリーンショットは常に 100 % のサイズで撮影され、表示サイズ設定の影響を受けません。.
+        /// </summary>
+        public static string Settings_Browser_ZoomDescription {
+            get {
+                return ResourceManager.GetString("Settings_Browser_ZoomDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ブラウザー操作.
         /// </summary>
         public static string Settings_BrowserControl {

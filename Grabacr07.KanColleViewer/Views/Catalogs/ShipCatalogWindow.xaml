@@ -290,7 +290,7 @@
 									</Grid.ColumnDefinitions>
 									<TextBlock Margin="0,2"
 											   HorizontalAlignment="Right">
-										<Run Text="Lock" />
+										<Run Text="{Binding Resources.ShipCatalog_Lock, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 										<Run Text=":" />
 									</TextBlock>
 									<WrapPanel Grid.Column="2">

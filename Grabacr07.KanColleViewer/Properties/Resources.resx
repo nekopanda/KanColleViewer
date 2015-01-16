@@ -1002,4 +1002,16 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="Settings_Updates_ForceUpdateTransBtn_ToolTip" xml:space="preserve">
     <value>Download all translatations without check version!</value>
   </data>
+  <data name="Settings_Browser_ResetZoom_Pre" xml:space="preserve">
+    <value>ゲーム画面を </value>
+  </data>
+  <data name="Settings_Browser_ResetZoomDescription" xml:space="preserve">
+    <value>(誤ってズームしたとき用)</value>
+  </data>
+  <data name="Settings_Browser_ZoomDescription" xml:space="preserve">
+    <value>ウィンドウ上部のボタンでゲーム画面 (Internet Explorer) の表示サイズを変更できます。スクリーンショットは常に 100 % のサイズで撮影され、表示サイズ設定の影響を受けません。</value>
+  </data>
+  <data name="Settings_Browser_ResetZoom_Suf" xml:space="preserve">
+    <value>% に戻す</value>
+  </data>
 </root>
