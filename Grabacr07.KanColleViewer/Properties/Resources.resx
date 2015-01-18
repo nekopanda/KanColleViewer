@@ -202,10 +202,10 @@
     <value>Individual Fleet Settings</value>
   </data>
   <data name="Expedition_TimeComplete" xml:space="preserve">
-    <value>Completion</value>
+    <value>終了時刻</value>
   </data>
   <data name="Expedition_TimeRemaining" xml:space="preserve">
-    <value>Remaining</value>
+    <value>艦隊帰投まで</value>
   </data>
   <data name="Fleets" xml:space="preserve">
     <value>艦隊</value>
@@ -322,7 +322,7 @@
     <value>完成時刻</value>
   </data>
   <data name="Repairyard_TimeRemaining" xml:space="preserve">
-    <value>建造完了まで</value>
+    <value>整備完了まで</value>
   </data>
   <data name="Reparyard_Unused" xml:space="preserve">
     <value>未使用</value>
@@ -532,13 +532,13 @@
     <value>射程</value>
   </data>
   <data name="Notifications_CriticalCondition" xml:space="preserve">
-    <value>{0} has a ship is in critical condition!</value>
+    <value>{0} が大破しています</value>
   </data>
   <data name="Notifications_CriticalCondition_Title" xml:space="preserve">
-    <value>Critical Ship Warning</value>
+    <value>大破警告</value>
   </data>
   <data name="Settings_Notifications_CriticalCondition" xml:space="preserve">
-    <value>クリティカル時に通知する</value>
+    <value>大破艦がいる場合に通知する</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>ツール</value>
@@ -547,47 +547,47 @@
     <value>アップデート</value>
   </data>
   <data name="Settings_Updates_AutoUpdateTrans" xml:space="preserve">
-    <value>Automatically update translations on startup</value>
+    <value>起動時に言語ファイルをアップデート</value>
   </data>
   <data name="Settings_Updates_CheckUpdateButn_ToolTip" xml:space="preserve">
-    <value>Check for the latest program and translation versions</value>
+    <value>アップデートの有無をチェックしています</value>
   </data>
   <data name="Settings_Updates_CheckUpdatesBtn" xml:space="preserve">
-    <value>Check for Updates</value>
+    <value>アップデートチェック</value>
   </data>
   <data name="Settings_Updates_CurrentVersion" xml:space="preserve">
-    <value>Currently</value>
+    <value>現在のバージョン</value>
   </data>
   <data name="Settings_Updates_OnlineVersion" xml:space="preserve">
-    <value>Online</value>
+    <value>最新バージョン</value>
   </data>
   <data name="Settings_Updates_UpdateOnStartup" xml:space="preserve">
-    <value>Check for updates on startup</value>
+    <value>起動時にアップデートチェック</value>
   </data>
   <data name="Settings_Updates_UpdateTransBtn" xml:space="preserve">
-    <value>Download Translations</value>
+    <value>言語ファイルをダウンロード</value>
   </data>
   <data name="Settings_Updates_UpdateTransBtn_ToolTip" xml:space="preserve">
-    <value>Downloads new translations</value>
+    <value>アップデートがある場合は言語ファイルをダウンロードします</value>
   </data>
   <data name="Updater_Notification_CheckFailed" xml:space="preserve">
-    <value>KCV was unable to check for updates!</value>
+    <value>アップデートチェックに失敗しました</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Success" xml:space="preserve">
-    <value>Translation files have been updated!</value>
+    <value>言語ファイルをアップデートしました</value>
   </data>
   <data name="Updater_Notification_NewAppVersion" xml:space="preserve">
-    <value>New Version of KCV is available! 「v{0}」
-Click here to get it.</value>
+    <value>新しいバージョンがあります 「v{0}」
+ここをクリックするとサイトが開きます</value>
   </data>
   <data name="Updater_Notification_Title" xml:space="preserve">
-    <value>Updater</value>
+    <value>アップデート</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Fail" xml:space="preserve">
-    <value>KCV was unable to download the translations!</value>
+    <value>言語ファイルのダウンロードに失敗</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Same" xml:space="preserve">
-    <value>Translations are already up-to-date</value>
+    <value>言語ファイルは既に最新版です</value>
   </data>
   <data name="Settings_Flash" xml:space="preserve">
     <value>Flash</value>
@@ -612,10 +612,10 @@ AutoLow: Will emphasize speed when needed
 Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Settings_Updates_GetKCVBtn" xml:space="preserve">
-    <value>Get Latest KCV</value>
+    <value>配布サイトに行く</value>
   </data>
   <data name="Settings_Updates_GetKCVBtn_ToolTip" xml:space="preserve">
-    <value>Opens a link to the latest version of KCV found here.</value>
+    <value>最新版の配布サイトを開きます</value>
   </data>
   <data name="Settings_CustomSound" xml:space="preserve">
     <value>通知音を設定</value>
@@ -838,7 +838,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>艦隊の索敵値の算出に使用する計算式は、以下を使用する</value>
   </data>
   <data name="Settings_Updates_CheckUpdatesBtn_ToolTip" xml:space="preserve">
-    <value>Check for new version of KCV and translate.</value>
+    <value>アップデートがあるかどうかチェックします</value>
   </data>
   <data name="StateDetail_Repairing" xml:space="preserve">
     <value>艦隊に入渠中の艦娘がいます。</value>
@@ -949,7 +949,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>フィルター設定リセット</value>
   </data>
   <data name="ShipCatalog_SaveFilterSettings" xml:space="preserve">
-    <value>フィルター設定セーブ</value>
+    <value>フィルター設定を保存</value>
   </data>
   <data name="ShipCatalog_SelectAll" xml:space="preserve">
     <value>すべて選択</value>
@@ -958,7 +958,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>艦種</value>
   </data>
   <data name="ShipCatalog_ShowAdditionalShipStats" xml:space="preserve">
-    <value>追加の統計を示す</value>
+    <value>ステータスをすべて表示</value>
   </data>
   <data name="ShipCatalog_Slow" xml:space="preserve">
     <value>低速</value>
@@ -985,7 +985,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>所持数</value>
   </data>
   <data name="SlotItemCatalog_Stats" xml:space="preserve">
-    <value>統計</value>
+    <value>ステータス</value>
   </data>
   <data name="Shipyard_Drop" xml:space="preserve">
     <value>ドロップ</value>
@@ -997,10 +997,10 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>情報</value>
   </data>
   <data name="Settings_Updates_ForceUpdateTransBtn" xml:space="preserve">
-    <value>Force download</value>
+    <value>強制的に更新</value>
   </data>
   <data name="Settings_Updates_ForceUpdateTransBtn_ToolTip" xml:space="preserve">
-    <value>Download all translatations without check version!</value>
+    <value>更新の有無に関係なくすべての言語ファイルをダウンロードします</value>
   </data>
   <data name="Settings_Browser_ResetZoom_Pre" xml:space="preserve">
     <value>ゲーム画面を </value>

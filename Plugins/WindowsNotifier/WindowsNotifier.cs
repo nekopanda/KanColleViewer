@@ -10,7 +10,7 @@ namespace Grabacr07.KanColleViewer.Plugins
 {
 	[Export(typeof(INotifier))]
 	[ExportMetadata("Title", "WindowsNotifier")]
-    [ExportMetadata("Description", "Use Windows OS's notification function (toast notice, balloon notice)")]
+	[ExportMetadata("Description", "Windows OS の機能 (トースト通知・バルーン通知) を使用して通知します。")]
 	[ExportMetadata("Version", "1.0")]
 	[ExportMetadata("Author", "@Grabacr07")]
 	public class WindowsNotifier : INotifier

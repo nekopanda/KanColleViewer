@@ -140,12 +140,8 @@
 												</Viewbox>
 											</Border>
 											<TextBlock Margin="0,4">
-												<Run Text="{Binding SlotItem.Name, Mode=OneWay}"
-													 Foreground="{DynamicResource ActiveForegroundBrushKey}" />
-												<LineBreak />
 												<Run Text="{Binding SlotItem.UntranslatedName, Mode=OneWay}"
-													 Background="{DynamicResource BackgroundBrushKey}"
-													 FontSize="11" />
+													 Foreground="{DynamicResource ActiveForegroundBrushKey}" />
 											</TextBlock>
 										</StackPanel>
 									</DataTemplate>

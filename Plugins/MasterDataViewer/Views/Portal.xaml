@@ -28,7 +28,7 @@
 	</UserControl.Resources>
 
 	<StackPanel Margin="8,0,8,8">
-		<TextBlock Text="Read kancolle master data"
+		<TextBlock Text="艦これのマスター データを閲覧します。"
 				   Style="{DynamicResource HeaderTextStyleKey}" />
 		
 		<metro2:CallMethodButton />

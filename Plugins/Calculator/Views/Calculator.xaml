@@ -49,7 +49,7 @@
 
         <metro:PromptComboBox Margin="0,8"
 							  HorizontalAlignment="Left"
-							  Prompt="Select a Ship Girl"
+							  Prompt="艦娘を選択してください"
 							  ItemsSource="{Binding Ships}"
 							  DisplayMemberPath="Ship.NameLv"
 							  SelectedValuePath="Ship"
@@ -84,7 +84,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,0,0"
                            VerticalAlignment="Center"
-						   Text="Current Level" />
+						   Text="今のレベル" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding Source={StaticResource EnumerableRange}}"
@@ -110,7 +110,7 @@
 						   Grid.Column="0"
 						   Grid.Row="1"
                            VerticalAlignment="Center"
-						   Text="Target Level" />
+						   Text="目標レベル" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding Source={StaticResource EnumerableRange}}"
@@ -145,7 +145,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="2,0,8,0"
                            VerticalAlignment="Center"
-						   Text="Map" />
+						   Text="海域" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding SeaList}"
@@ -161,7 +161,7 @@
 						   Margin="8,0"
 						   Grid.Column="2"
                            VerticalAlignment="Center"
-						   Text="Result" />
+						   Text="評価" />
 
                 <metro:PromptComboBox Margin="8"
 									  ItemsSource="{Binding ResultList}"
@@ -195,7 +195,7 @@
 						   Style="{DynamicResource EmphaticTextStyleKey}"
 						   Margin="12,0,8,0"
                            VerticalAlignment="Center"
-						   Text="Sortie Exp" />
+						   Text="出撃" />
 
                 <metro:PromptTextBox Grid.Column="1"
 									 Text="{Binding SortieExp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
@@ -225,7 +225,7 @@
 						   Margin="12,0,8,0"
 						   Grid.Row="1"
                            VerticalAlignment="Center"
-						   Text="Remaining" />
+						   Text="必要経験値" />
 
                 <metro:PromptTextBox Grid.Column="1"
 									 Grid.Row="1"
@@ -242,7 +242,7 @@
             <StackPanel Grid.Column="1"
 						Grid.RowSpan="2"
 						VerticalAlignment="Center">
-				<CheckBox Content="Flagship" IsChecked="{Binding IsFlagship}" Height="17" Margin="8,0,0,10"/>
+				<CheckBox Content="旗艦" IsChecked="{Binding IsFlagship}" Height="17" Margin="8,0,0,10"/>
 				<CheckBox Content="MVP" IsChecked="{Binding IsMVP}" Height="17" Margin="8,0,0,10"/>
             </StackPanel>
 

@@ -12,7 +12,7 @@
 			 d:DesignWidth="300">
 	<DockPanel>
 		<TextBlock DockPanel.Dock="Bottom"
-				   Text="※Counter from application started"
+				   Text="※アプリケーションが起動している間に発生した回数のみをカウントしています。"
 				   Style="{DynamicResource DefaultTextStyleKey}"
 				   Margin="4"
 				   Padding="0,8,0,0" />
@@ -47,7 +47,7 @@
 									 Style="{DynamicResource EmphaticTextElementStyleKey}" />
 							</TextBlock>
 							<controls:CallMethodButton Grid.Column="2"
-													   Content="Reset"
+													   Content="リセット"
 													   MethodName="Reset" />
 						</Grid>
 					</Border>

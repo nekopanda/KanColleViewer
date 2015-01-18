@@ -161,7 +161,7 @@
 									</Style>
 								</WrapPanel.Resources>
 								<!-- これっきりボタン -->
-								<metro2:CallMethodButton Content="Destroyers">
+								<metro2:CallMethodButton Content="駆逐艦">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>1</s:Int32>
@@ -169,7 +169,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Light Cruisers">
+								<metro2:CallMethodButton Content="軽巡・雷巡">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>3</s:Int32>
@@ -177,7 +177,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Heavy Cruisers">
+								<metro2:CallMethodButton Content="重巡・航巡">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>5</s:Int32>
@@ -185,7 +185,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Battleships">
+								<metro2:CallMethodButton Content="戦艦">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>8</s:Int32>
@@ -195,7 +195,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Aircraft Carriers">
+								<metro2:CallMethodButton Content="航空母艦">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>7</s:Int32>
@@ -204,7 +204,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Submarines">
+								<metro2:CallMethodButton Content="潜水艦">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>13</s:Int32>
@@ -212,7 +212,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Aviation Ships">
+								<metro2:CallMethodButton Content="航空？">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>6</s:Int32>
@@ -221,7 +221,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="Others">
+								<metro2:CallMethodButton Content="その他">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>17</s:Int32>
