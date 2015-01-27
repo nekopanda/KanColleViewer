@@ -46,12 +46,15 @@
 							   FontSize="13"
 							   HorizontalAlignment="Center">
 						<TextBlock.Text>
-							<Binding Path="BrowserZoomFactor.CurrentParcentage"
-									 StringFormat="Return game to {0}% scale"
-									 Mode="OneWay" />
+							
+							<MultiBinding StringFormat="{}{0}{1}{2}">
+								<Binding Path="Resources.Settings_Browser_ResetZoom_Pre" Source="{x:Static models:ResourceService.Current}" Mode="OneWay" />
+								<Binding Path="BrowserZoomFactor.CurrentParcentage" Mode="OneWay" />
+								<Binding Path="Resources.Settings_Browser_ResetZoom_Suf" Source="{x:Static models:ResourceService.Current}" Mode="OneWay" />
+							</MultiBinding>
 						</TextBlock.Text>
 					</TextBlock>
-					<TextBlock Text="(when zoomed incorrectly)"
+					<TextBlock Text="{Binding Resources.Settings_Browser_ResetZoomDescription, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 							   Style="{DynamicResource DefaultTextStyleKey}"
 							   FontSize="11"
 							   HorizontalAlignment="Center" />
@@ -67,7 +70,7 @@
 
 			<TextBlock Margin="8,0,10,0"
 					   Style="{DynamicResource DefaultTextStyleKey}"
-					   Text="You can change the display size of the game (IE) with the zoom button at the top of the window. Screenshots are not affected by this setting and will always be taken at 100% scale."
+					   Text="{Binding Resources.Settings_Browser_ZoomDescription, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 					   Foreground="{DynamicResource ActiveForegroundBrushKey}" />
 		</DockPanel>
 

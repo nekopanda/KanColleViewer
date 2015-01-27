@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.7">
+<Quests Version="1.1.8">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1119,5 +1119,26 @@
     <TR-Name>Sortie the 21st Destroyer Division</TR-Name>
     <JP-Detail>「第二一駆逐隊」を含む艦隊で出撃し、北方海域モーレイ海の敵を撃滅せよ！</JP-Detail>
     <TR-Detail>Deploy a fleet consisting of Hatsuharu, Nenohi, Wakaba, Hatsushimo and up to two wildcards to 3-1 and get an S-Rank at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>151</ID>
+    <JP-Name>「第二二駆逐隊」を編成せよ！</JP-Name>
+    <TR-Name>Organize the 22nd Destroyer Division! </TR-Name>
+    <JP-Detail>「皐月」「文月」「長月」他1隻計駆逐艦4隻による第二二駆逐隊を編成せよ！</JP-Detail>
+    <TR-Detail>Have only Satsuki, Fumizuki, Nagatsuki and 1 more DD in your main fleet.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>271</ID>
+    <JP-Name>「那智戦隊」抜錨せよ！</JP-Name>
+    <TR-Name>Deploy the Nachi Squadron!</TR-Name>
+    <JP-Detail>旗艦「那智」及び「初霜」「霞(かすみ)」「潮」「曙」他1隻の艦隊でバシー島沖の敵を殲滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Nachi as the flagship, Hatsushimo, Kasumi, Ushio and Akebono. You may add another ship. You MUST deploy to World 2-2, and obtain an S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>270</ID>
+    <JP-Name>「第二二駆逐隊」出撃せよ！</JP-Name>
+    <TR-Name>Deploy the 22nd Destroyer Division! </TR-Name>
+    <JP-Detail>「第二二駆逐隊」を含む艦隊で南西諸島防衛線に出撃、敵主力艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Satsuki, Fumizuki, Nagatsuki and one additional DD. You may add up to two other ships. You MUST deploy to World 1-4, and obtain an S-rank victory at the boss node.</TR-Detail>
   </Quest>
 </Quests>
