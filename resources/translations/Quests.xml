@@ -1069,7 +1069,7 @@
     <JP-Name>「空母機動部隊」西へ！</JP-Name>
     <TR-Name>Monthly Sortie 6</TR-Name>
     <JP-Detail>航空母艦2隻(随伴駆逐艦2隻)を基幹とする空母機動艦隊で、カレー洋の敵艦隊を撃滅せよ！</JP-Detail>
-    <TR-Detail>Dispatch a fleet consisting of 2 CV, 2 DD and additional 2 ships to 4-2. You must reach the boss an achieve S-rank Victory.</TR-Detail>
+    <TR-Detail>Dispatch a fleet consisting of 2 CV, 2 DD and additional 2 ships to 4-2. You must reach the boss and achieve S-rank Victory.</TR-Detail>
   </Quest>
   <Quest>
     <ID>148</ID>
