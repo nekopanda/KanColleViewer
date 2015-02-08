@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Ships Version="1.1.3">
+<Ships Version="1.1.4">
   <Ship>
     <JP-Name>長門</JP-Name>
     <TR-Name>Nagato</TR-Name>
@@ -914,6 +914,14 @@
   <Ship>
     <JP-Name>Prinz Eugen</JP-Name>
     <TR-Name>Prinz Eugen</TR-Name>
+  </Ship>
+  <Ship>
+    <JP-Name>U-511</JP-Name>
+    <TR-Name>U-511</TR-Name>
+  </Ship>
+  <Ship>
+    <JP-Name>呂500</JP-Name>
+    <TR-Name>Ro-500</TR-Name>
   </Ship>
   <Ship mode="suffix">
 	<JP-Name>改</JP-Name>

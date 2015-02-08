@@ -40,6 +40,7 @@ namespace Grabacr07.KanColleWrapper
 			proxy.api_req_kousyou_createship.TryParse<kcsapi_createship>().Subscribe(x => this.CreateShip(x.Request));
 			proxy.api_get_member_kdock.TryParse<kcsapi_kdock[]>().Subscribe(x => this.KDock(x.Data));
 			proxy.api_req_sortie_battleresult.TryParse<kcsapi_battleresult>().Subscribe(x => this.BattleResult(x.Data));
+			proxy.api_req_combined_battle_battleresult.TryParse<kcsapi_combined_battle_battleresult>().Subscribe(x => this.BattleResult(x.Data));
 			proxy.api_get_member_material.TryParse<kcsapi_material[]>().Subscribe(x => this.MaterialsHistory(x.Data));
 			proxy.api_req_hokyu_charge.TryParse<kcsapi_charge>().Subscribe(x => this.MaterialsHistory(x.Data.api_material));
 			proxy.api_req_kousyou_destroyship.TryParse<kcsapi_destroyship>().Subscribe(x => this.MaterialsHistory(x.Data.api_material));
@@ -75,6 +76,17 @@ namespace Grabacr07.KanColleWrapper
 		}
 
 		private void BattleResult(kcsapi_battleresult br)
+		{
+			if (br.api_get_ship == null)
+				return;
+
+			Log(LogType.ShipDrop, "{0},{1},{2},{3},{4}", DateTime.Now.ToString(this.LogTimestampFormat),
+				KanColleClient.Current.Translations.GetTranslation(br.api_get_ship.api_ship_name, TranslationType.Ships, br),
+				KanColleClient.Current.Translations.GetTranslation(br.api_quest_name, TranslationType.OperationMaps, br),
+				KanColleClient.Current.Translations.GetTranslation(br.api_enemy_info.api_deck_name, TranslationType.OperationSortie, br),
+				br.api_win_rank);
+		}
+		private void BattleResult(kcsapi_combined_battle_battleresult br)
 		{
 			if (br.api_get_ship == null)
 				return;

@@ -135,6 +135,7 @@ namespace Grabacr07.KanColleWrapper
 			proxy.api_req_member_updatedeckname.TryParse().Subscribe(this.UpdateFleetName);
 
 			proxy.api_req_sortie_battleresult.TryParse<kcsapi_battleresult>().Subscribe(x => this.DropShip(x.Data));
+			proxy.api_req_combined_battle_battleresult.TryParse<kcsapi_combined_battle_battleresult>().Subscribe(x => this.DropShip(x.Data));
 
 			proxy.api_req_hensei_combined.TryParse<kcsapi_hensei_combined>()
 				.Subscribe(x => this.Combined = x.Data.api_combined == 1);
@@ -381,6 +382,13 @@ namespace Grabacr07.KanColleWrapper
 		}
 
 		private void DropShip(kcsapi_battleresult source)
+		{
+			if (source.api_get_ship == null) return;
+
+			this.DroppedShip = new DroppedShip(source.api_get_ship);
+		}
+
+		private void DropShip(kcsapi_combined_battle_battleresult source)
 		{
 			if (source.api_get_ship == null) return;
 

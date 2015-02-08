@@ -28,25 +28,6 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 
 		#endregion
 
-		#region Name 変更通知プロパティ
-
-		private string _Name;
-
-		public string Name
-		{
-			get { return this._Name; }
-			set
-			{
-				if (this._Name != value)
-				{
-					this._Name = value;
-					this.RaisePropertyChanged();
-				}
-			}
-		}
-
-		#endregion
-
 		public CreatedSlotItemViewModel()
 		{
 			this.Succeed = null;

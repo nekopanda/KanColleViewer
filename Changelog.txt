@@ -2,6 +2,12 @@
 	KCV Change Log
 ========================
 
+v3.5.0 r522 - 2/8/2015
+	* Add icon for rocket launcher
+	* Fix bug don't show drop when use combined fleet
+	* Update calculator plugin
+	* Chinese translation thank @kookxiang
+
 v3.4.0 r520 - 1/14/2015
 	* Support use other's translation
 

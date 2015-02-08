@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Expeditions Version="1.0.1">
+<Expeditions Version="1.0.2">
   <Expedition>
     <ID>1</ID>
     <JP-Name>練習航海</JP-Name>
@@ -268,6 +268,27 @@
   </Expedition>
   <Expedition>
     <ID>126</ID>
+    <JP-Name>艦隊決戦支援任務</JP-Name>
+    <TR-Name>Boss support</TR-Name>
+    <JP-Detail>主力艦隊支援を行う別動隊を出撃させ、艦隊決戦を援護せよ！(要:駆逐2隻)</JP-Detail>
+    <TR-Detail>Support expedition event for boss node only</TR-Detail>
+  </Expedition>
+  <Expedition>
+    <ID>32</ID>
+    <JP-Name>遠洋練習航海</JP-Name>
+    <TR-Name>Expedition 32</TR-Name>
+    <JP-Detail>練習巡洋艦を旗艦とした練習艦隊で遠洋練習航海を実施、基礎練度向上に努めよ！</JP-Detail>
+    <TR-Detail>練習巡洋艦を旗艦とした練習艦隊で遠洋練習航海を実施、基礎練度向上に努めよ！</TR-Detail>
+  </Expedition>
+  <Expedition>
+    <ID>141</ID>
+    <JP-Name>前衛支援任務</JP-Name>
+    <TR-Name>General support</TR-Name>
+    <JP-Detail>支援艦隊を出撃させ、主力艦隊の進撃を援護せよ！(要:駆逐2隻)</JP-Detail>
+    <TR-Detail>Support expedition event for general node battles</TR-Detail>
+  </Expedition>
+  <Expedition>
+    <ID>142</ID>
     <JP-Name>艦隊決戦支援任務</JP-Name>
     <TR-Name>Boss support</TR-Name>
     <JP-Detail>主力艦隊支援を行う別動隊を出撃させ、艦隊決戦を援護せよ！(要:駆逐2隻)</JP-Detail>
