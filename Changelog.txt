@@ -2,6 +2,12 @@
 	KCV Change Log
 ========================
 
+v3.5.1 r525 - 2/14/2015
+	* Support negative stats
+	* Fix error when use surface combined
+	* Fix japanese translation
+	* Show retreat indicator & fix critical notify when use retreat function
+
 v3.5.0 r522 - 2/8/2015
 	* Add icon for rocket launcher
 	* Fix bug don't show drop when use combined fleet

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Grabacr07.KanColleWrapper.Models;
 using Grabacr07.KanColleWrapper.Models.Raw;
 using Livet;
+using System.Diagnostics;
 
 namespace Grabacr07.KanColleWrapper
 {
@@ -15,6 +16,8 @@ namespace Grabacr07.KanColleWrapper
 	public class Organization : NotificationObject
 	{
 		private readonly Homeport homeport;
+
+		private int[] escapingShips;
 
 		#region Ships 変更通知プロパティ
 
@@ -135,7 +138,12 @@ namespace Grabacr07.KanColleWrapper
 			proxy.api_req_member_updatedeckname.TryParse().Subscribe(this.UpdateFleetName);
 
 			proxy.api_req_sortie_battleresult.TryParse<kcsapi_battleresult>().Subscribe(x => this.DropShip(x.Data));
-			proxy.api_req_combined_battle_battleresult.TryParse<kcsapi_combined_battle_battleresult>().Subscribe(x => this.DropShip(x.Data));
+			proxy.api_req_combined_battle_battleresult.TryParse<kcsapi_combined_battle_battleresult>().Subscribe(x => {
+				this.DropShip(x.Data);
+				this.PreEscape(x.Data);
+			});
+
+			proxy.api_req_combined_battle_goback_port.TryParse().Subscribe(this.Escape);
 
 			proxy.api_req_hensei_combined.TryParse<kcsapi_hensei_combined>()
 				.Subscribe(x => this.Combined = x.Data.api_combined == 1);
@@ -393,6 +401,31 @@ namespace Grabacr07.KanColleWrapper
 			if (source.api_get_ship == null) return;
 
 			this.DroppedShip = new DroppedShip(source.api_get_ship);
+		}
+
+		private void PreEscape(kcsapi_combined_battle_battleresult source)
+		{
+            if (source.api_escape == null) return;
+
+			try
+			{
+				this.escapingShips = new int[] {
+					source.api_escape.api_escape_idx[0] - 1,
+					source.api_escape.api_tow_idx[0] - 1
+				};
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
+        }
+
+		private void Escape(SvData data)
+		{
+			foreach (int x in this.escapingShips)
+			{
+				Fleets[x / 6 + 1].Ships[x % 6].IsRetreat = true;
+            }
 		}
 	}
 }

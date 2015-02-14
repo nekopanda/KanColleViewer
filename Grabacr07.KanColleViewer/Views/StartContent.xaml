@@ -265,15 +265,15 @@
                                         <Paragraph>
                                             <Run Foreground="White"
 									 FontSize="20"
-									 Text="Welcome" />
+									 Text="{Binding Resources.StartContent_Welcom, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                         </Paragraph>
                                         <Paragraph>
-                                            <Run Text="KanColleViewer is a tool to play Kantai Collection." />
+                                            <Run Text="{Binding Resources.StartContent_Introduction1, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                             <LineBreak />
-                                            <Run Text="This program uses Internet Explorer (IE) and does not change the communication to the servers, extract from Flash, nor use macro cheats." />
+                                            <Run Text="{Binding Resources.StartContent_Introduction2, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                         </Paragraph>
                                         <Paragraph>
-                                            <Run Text="If you keep getting in game errors, please delete IE's cache. If this does not improve, check whether Flash works on IE." />
+                                            <Run Text="{Binding Resources.StartContent_Introduction3, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                         </Paragraph>
                                         <Table>
                                             <Table.Columns>
@@ -318,7 +318,7 @@
                                         </BlockUIContainer>
 
                                         <Paragraph>
-                                            <Run Text="This program is updated often. Please check below for updates." />
+                                            <Run Text="{Binding Resources.StartContent_Introduction4, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                             <LineBreak />
                                             <LineBreak />
                                             <Run Text="Project home:" />

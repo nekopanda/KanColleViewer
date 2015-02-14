@@ -32,7 +32,13 @@ namespace Grabacr07.KanColleWrapper.Models.Raw
 		public int api_get_exmap_rate { get; set; }
 		public int api_get_exmap_useitem_id { get; set; }
 		public int api_escape_flag { get; set; }
-		public object api_escape { get; set; }
+		public kcsapi_battleresult_escape api_escape { get; set; }
 	}
 	// ReSharper restore InconsistentNaming
+
+	public class kcsapi_battleresult_escape
+	{
+		public int[] api_escape_idx { get; set; }
+		public int[] api_tow_idx { get; set; }
+	}
 }

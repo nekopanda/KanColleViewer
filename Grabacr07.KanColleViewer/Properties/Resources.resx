@@ -199,13 +199,13 @@
     <value>遠征帰投時に通知を表示する</value>
   </data>
   <data name="Expedition_Notifications_Individual" xml:space="preserve">
-    <value>Individual Fleet Settings</value>
+    <value>艦隊ごとに個別に設定する</value>
   </data>
   <data name="Expedition_TimeComplete" xml:space="preserve">
-    <value>Completion</value>
+    <value>終了時刻</value>
   </data>
   <data name="Expedition_TimeRemaining" xml:space="preserve">
-    <value>Remaining</value>
+    <value>艦隊帰投まで</value>
   </data>
   <data name="Fleets" xml:space="preserve">
     <value>艦隊</value>
@@ -301,7 +301,7 @@
     <value>入渠ドック</value>
   </data>
   <data name="Repairyard_Locked" xml:space="preserve">
-    <value>Locked</value>
+    <value>ロックされています</value>
   </data>
   <data name="Repairyard_NotificationMessage" xml:space="preserve">
     <value>入渠第 {0} ドックでの「{1}」の整備が完了しました。</value>
@@ -319,10 +319,10 @@
     <value>入渠中の艦</value>
   </data>
   <data name="Repairyard_TimeComplete" xml:space="preserve">
-    <value>完成時刻</value>
+    <value>完了時刻</value>
   </data>
   <data name="Repairyard_TimeRemaining" xml:space="preserve">
-    <value>建造完了まで</value>
+    <value>整備完了まで</value>
   </data>
   <data name="Reparyard_Unused" xml:space="preserve">
     <value>未使用</value>
@@ -355,7 +355,7 @@
     <value>言語</value>
   </data>
   <data name="Settings_Network" xml:space="preserve">
-    <value>ネットワーク</value>
+    <value>通信設定</value>
   </data>
   <data name="Settings_Operation" xml:space="preserve">
     <value>動作設定</value>
@@ -475,10 +475,10 @@
     <value>索敵能力</value>
   </data>
   <data name="StartContent_SetRegionCookieButton" xml:space="preserve">
-    <value>Set Cookie Region</value>
+    <value>クッキーの設定</value>
   </data>
   <data name="StartContent_SetRegionCookieMessage" xml:space="preserve">
-    <value>Cookie has been set</value>
+    <value>クッキーを設定しました</value>
   </data>
   <data name="Settings_Translations" xml:space="preserve">
     <value>Translations</value>
@@ -532,13 +532,13 @@
     <value>射程</value>
   </data>
   <data name="Notifications_CriticalCondition" xml:space="preserve">
-    <value>{0} has a ship is in critical condition!</value>
+    <value>{0} が大破しています</value>
   </data>
   <data name="Notifications_CriticalCondition_Title" xml:space="preserve">
-    <value>Critical Ship Warning</value>
+    <value>大破警告</value>
   </data>
   <data name="Settings_Notifications_CriticalCondition" xml:space="preserve">
-    <value>クリティカル時に通知する</value>
+    <value>大破艦がいる場合に通知する</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>ツール</value>
@@ -547,47 +547,47 @@
     <value>アップデート</value>
   </data>
   <data name="Settings_Updates_AutoUpdateTrans" xml:space="preserve">
-    <value>Automatically update translations on startup</value>
+    <value>起動時に言語ファイルをアップデート</value>
   </data>
   <data name="Settings_Updates_CheckUpdateButn_ToolTip" xml:space="preserve">
-    <value>Check for the latest program and translation versions</value>
+    <value>アップデートの有無をチェックしています</value>
   </data>
   <data name="Settings_Updates_CheckUpdatesBtn" xml:space="preserve">
-    <value>Check for Updates</value>
+    <value>アップデートチェック</value>
   </data>
   <data name="Settings_Updates_CurrentVersion" xml:space="preserve">
-    <value>Currently</value>
+    <value>現在のバージョン</value>
   </data>
   <data name="Settings_Updates_OnlineVersion" xml:space="preserve">
-    <value>Online</value>
+    <value>最新バージョン</value>
   </data>
   <data name="Settings_Updates_UpdateOnStartup" xml:space="preserve">
-    <value>Check for updates on startup</value>
+    <value>起動時にアップデートチェック</value>
   </data>
   <data name="Settings_Updates_UpdateTransBtn" xml:space="preserve">
-    <value>Download Translations</value>
+    <value>言語ファイルをダウンロード</value>
   </data>
   <data name="Settings_Updates_UpdateTransBtn_ToolTip" xml:space="preserve">
-    <value>Downloads new translations</value>
+    <value>アップデートがある場合は言語ファイルをダウンロードします</value>
   </data>
   <data name="Updater_Notification_CheckFailed" xml:space="preserve">
-    <value>KCV was unable to check for updates!</value>
+    <value>アップデートチェックに失敗しました</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Success" xml:space="preserve">
-    <value>Translation files have been updated!</value>
+    <value>言語ファイルをアップデートしました</value>
   </data>
   <data name="Updater_Notification_NewAppVersion" xml:space="preserve">
-    <value>New Version of KCV is available! 「v{0}」
-Click here to get it.</value>
+    <value>新しいバージョンがあります 「v{0}」
+ここをクリックするとサイトが開きます</value>
   </data>
   <data name="Updater_Notification_Title" xml:space="preserve">
-    <value>Updater</value>
+    <value>アップデート</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Fail" xml:space="preserve">
-    <value>KCV was unable to download the translations!</value>
+    <value>言語ファイルのダウンロードに失敗</value>
   </data>
   <data name="Updater_Notification_TransUpdate_Same" xml:space="preserve">
-    <value>Translations are already up-to-date</value>
+    <value>言語ファイルは既に最新版です</value>
   </data>
   <data name="Settings_Flash" xml:space="preserve">
     <value>Flash</value>
@@ -612,10 +612,10 @@ AutoLow: Will emphasize speed when needed
 Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Settings_Updates_GetKCVBtn" xml:space="preserve">
-    <value>Get Latest KCV</value>
+    <value>配布サイトに行く</value>
   </data>
   <data name="Settings_Updates_GetKCVBtn_ToolTip" xml:space="preserve">
-    <value>Opens a link to the latest version of KCV found here.</value>
+    <value>最新版の配布サイトを開きます</value>
   </data>
   <data name="Settings_CustomSound" xml:space="preserve">
     <value>通知音を設定</value>
@@ -670,7 +670,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>中将</value>
   </data>
   <data name="Settings_Notifications" xml:space="preserve">
-    <value>通信設定</value>
+    <value>通知設定</value>
   </data>
   <data name="Settings_Notifications_AheadOfTime" xml:space="preserve">
     <value>通知を早める：</value>
@@ -838,10 +838,10 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>艦隊の索敵値の算出に使用する計算式は、以下を使用する</value>
   </data>
   <data name="Settings_Updates_CheckUpdatesBtn_ToolTip" xml:space="preserve">
-    <value>Check for new version of KCV and translate.</value>
+    <value>アップデートがあるかどうかチェックします</value>
   </data>
   <data name="StateDetail_Repairing" xml:space="preserve">
-    <value>艦隊に入渠中の艦娘がいます。</value>
+    <value>艦娘入渠まで</value>
   </data>
   <data name="StateDetail_ShortSupply" xml:space="preserve">
     <value>艦隊に未補給の艦娘がいます。</value>
@@ -949,7 +949,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>フィルター設定リセット</value>
   </data>
   <data name="ShipCatalog_SaveFilterSettings" xml:space="preserve">
-    <value>フィルター設定セーブ</value>
+    <value>フィルター設定を保存</value>
   </data>
   <data name="ShipCatalog_SelectAll" xml:space="preserve">
     <value>すべて選択</value>
@@ -958,7 +958,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>艦種</value>
   </data>
   <data name="ShipCatalog_ShowAdditionalShipStats" xml:space="preserve">
-    <value>追加の統計を示す</value>
+    <value>ステータスをすべて表示</value>
   </data>
   <data name="ShipCatalog_Slow" xml:space="preserve">
     <value>低速</value>
@@ -985,7 +985,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>所持数</value>
   </data>
   <data name="SlotItemCatalog_Stats" xml:space="preserve">
-    <value>統計</value>
+    <value>ステータス</value>
   </data>
   <data name="Shipyard_Drop" xml:space="preserve">
     <value>ドロップ</value>
@@ -997,10 +997,10 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>情報</value>
   </data>
   <data name="Settings_Updates_ForceUpdateTransBtn" xml:space="preserve">
-    <value>Force download</value>
+    <value>強制的に更新</value>
   </data>
   <data name="Settings_Updates_ForceUpdateTransBtn_ToolTip" xml:space="preserve">
-    <value>Download all translatations without check version!</value>
+    <value>更新の有無に関係なくすべての言語ファイルをダウンロードします</value>
   </data>
   <data name="Settings_Browser_ResetZoom_Pre" xml:space="preserve">
     <value>ゲーム画面を </value>
@@ -1013,5 +1013,65 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Settings_Browser_ResetZoom_Suf" xml:space="preserve">
     <value>% に戻す</value>
+  </data>
+  <data name="Browser_GoBack" xml:space="preserve">
+    <value>前のページに戻る</value>
+  </data>
+  <data name="Browser_GoForward" xml:space="preserve">
+    <value>次のページに進む</value>
+  </data>
+  <data name="Browser_ReNavigate" xml:space="preserve">
+    <value>このページを再読み込む</value>
+  </data>
+  <data name="Browser_URLTip" xml:space="preserve">
+    <value>URL を入力し、Enter キーで移動します。</value>
+  </data>
+  <data name="ShipCatalog_Title" xml:space="preserve">
+    <value>所属艦娘一覧</value>
+  </data>
+  <data name="SlotItemCatalog_Title" xml:space="preserve">
+    <value>所有装備一覧</value>
+  </data>
+  <data name="Overview_ConstructionDock" xml:space="preserve">
+    <value>建造ドック</value>
+  </data>
+  <data name="Overview_RepairDock" xml:space="preserve">
+    <value>入渠ドック</value>
+  </data>
+  <data name="StartContent_Introduction2" xml:space="preserve">
+    <value>艦これは、内蔵された Internet Explorer (IE) 上で動作します。艦これのサーバーに対し一切の負荷をかけないように設計・開発しており、通信内容の変更やサーバーに対する情報の送信、Flash 抽出、マクロ・チートの類は一切行っていません。</value>
+  </data>
+  <data name="StartContent_Introduction3" xml:space="preserve">
+    <value>ゲームが正しく表示されない場合や、スクリプトエラーが頻発する場合は、IE のキャッシュを削除してみてください。改善されない場合は、IE の設定や、通常の IE 上で Flash が表示できるかどうか等をご確認ください。</value>
+  </data>
+  <data name="StartContent_Introduction4" xml:space="preserve">
+    <value>ツールは不定期に更新されています。適宜、更新の確認をお願いします。</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AircraftCarriers" xml:space="preserve">
+    <value>航空母艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AviationShips" xml:space="preserve">
+    <value>航戦・航巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Battleships" xml:space="preserve">
+    <value>戦艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Destroyers" xml:space="preserve">
+    <value>駆逐艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_HeavyCruisers" xml:space="preserve">
+    <value>重巡・航巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_LightCruisers" xml:space="preserve">
+    <value>軽巡・雷巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Others" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Submarines" xml:space="preserve">
+    <value>潜水艦</value>
+  </data>
+  <data name="Ship_Retreat" xml:space="preserve">
+    <value>退避</value>
   </data>
 </root>

@@ -303,6 +303,14 @@ namespace Grabacr07.KanColleWrapper
 			get { return this.ApiSessionSource.Where(x => x.PathAndQuery == "/kcsapi/api_req_combined_battle/battleresult"); }
 		}
 
+		/// <summary>
+		/// エンド ポイント "/kcsapi/api_req_combined_battle/goback_port" からのセッションを配信します。
+		/// </summary>
+		public IObservable<Session> api_req_combined_battle_goback_port
+		{
+			get { return this.ApiSessionSource.Where(x => x.PathAndQuery == "/kcsapi/api_req_combined_battle/goback_port"); }
+		}
+
 		// ReSharper restore InconsistentNaming
 	}
 }

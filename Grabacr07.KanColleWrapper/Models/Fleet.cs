@@ -424,8 +424,9 @@ namespace Grabacr07.KanColleWrapper.Models
 			if (this.isInSortie)
 			{
 				this.isInSortie = false;
-				this.UpdateStatus();
-			}
+                this.UpdateStatus();
+				this.CleanEscape();
+            }
 		}
 
 
@@ -436,7 +437,9 @@ namespace Grabacr07.KanColleWrapper.Models
 		{
 			this.Condition.Update(this.Ships);
 			this.IsRepairling = this.homeport.Repairyard.CheckRepairing(this);
-			this.IsWounded = this.Ships.Any(s => (s.HP.Current / (double)s.HP.Maximum) <= 0.25 && !this.homeport.Repairyard.CheckRepairing(s.Id));
+			this.IsWounded = this.Ships.Any(s => (s.HP.Current / (double)s.HP.Maximum) <= 0.25 
+				&& !this.homeport.Repairyard.CheckRepairing(s.Id) 
+				&& !s.IsRetreat);
 			this.IsInShortSupply = this.Ships.Any(s => s.Fuel.Current < s.Fuel.Maximum || s.Bull.Current < s.Bull.Maximum);
 
 			if (this.Ships.Length == 0)
@@ -487,5 +490,11 @@ namespace Grabacr07.KanColleWrapper.Models
 			this.Expedition.SafeDispose();
 			this.Condition.SafeDispose();
 		}
-	}
+
+		internal void CleanEscape()
+		{
+			foreach (Ship ship in this.Ships)
+				ship.IsRetreat = false;
+		}
+    }
 }

@@ -430,7 +430,7 @@
     <value>Browser cache cleared</value>
   </data>
   <data name="StartContent_Introduction1" xml:space="preserve">
-    <value>「提督業も忙しい！」は、艦これを遊びやすくするためのツールです。</value>
+    <value>KanColleViewer is a tool to play Kantai Collection.</value>
   </data>
   <data name="StartContent_Welcom" xml:space="preserve">
     <value>Welcome</value>
@@ -1075,5 +1075,71 @@ Low: Performance over quality. Ugliest setting.</value>
   </data>
   <data name="Settings_Browser_ZoomDescription" xml:space="preserve">
     <value>You can change the display size of the game (IE) with the zoom button at the top of the window. Screenshots are not affected by this setting and will always be taken at 100% scale.</value>
+  </data>
+  <data name="Settings_Updates_ForceUpdateTransBtn" xml:space="preserve">
+    <value>Force download</value>
+  </data>
+  <data name="Settings_Updates_ForceUpdateTransBtn_ToolTip" xml:space="preserve">
+    <value>Download all translatations without check version!</value>
+  </data>
+  <data name="Browser_GoBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Browser_GoForward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="Browser_ReNavigate" xml:space="preserve">
+    <value>Reload (F5)</value>
+  </data>
+  <data name="Browser_URLTip" xml:space="preserve">
+    <value>Enter the URL and press ENTER.</value>
+  </data>
+  <data name="ShipCatalog_Title" xml:space="preserve">
+    <value>Ship Girl Roster</value>
+  </data>
+  <data name="SlotItemCatalog_Title" xml:space="preserve">
+    <value>Equipment List</value>
+  </data>
+  <data name="Overview_ConstructionDock" xml:space="preserve">
+    <value>Construction</value>
+  </data>
+  <data name="Overview_RepairDock" xml:space="preserve">
+    <value>Repairs</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AircraftCarriers" xml:space="preserve">
+    <value>Aircraft Carriers</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AviationShips" xml:space="preserve">
+    <value>Aviation Ship</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Battleships" xml:space="preserve">
+    <value>Battleships</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Destroyers" xml:space="preserve">
+    <value>Destroyers</value>
+  </data>
+  <data name="ShipCatalog_ShipType_HeavyCruisers" xml:space="preserve">
+    <value>Heavy Cruisers</value>
+  </data>
+  <data name="ShipCatalog_ShipType_LightCruisers" xml:space="preserve">
+    <value>Light Cruisers</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Submarines" xml:space="preserve">
+    <value>Submarines</value>
+  </data>
+  <data name="StartContent_Introduction2" xml:space="preserve">
+    <value>This program uses Internet Explorer (IE) and does not change the communication to the servers, extract from Flash, nor use macro cheats.</value>
+  </data>
+  <data name="StartContent_Introduction3" xml:space="preserve">
+    <value>If you keep getting in game errors, please delete IE's cache. If this does not improve, check whether Flash works on IE.</value>
+  </data>
+  <data name="StartContent_Introduction4" xml:space="preserve">
+    <value>This program is updated often. Please check below for updates.</value>
+  </data>
+  <data name="Ship_Retreat" xml:space="preserve">
+    <value>Retreat</value>
   </data>
 </root>

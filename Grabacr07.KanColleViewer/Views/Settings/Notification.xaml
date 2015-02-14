@@ -125,7 +125,7 @@
 										   HorizontalAlignment="Right"
 										   Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisiblityConverter}}" />
 								<controls:CallMethodButton DockPanel.Dock="Right"
-														   Content="Test"
+														   Content="{Binding Resources.Debug_NotificationMessage_Title, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 														   MethodName="Test"
 														   Padding="8,6"
 														   Margin="5,0,0,0"
