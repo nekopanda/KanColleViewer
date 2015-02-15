@@ -18,7 +18,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 		{
 			this.Index = index;
 			this.Ship = ship;
-			this.SlotItems = ship.SlotItems.Select(i => new SlotItemViewModel { SlotItem = i.Info, Level = i.Level }).ToList();
+			this.SlotItems = ship.EquippedSlots.Select(i => new SlotItemViewModel { SlotItem = i.Item.Info, Level = i.Item.Level }).ToList();
 		}
 	}
 }

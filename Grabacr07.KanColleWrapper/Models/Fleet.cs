@@ -145,12 +145,12 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		#region TotalViewRange 変更通知プロパティ
 
-		private int _TotalViewRange;
+		private double _TotalViewRange;
 
 		/// <summary>
 		/// 各艦娘の装備によるボーナスを含めた、艦隊の索敵合計値を取得します。
 		/// </summary>
-		public int TotalViewRange
+		public double TotalViewRange
 		{
 			get { return this._TotalViewRange; }
 			private set
@@ -400,12 +400,12 @@ namespace Grabacr07.KanColleWrapper.Models
 		/// <summary>
 		/// 艦隊の平均レベルや制空戦力などの各種数値を再計算します。
 		/// </summary>
-		internal void Calculate()
+		public void Calculate()
 		{
 			this.TotalLevel = this.Ships.HasItems() ? this.Ships.Sum(x => x.Level) : 0;
 			this.AverageLevel = this.Ships.HasItems() ? (double)this.TotalLevel / this.Ships.Length : 0.0;
 			this.AirSuperiorityPotential = this.Ships.Sum(s => s.CalcAirSuperiorityPotential());
-			this.TotalViewRange = this.CalcFleetViewRange(KanColleClient.Current.Settings.ViewRangeCalcLogic);
+			this.TotalViewRange = ViewRangeCalcLogic.Get(KanColleClient.Current.Settings.ViewRangeCalcType).Calc(this);
 			this.Speed = this.Ships.All(s => s.Info.Speed == Speed.Fast) ? Speed.Fast : Speed.Low;
 		}
 
@@ -472,7 +472,19 @@ namespace Grabacr07.KanColleWrapper.Models
 		private void UpdateShips(Ship[] ships)
 		{
 			this.originalShips = ships;
-			this.Ships = ships.Where(x => x != null).ToArray();
+			if (this.Ships != null && this.isInSortie)
+			{
+				int[] RetreatedShip = this.Ships.Where(x => x.IsRetreat).Select(x => x.Id).ToArray();
+				this.Ships = ships.Where(x => x != null).Select(x =>
+				{
+					if (RetreatedShip.Where(id => id == x.Id).Any()) x.IsRetreat = true;
+					return x;
+				}).ToArray();
+			}
+			else
+			{
+				this.Ships = ships.Where(x => x != null).ToArray();
+			}
 
 			this.Calculate();
 			this.UpdateStatus();

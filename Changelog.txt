@@ -2,6 +2,11 @@
 	KCV Change Log
 ========================
 
+v3.6.0 r530 - 2/15/2015
+	* New formula to calculate LoS
+	* Improvement performance
+	* Fix bugs
+
 v3.5.1 r525 - 2/14/2015
 	* Support negative stats
 	* Fix error when use surface combined

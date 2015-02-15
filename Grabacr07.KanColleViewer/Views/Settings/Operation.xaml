@@ -72,40 +72,24 @@
 		<StackPanel Margin="20,0,0,0">
 			<TextBlock Text="{Binding Resources.Settings_Operation_LoS_Title, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 
-			<StackPanel Margin="0,5">
-				<RadioButton IsChecked="{Binding ViewRangeType1}"
-							 Margin="0,5">
-					<TextBlock Style="{DynamicResource DefaultTextStyleKey}"
-							   LineHeight="16">
-						<Run Text="{Binding Resources.Settings_Operation_LoS_Simple, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
-							 Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}" />
-						<LineBreak />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_Simple_Description, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-					</TextBlock>
-				</RadioButton>
-
-				<RadioButton IsChecked="{Binding ViewRangeType2}"
-							 Margin="0,5">
-					<TextBlock Style="{DynamicResource DefaultTextStyleKey}"
-							   LineHeight="18">
-						<Run Text="{Binding Resources.Settings_Operation_LoS_New, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
-							 Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}" />
-						<LineBreak />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_New_Desc, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-						<LineBreak />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_Recon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-						<Run Text="…" />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_SeaplaneRecon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
-							 ToolTip="{Binding Resources.Settings_Operation_LoS_SeaplaneRecon_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-						<Run Text="・" />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_SeaplaneBomber, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
-							 ToolTip="{Binding Resources.Settings_Operation_LoS_SeaplaneBomber_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-						<Run Text="・" />
-						<Run Text="{Binding Resources.Settings_Operation_LoS_CarrierBasedRecon, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
-							 ToolTip="{Binding Resources.Settings_Operation_LoS_CarrierBasedRecon_Tooltip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
-					</TextBlock>
-				</RadioButton>
-			</StackPanel>
+			<ItemsControl ItemsSource="{Binding ViewRangeSettingsCollection}"
+						  Margin="0,5">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<RadioButton IsChecked="{Binding Selected}"
+									 Margin="0,5"
+									 GroupName="ViewRangeCalcLogicSelection">
+							<TextBlock Style="{DynamicResource DefaultTextStyleKey}"
+									   LineHeight="18">
+								<Run Text="{Binding Logic.Name, Mode=OneWay}"
+									 Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}" />
+								<LineBreak />
+								<Run Text="{Binding Logic.Description, Mode=OneWay}" />
+							</TextBlock>
+						</RadioButton>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
 		</StackPanel>
 
 		<Rectangle Height="1"

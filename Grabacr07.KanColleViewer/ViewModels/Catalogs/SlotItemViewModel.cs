@@ -13,18 +13,27 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 	public class SlotItemViewModel : ViewModel
 	{
 		private int count;
-		public List<Counter> Ships { get; }
+		public List<Counter> Ships { get; private set; }
 
 		public class Counter
 		{
 			public Ship Ship { get; set; }
 			public int Count { get; set; }
 
-			public string ShipName => this.Ship.Info.Name;
+			public string ShipName
+			{
+			    get { return this.Ship.Info.Name; }
+			}
 
-			public string ShipLevel => "Lv." + this.Ship.Level;
+		    public string ShipLevel
+		    {
+		        get { return "Lv." + this.Ship.Level; }
+		    }
 
-			public string CountString => this.Count == 1 ? "" : " x " + this.Count + " ";
+		    public string CountString
+		    {
+		        get { return this.Count == 1 ? "" : " x " + this.Count + " "; }
+		    }
 
 			public string StatsToolTip
 			{
@@ -34,8 +43,8 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 					if (this.Ship.Info.UntranslatedName != "")
 						AddDetail += this.Ship.Info.UntranslatedName + "\n";
 
-					foreach (SlotItem s in this.Ship.SlotItems) {
-						AddDetail += String.Format("{0}{1}\n", s.Info.Name, s.Level > 0 ? " +" + s.Level : "");
+					foreach (ShipSlot s in this.Ship.EquippedSlots) {
+						AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " +" + s.Item.Level : "");
 					}
 
 					return AddDetail.TrimEnd('\n');
