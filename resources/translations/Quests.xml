@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.8">
+<Quests Version="1.1.9">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1081,7 +1081,7 @@
   <Quest>
     <ID>266</ID>
     <JP-Name>「水上反撃部隊」突入せよ！</JP-Name>
-    <TR-Name>Sortie the Surface Counterattack Squadron </TR-Name>
+    <TR-Name>Monthly Sortie 7</TR-Name>
     <JP-Detail>駆逐艦を旗艦とした重巡1隻軽巡1隻駆逐艦4隻からなる水上挺身部隊、沖ノ島沖に突入せよ！</JP-Detail>
     <TR-Detail>Consists of 1 CA 1 CL 4 DD. You MUST deploy to World 2-5, and obtain an S-Rank victory at the boss node. Flagship MUST be DD.</TR-Detail>
   </Quest>
