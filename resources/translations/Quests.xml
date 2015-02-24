@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.9">
+<Quests Version="1.1.10">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1140,5 +1140,19 @@
     <TR-Name>Deploy the 22nd Destroyer Division! </TR-Name>
     <JP-Detail>「第二二駆逐隊」を含む艦隊で南西諸島防衛線に出撃、敵主力艦隊を撃滅せよ！</JP-Detail>
     <TR-Detail>Consists of Satsuki, Fumizuki, Nagatsuki and one additional DD. You may add up to two other ships. You MUST deploy to World 1-4, and obtain an S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>272</ID>
+    <JP-Name>桃の節句：「菱餅」を集めよう！</JP-Name>
+    <TR-Name>Momonosekku: Let collect hishimoshi!</TR-Name>
+    <JP-Detail>出撃により特定海域の敵艦隊を撃破して「菱餅」を3つ集めよう！</JP-Detail>
+    <TR-Detail>Collect 3 hishimoshi.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>273</ID>
+    <JP-Name>桃の節句：「菱餅」を沢山集めるのです！</JP-Name>
+    <TR-Name>Momonosekku: Collect many hishimoshi!</TR-Name>
+    <JP-Detail>結構大変だけれど、敵艦隊を撃破して「菱餅」を10個集めるのです！</JP-Detail>
+    <TR-Detail>Collect 10 hishimoshi.</TR-Detail>
   </Quest>
 </Quests>

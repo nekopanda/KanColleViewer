@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.14">
+<Equipment Version="1.0.15">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -503,5 +503,9 @@
   <Item>
     <JP-Name>試製51cm連装砲</JP-Name>
     <TR-Name>Prototype 51cm Twin Cannon</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>熟練見張員</JP-Name>
+    <TR-Name>Skilled Lookouts</TR-Name>
   </Item>
 </Equipment>
