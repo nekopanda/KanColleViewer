@@ -1144,15 +1144,15 @@
   <Quest>
     <ID>272</ID>
     <JP-Name>桃の節句：「菱餅」を集めよう！</JP-Name>
-    <TR-Name>Momonosekku: Let collect hishimoshi!</TR-Name>
+    <TR-Name>Hinamatsuri: Let collect hishimoshi!</TR-Name>
     <JP-Detail>出撃により特定海域の敵艦隊を撃破して「菱餅」を3つ集めよう！</JP-Detail>
-    <TR-Detail>Collect 3 hishimoshi.</TR-Detail>
+    <TR-Detail>Collect 3 hishimochis.</TR-Detail>
   </Quest>
   <Quest>
     <ID>273</ID>
     <JP-Name>桃の節句：「菱餅」を沢山集めるのです！</JP-Name>
-    <TR-Name>Momonosekku: Collect many hishimoshi!</TR-Name>
+    <TR-Name>Hinamatsuri: Collect many hishimoshi!</TR-Name>
     <JP-Detail>結構大変だけれど、敵艦隊を撃破して「菱餅」を10個集めるのです！</JP-Detail>
-    <TR-Detail>Collect 10 hishimoshi.</TR-Detail>
+    <TR-Detail>Collect 10 hishimochis.</TR-Detail>
   </Quest>
 </Quests>
