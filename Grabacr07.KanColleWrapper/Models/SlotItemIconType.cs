@@ -164,5 +164,10 @@ namespace Grabacr07.KanColleWrapper.Models
         /// ロケットランチャー。
         /// </summary>
         RocketLauncher = 31,
+
+        /// <summary>
+        /// 見張。
+        /// </summary>
+        Lookout = 32,
     }
 }
