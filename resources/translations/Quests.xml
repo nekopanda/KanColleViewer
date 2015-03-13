@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.10">
+<Quests Version="1.1.11">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1142,17 +1142,24 @@
     <TR-Detail>Consists of Satsuki, Fumizuki, Nagatsuki and one additional DD. You may add up to two other ships. You MUST deploy to World 1-4, and obtain an S-rank victory at the boss node.</TR-Detail>
   </Quest>
   <Quest>
-    <ID>272</ID>
-    <JP-Name>桃の節句：「菱餅」を集めよう！</JP-Name>
-    <TR-Name>Hinamatsuri: Let collect hishimochi!</TR-Name>
-    <JP-Detail>出撃により特定海域の敵艦隊を撃破して「菱餅」を3つ集めよう！</JP-Detail>
-    <TR-Detail>Collect 3 hishimochis.</TR-Detail>
+    <ID>416</ID>
+    <JP-Name>防空射撃演習を実施せよ！</JP-Name>
+    <TR-Name>Implement anti-air shooting exercises!</TR-Name>
+    <JP-Detail>「防空射撃演習」を複数回実施し、艦隊の防空能力を高めよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 6 three times.</TR-Detail>
   </Quest>
   <Quest>
-    <ID>273</ID>
-    <JP-Name>桃の節句：「菱餅」を沢山集めるのです！</JP-Name>
-    <TR-Name>Hinamatsuri: Collect many hishimochi!</TR-Name>
-    <JP-Detail>結構大変だけれど、敵艦隊を撃破して「菱餅」を10個集めるのです！</JP-Detail>
-    <TR-Detail>Collect 10 hishimochis.</TR-Detail>
+    <ID>272</ID>
+    <JP-Name>「改装防空重巡」出撃せよ！</JP-Name>
+    <TR-Name>Sortie the remodeled Air-Defence Heavy Cruiser!</TR-Name>
+    <JP-Detail>摩耶改または摩耶改二及び軽巡1駆逐2隻を含む艦隊でオリョール海の敵艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Maya Kai or Kai2, 2 DD, 1 CL. You may add up to two other ships. Deploy to world 2-3 and obtain an S rank victory at the boss.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>417</ID>
+    <JP-Name>囮機動部隊支援作戦を実施せよ！</JP-Name>
+    <TR-Name>Implement the decoy task force support strategy!</TR-Name>
+    <JP-Detail>「囮機動部隊支援作戦」を実施し、これを成功させよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 15 once</TR-Detail>
   </Quest>
 </Quests>
