@@ -40,10 +40,10 @@ namespace Grabacr07.KanColleWrapper.Models
 		/// </summary>
 		public bool IsRejuvenating
 		{
-			get { return this.RejuvenateTime.HasValue; }
+		    get { return this.RejuvenateTime.HasValue; }
 		}
 
-		#endregion
+	    #endregion
 
 		#region Remaining 変更通知プロパティ
 

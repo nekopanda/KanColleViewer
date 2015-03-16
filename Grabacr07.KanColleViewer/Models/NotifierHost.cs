@@ -80,8 +80,8 @@ namespace Grabacr07.KanColleViewer.Models
 				{
 					if (Settings.Current.NotifyBuildingCompleted)
 					{
-						var shipName = Settings.Current.CanDisplayBuildingShipName 
-							? args.Ship.Name 
+						var shipName = Settings.Current.CanDisplayBuildingShipName
+							? args.Ship.Name
 							: Resources.Common_ShipGirl;
 
 						PluginHost.Instance.GetNotifier().Show(

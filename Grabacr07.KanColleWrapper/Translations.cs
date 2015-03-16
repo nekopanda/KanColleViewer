@@ -512,8 +512,10 @@ namespace Grabacr07.KanColleWrapper
 						{
 							foreach (XElement el in FoundTranslation)
 							{
-								el.Element("JP-Name").Value = QuestData.api_title;
-								el.Element("JP-Detail").Value = QuestData.api_detail;
+								if (el.Element("JP-Name") == null) el.Add(new XElement("JP-Name", QuestData.api_title));
+								else el.Element("JP-Name").Value = QuestData.api_title;
+								if (el.Element("JP-Detail") == null) el.Add(new XElement("JP-Detail", QuestData.api_detail));
+								else el.Element("JP-Detail").Value = QuestData.api_detail;
 							}
 						}
 						else
@@ -531,7 +533,8 @@ namespace Grabacr07.KanColleWrapper
 								{
 									if (!Int32.TryParse(el.Element("ID").Value, out n))
 									{
-										el.Element("JP-Name").Value = QuestData.api_title;
+										if (el.Element("JP-Name") == null) el.Add(new XElement("JP-Name", QuestData.api_title));
+										else el.Element("JP-Name").Value = QuestData.api_title;
 										need_add = false;
 									}
 								}
@@ -544,7 +547,8 @@ namespace Grabacr07.KanColleWrapper
 								{
 									if (!Int32.TryParse(el.Element("ID").Value, out n))
 									{
-										el.Element("JP-Detail").Value = QuestData.api_detail;
+										if (el.Element("JP-Detail") == null) el.Add(new XElement("JP-Detail", QuestData.api_detail));
+										else el.Element("JP-Detail").Value = QuestData.api_detail;
 										need_add = false;
 									}
 								}									
@@ -588,8 +592,10 @@ namespace Grabacr07.KanColleWrapper
                         {
 							foreach (XElement el in FoundTranslationExpedition)
 							{
-								el.Element("JP-Name").Value = ExpeditionData.api_name;
-								el.Element("JP-Detail").Value = ExpeditionData.api_details;
+								if (el.Element("JP-Name") == null) el.Add(new XElement("JP-Name", ExpeditionData.api_name));
+								else el.Element("JP-Name").Value = ExpeditionData.api_name;
+								if (el.Element("JP-Detail") == null) el.Add(new XElement("JP-Detail", ExpeditionData.api_details));
+								else el.Element("JP-Detail").Value = ExpeditionData.api_details;
 							}
 
                         }

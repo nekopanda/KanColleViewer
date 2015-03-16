@@ -84,7 +84,6 @@ namespace Grabacr07.KanColleWrapper.Models
 			get { return this.ReturnTime.HasValue; }
 		}
 
-
 		#endregion
 
 		#region Remaining 変更通知プロパティ

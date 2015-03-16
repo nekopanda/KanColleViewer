@@ -2,6 +2,28 @@
 	KCV Change Log
 ========================
 
+v3.6.1 r531 - 3/1/2015
+	* Add Lookout icon
+	* Improvement sort in ship catalog
+	* Fix bugs
+
+v3.6.0 r530 - 2/15/2015
+	* New formula to calculate LoS
+	* Improvement performance
+	* Fix bugs
+
+v3.5.1 r525 - 2/14/2015
+	* Support negative stats
+	* Fix error when use surface combined
+	* Fix japanese translation
+	* Show retreat indicator & fix critical notify when use retreat function
+
+v3.5.0 r522 - 2/8/2015
+	* Add icon for rocket launcher
+	* Fix bug don't show drop when use combined fleet
+	* Update calculator plugin
+	* Chinese translation thank @kookxiang
+
 v3.4.0 r520 - 1/14/2015
 	* Support use other's translation
 

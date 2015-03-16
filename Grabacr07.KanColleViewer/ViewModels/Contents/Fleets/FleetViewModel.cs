@@ -110,7 +110,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents.Fleets
 
 		public string TotalViewRange
 		{
-			get { return this.source.TotalViewRange.ToString("####"); }
+			get { return this.source.TotalViewRange.ToString("###.##"); }
 		}
 
 		#endregion

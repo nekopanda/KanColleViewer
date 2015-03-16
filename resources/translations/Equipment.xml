@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Equipment Version="1.0.13">
+<Equipment Version="1.0.15">
   <Item>
     <JP-Name>12cm単装砲</JP-Name>
     <TR-Name>12cm Single Cannon</TR-Name>
@@ -495,5 +495,17 @@
   <Item>
     <JP-Name>61cm三連装(酸素)魚雷</JP-Name>
     <TR-Name>61cm Triple (Oxygen) Torpedo Mount</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>試製FaT仕様九五式酸素魚雷改</JP-Name>
+    <TR-Name>Prototype FaT Type 95 Oxygen Torpedo Kai</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>試製51cm連装砲</JP-Name>
+    <TR-Name>Prototype 51cm Twin Cannon</TR-Name>
+  </Item>
+  <Item>
+    <JP-Name>熟練見張員</JP-Name>
+    <TR-Name>Skilled Lookouts</TR-Name>
   </Item>
 </Equipment>

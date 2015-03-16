@@ -161,7 +161,7 @@
 									</Style>
 								</WrapPanel.Resources>
 								<!-- これっきりボタン -->
-								<metro2:CallMethodButton Content="駆逐艦">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_Destroyers, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>1</s:Int32>
@@ -169,15 +169,16 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="軽巡・雷巡">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_LightCruisers, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>3</s:Int32>
 											<s:Int32>4</s:Int32>
+											<s:Int32>21</s:Int32>
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="重巡・航巡">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_HeavyCruisers, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>5</s:Int32>
@@ -185,7 +186,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="戦艦">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_Battleships, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>8</s:Int32>
@@ -195,7 +196,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="航空母艦">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_AircraftCarriers, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>7</s:Int32>
@@ -204,7 +205,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="潜水艦">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_Submarines, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>13</s:Int32>
@@ -212,7 +213,7 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="航空？">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_AviationShips, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>6</s:Int32>
@@ -221,12 +222,13 @@
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
-								<metro2:CallMethodButton Content="その他">
+								<metro2:CallMethodButton Content="{Binding Resources.ShipCatalog_ShipType_Others, Source={x:Static models:ResourceService.Current}, Mode=OneWay}">
 									<metro2:CallMethodButton.MethodParameter>
 										<x:Array Type="s:Int32">
 											<s:Int32>17</s:Int32>
 											<s:Int32>19</s:Int32>
 											<s:Int32>20</s:Int32>
+                                            <s:Int32>21</s:Int32>
 										</x:Array>
 									</metro2:CallMethodButton.MethodParameter>
 								</metro2:CallMethodButton>
@@ -926,5 +928,4 @@
 						   HorizontalAlignment="Center" />
 			</Border>
 		</Grid>
-	</Grid>
-</metro:MetroWindow>
+	</Grid></metro:MetroWindow>

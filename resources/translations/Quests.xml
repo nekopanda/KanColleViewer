@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Quests Version="1.1.7">
+<Quests Version="1.1.11">
   <Quest>
     <ID>A1</ID>
     <JP-Name>はじめての「編成」！</JP-Name>
@@ -1069,7 +1069,7 @@
     <JP-Name>「空母機動部隊」西へ！</JP-Name>
     <TR-Name>Monthly Sortie 6</TR-Name>
     <JP-Detail>航空母艦2隻(随伴駆逐艦2隻)を基幹とする空母機動艦隊で、カレー洋の敵艦隊を撃滅せよ！</JP-Detail>
-    <TR-Detail>Dispatch a fleet consisting of 2 CV, 2 DD and additional 2 ships to 4-2. You must reach the boss an achieve S-rank Victory.</TR-Detail>
+    <TR-Detail>Dispatch a fleet consisting of 2 CV, 2 DD and additional 2 ships to 4-2. You must reach the boss and achieve S-rank Victory.</TR-Detail>
   </Quest>
   <Quest>
     <ID>148</ID>
@@ -1081,7 +1081,7 @@
   <Quest>
     <ID>266</ID>
     <JP-Name>「水上反撃部隊」突入せよ！</JP-Name>
-    <TR-Name>Sortie the Surface Counterattack Squadron </TR-Name>
+    <TR-Name>Monthly Sortie 7</TR-Name>
     <JP-Detail>駆逐艦を旗艦とした重巡1隻軽巡1隻駆逐艦4隻からなる水上挺身部隊、沖ノ島沖に突入せよ！</JP-Detail>
     <TR-Detail>Consists of 1 CA 1 CL 4 DD. You MUST deploy to World 2-5, and obtain an S-Rank victory at the boss node. Flagship MUST be DD.</TR-Detail>
   </Quest>
@@ -1119,5 +1119,47 @@
     <TR-Name>Sortie the 21st Destroyer Division</TR-Name>
     <JP-Detail>「第二一駆逐隊」を含む艦隊で出撃し、北方海域モーレイ海の敵を撃滅せよ！</JP-Detail>
     <TR-Detail>Deploy a fleet consisting of Hatsuharu, Nenohi, Wakaba, Hatsushimo and up to two wildcards to 3-1 and get an S-Rank at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>151</ID>
+    <JP-Name>「第二二駆逐隊」を編成せよ！</JP-Name>
+    <TR-Name>Organize the 22nd Destroyer Division! </TR-Name>
+    <JP-Detail>「皐月」「文月」「長月」他1隻計駆逐艦4隻による第二二駆逐隊を編成せよ！</JP-Detail>
+    <TR-Detail>Have only Satsuki, Fumizuki, Nagatsuki and 1 more DD in your main fleet.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>271</ID>
+    <JP-Name>「那智戦隊」抜錨せよ！</JP-Name>
+    <TR-Name>Deploy the Nachi Squadron!</TR-Name>
+    <JP-Detail>旗艦「那智」及び「初霜」「霞(かすみ)」「潮」「曙」他1隻の艦隊でバシー島沖の敵を殲滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Nachi as the flagship, Hatsushimo, Kasumi, Ushio and Akebono. You may add another ship. You MUST deploy to World 2-2, and obtain an S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>270</ID>
+    <JP-Name>「第二二駆逐隊」出撃せよ！</JP-Name>
+    <TR-Name>Deploy the 22nd Destroyer Division! </TR-Name>
+    <JP-Detail>「第二二駆逐隊」を含む艦隊で南西諸島防衛線に出撃、敵主力艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Satsuki, Fumizuki, Nagatsuki and one additional DD. You may add up to two other ships. You MUST deploy to World 1-4, and obtain an S-rank victory at the boss node.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>416</ID>
+    <JP-Name>防空射撃演習を実施せよ！</JP-Name>
+    <TR-Name>Implement anti-air shooting exercises!</TR-Name>
+    <JP-Detail>「防空射撃演習」を複数回実施し、艦隊の防空能力を高めよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 6 three times.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>272</ID>
+    <JP-Name>「改装防空重巡」出撃せよ！</JP-Name>
+    <TR-Name>Sortie the remodeled Air-Defence Heavy Cruiser!</TR-Name>
+    <JP-Detail>摩耶改または摩耶改二及び軽巡1駆逐2隻を含む艦隊でオリョール海の敵艦隊を撃滅せよ！</JP-Detail>
+    <TR-Detail>Consists of Maya Kai or Kai2, 2 DD, 1 CL. You may add up to two other ships. Deploy to world 2-3 and obtain an S rank victory at the boss.</TR-Detail>
+  </Quest>
+  <Quest>
+    <ID>417</ID>
+    <JP-Name>囮機動部隊支援作戦を実施せよ！</JP-Name>
+    <TR-Name>Implement the decoy task force support strategy!</TR-Name>
+    <JP-Detail>「囮機動部隊支援作戦」を実施し、これを成功させよ！</JP-Detail>
+    <TR-Detail>Complete Expedition 15 once</TR-Detail>
   </Quest>
 </Quests>

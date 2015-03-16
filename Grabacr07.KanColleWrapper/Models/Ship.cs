@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Fiddler;
 using Grabacr07.KanColleWrapper.Internal;
 using Grabacr07.KanColleWrapper.Models.Raw;
+using Livet;
 
 namespace Grabacr07.KanColleWrapper.Models
 {
@@ -336,29 +337,9 @@ namespace Grabacr07.KanColleWrapper.Models
 			get { return (this.HP.Current / (double)this.HP.Maximum) <= 0.25; }
 		}
 
-		public SlotItem[] SlotItems { get; private set; }
+		public ShipSlot[] Slots { get; private set; }
 
-		#region OnSlot 変更通知プロパティ
-
-		private int[] _OnSlot;
-
-		/// <summary>
-		/// 各装備スロットの艦載機数を取得します。
-		/// </summary>
-		public int[] OnSlot
-		{
-			get { return this._OnSlot; }
-			private set
-			{
-				if (this._OnSlot != value)
-				{
-					this._OnSlot = value;
-					this.RaisePropertyChanged();
-				}
-			}
-		}
-
-		#endregion
+		public ShipSlot[] EquippedSlots { get; private set; }
 
 		#region IsInRepairing 変更通知プロパティ
 
@@ -375,6 +356,28 @@ namespace Grabacr07.KanColleWrapper.Models
 				if (this._IsInRepairing != value)
 				{
 					this._IsInRepairing = value;
+					this.RaisePropertyChanged();
+				}
+			}
+		}
+
+		#endregion
+
+		#region IsRetreat 変更通知プロパティ
+
+		private bool _IsRetreat;
+
+		/// <summary>
+		/// この艦が入渠中かどうかを示す値を取得します。
+		/// </summary>
+		public bool IsRetreat
+		{
+			get { return this._IsRetreat; }
+			internal set
+			{
+				if (this._IsRetreat != value)
+				{
+					this._IsRetreat = value;
 					this.RaisePropertyChanged();
 				}
 			}
@@ -416,20 +419,23 @@ namespace Grabacr07.KanColleWrapper.Models
 				this.Luck = new ModernizableStatus(this.Info.RawData.api_luck, this.RawData.api_kyouka[4]);
 			}
 
-			this.SlotItems = this.RawData.api_slot.Select(id => this.homeport.Itemyard.SlotItems[id]).Where(x => x != null).ToArray();
-			this.OnSlot = this.RawData.api_onslot;
+			this.Slots = this.RawData.api_slot
+				.Select(id => this.homeport.Itemyard.SlotItems[id])
+				.Select((t, i) => new ShipSlot(t, this.Info.RawData.api_maxeq.Get(i) ?? 0, this.RawData.api_onslot.Get(i) ?? 0))
+				.ToArray();
+			this.EquippedSlots = this.Slots.Where(x => x.Equipped).ToArray();
 
 			// Minimum removes equipped values.
 			int EqAntiSub = 0, EqEvasion = 0, EqLineOfSight = 0;
 
-			foreach (SlotItem item in this.SlotItems)
+			foreach (ShipSlot item in this.EquippedSlots)
 			{
 				if (item == null)
 					continue;
 
-				EqAntiSub += item.Info.RawData.api_tais;
-				EqEvasion += item.Info.RawData.api_houk;
-				EqLineOfSight += item.Info.RawData.api_saku;
+				EqAntiSub += item.Item.Info.RawData.api_tais;
+				EqEvasion += item.Item.Info.RawData.api_houk;
+				EqLineOfSight += item.Item.Info.RawData.api_saku;
 			}
 
 			this.AntiSub = new LimitedValue(this.RawData.api_taisen[0], this.RawData.api_taisen[1], this.RawData.api_taisen[0] - EqAntiSub);
@@ -442,7 +448,7 @@ namespace Grabacr07.KanColleWrapper.Models
 		{
 			this.Fuel = this.Fuel.Update(fuel);
 			this.Bull = this.Bull.Update(bull);
-			this.OnSlot = onslot;
+			for (var i = 0; i < this.Slots.Length; i++) this.Slots[i].Current = onslot.Get(i) ?? 0;
 		}
 
 		internal void Repair()
@@ -454,6 +460,45 @@ namespace Grabacr07.KanColleWrapper.Models
 		public override string ToString()
 		{
 			return string.Format("ID = {0}, Name = \"{1}\", ShipType = \"{2}\", Level = {3}", this.Id, this.Info.Name, this.Info.ShipType.Name, this.Level);
+		}
+	}
+
+
+	public class ShipSlot : NotificationObject
+	{
+		public SlotItem Item { get; private set; }
+
+		public int Maximum { get; private set; }
+
+		public bool Equipped
+		{
+			get { return this.Item != null; }
+		}
+
+		#region Current 変更通知プロパティ
+
+		private int _Current;
+
+		public int Current
+		{
+			get { return this._Current; }
+			set
+			{
+				if (this._Current != value)
+				{
+					this._Current = value;
+					this.RaisePropertyChanged();
+				}
+			}
+		}
+
+		#endregion
+
+		public ShipSlot(SlotItem item, int maximum, int current)
+		{
+			this.Item = item;
+			this.Maximum = maximum;
+			this.Current = current;
 		}
 	}
 }

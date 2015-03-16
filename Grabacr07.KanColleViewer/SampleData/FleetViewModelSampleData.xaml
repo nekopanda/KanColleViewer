@@ -32,29 +32,6 @@
 						</Models:ShipInfo>
 					</Models:Ship.Info>
 
-					<Models:Ship.SlotItems>
-						<Models:SlotItem>
-							<Models:SlotItem.Info>
-								<Models:SlotItemInfo IconType="MainCanonHeavy" />
-							</Models:SlotItem.Info>
-						</Models:SlotItem>
-						<Models:SlotItem>
-							<Models:SlotItem.Info>
-								<Models:SlotItemInfo IconType="MainCanonHeavy" />
-							</Models:SlotItem.Info>
-						</Models:SlotItem>
-						<Models:SlotItem>
-							<Models:SlotItem.Info>
-								<Models:SlotItemInfo IconType="Rader" />
-							</Models:SlotItem.Info>
-						</Models:SlotItem>
-						<Models:SlotItem>
-							<Models:SlotItem.Info>
-								<Models:SlotItemInfo IconType="DamageControl" />
-							</Models:SlotItem.Info>
-						</Models:SlotItem>
-					</Models:Ship.SlotItems>
-
 					<Models:Ship.HP>
 						<Models:LimitedValue Minimum="0"
 											 Maximum="82"
@@ -501,7 +478,6 @@
 
 	</fleets:FleetViewModel.Ships>
 	<fleets:FleetViewModel.State>
-		<Livet:ViewModel>
-		</Livet:ViewModel>
+		<Livet:ViewModel />
 	</fleets:FleetViewModel.State>
 </fleets:FleetViewModel>

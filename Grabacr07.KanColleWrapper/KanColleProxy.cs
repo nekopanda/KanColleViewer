@@ -20,15 +20,15 @@ namespace Grabacr07.KanColleWrapper
 
 		public IObservable<Session> SessionSource
 		{
-			get { return this.connectableSessionSource.AsObservable(); }
+		    get { return this.connectableSessionSource.AsObservable(); }
 		}
 
-		public IObservable<Session> ApiSessionSource
-		{
-			get { return this.apiSource.AsObservable(); }
-		}
+	    public IObservable<Session> ApiSessionSource
+	    {
+	        get { return this.apiSource.AsObservable(); }
+	    }
 
-		public IProxySettings UpstreamProxySettings { get; set; }
+	    public IProxySettings UpstreamProxySettings { get; set; }
 
 
 		public KanColleProxy()

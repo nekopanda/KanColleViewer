@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ShipTypes Version="1.0.5">
+<ShipTypes Version="1.0.7">
   <Type>
     <ID>1</ID>
     <JP-Name>海防艦</JP-Name>
@@ -99,5 +99,10 @@
     <ID>20</ID>
     <JP-Name>潜水母艦</JP-Name>
     <TR-Name>AS</TR-Name>
+  </Type>
+  <Type>
+    <ID>21</ID>
+    <JP-Name>練習巡洋艦</JP-Name>
+    <TR-Name>CT</TR-Name>
   </Type>
 </ShipTypes>

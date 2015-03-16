@@ -199,7 +199,7 @@
     <value>遠征帰投時に通知を表示する</value>
   </data>
   <data name="Expedition_Notifications_Individual" xml:space="preserve">
-    <value>Individual Fleet Settings</value>
+    <value>艦隊ごとに個別に設定する</value>
   </data>
   <data name="Expedition_TimeComplete" xml:space="preserve">
     <value>終了時刻</value>
@@ -301,7 +301,7 @@
     <value>入渠ドック</value>
   </data>
   <data name="Repairyard_Locked" xml:space="preserve">
-    <value>Locked</value>
+    <value>ロックされています</value>
   </data>
   <data name="Repairyard_NotificationMessage" xml:space="preserve">
     <value>入渠第 {0} ドックでの「{1}」の整備が完了しました。</value>
@@ -319,7 +319,7 @@
     <value>入渠中の艦</value>
   </data>
   <data name="Repairyard_TimeComplete" xml:space="preserve">
-    <value>完成時刻</value>
+    <value>完了時刻</value>
   </data>
   <data name="Repairyard_TimeRemaining" xml:space="preserve">
     <value>整備完了まで</value>
@@ -355,7 +355,7 @@
     <value>言語</value>
   </data>
   <data name="Settings_Network" xml:space="preserve">
-    <value>ネットワーク</value>
+    <value>通信設定</value>
   </data>
   <data name="Settings_Operation" xml:space="preserve">
     <value>動作設定</value>
@@ -475,10 +475,10 @@
     <value>索敵能力</value>
   </data>
   <data name="StartContent_SetRegionCookieButton" xml:space="preserve">
-    <value>Set Cookie Region</value>
+    <value>クッキーの設定</value>
   </data>
   <data name="StartContent_SetRegionCookieMessage" xml:space="preserve">
-    <value>Cookie has been set</value>
+    <value>クッキーを設定しました</value>
   </data>
   <data name="Settings_Translations" xml:space="preserve">
     <value>Translations</value>
@@ -670,7 +670,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>中将</value>
   </data>
   <data name="Settings_Notifications" xml:space="preserve">
-    <value>通信設定</value>
+    <value>通知設定</value>
   </data>
   <data name="Settings_Notifications_AheadOfTime" xml:space="preserve">
     <value>通知を早める：</value>
@@ -841,7 +841,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>アップデートがあるかどうかチェックします</value>
   </data>
   <data name="StateDetail_Repairing" xml:space="preserve">
-    <value>艦隊に入渠中の艦娘がいます。</value>
+    <value>艦娘入渠まで</value>
   </data>
   <data name="StateDetail_ShortSupply" xml:space="preserve">
     <value>艦隊に未補給の艦娘がいます。</value>
@@ -1014,4 +1014,63 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="Settings_Browser_ResetZoom_Suf" xml:space="preserve">
     <value>% に戻す</value>
   </data>
-</root>
+  <data name="Browser_GoBack" xml:space="preserve">
+    <value>前のページに戻る</value>
+  </data>
+  <data name="Browser_GoForward" xml:space="preserve">
+    <value>次のページに進む</value>
+  </data>
+  <data name="Browser_ReNavigate" xml:space="preserve">
+    <value>このページを再読み込む</value>
+  </data>
+  <data name="Browser_URLTip" xml:space="preserve">
+    <value>URL を入力し、Enter キーで移動します。</value>
+  </data>
+  <data name="ShipCatalog_Title" xml:space="preserve">
+    <value>所属艦娘一覧</value>
+  </data>
+  <data name="SlotItemCatalog_Title" xml:space="preserve">
+    <value>所有装備一覧</value>
+  </data>
+  <data name="Overview_ConstructionDock" xml:space="preserve">
+    <value>建造ドック</value>
+  </data>
+  <data name="Overview_RepairDock" xml:space="preserve">
+    <value>入渠ドック</value>
+  </data>
+  <data name="StartContent_Introduction2" xml:space="preserve">
+    <value>艦これは、内蔵された Internet Explorer (IE) 上で動作します。艦これのサーバーに対し一切の負荷をかけないように設計・開発しており、通信内容の変更やサーバーに対する情報の送信、Flash 抽出、マクロ・チートの類は一切行っていません。</value>
+  </data>
+  <data name="StartContent_Introduction3" xml:space="preserve">
+    <value>ゲームが正しく表示されない場合や、スクリプトエラーが頻発する場合は、IE のキャッシュを削除してみてください。改善されない場合は、IE の設定や、通常の IE 上で Flash が表示できるかどうか等をご確認ください。</value>
+  </data>
+  <data name="StartContent_Introduction4" xml:space="preserve">
+    <value>ツールは不定期に更新されています。適宜、更新の確認をお願いします。</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AircraftCarriers" xml:space="preserve">
+    <value>航空母艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_AviationShips" xml:space="preserve">
+    <value>航戦・航巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Battleships" xml:space="preserve">
+    <value>戦艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Destroyers" xml:space="preserve">
+    <value>駆逐艦</value>
+  </data>
+  <data name="ShipCatalog_ShipType_HeavyCruisers" xml:space="preserve">
+    <value>重巡・航巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_LightCruisers" xml:space="preserve">
+    <value>軽巡・雷巡</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Others" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="ShipCatalog_ShipType_Submarines" xml:space="preserve">
+    <value>潜水艦</value>
+  </data>
+  <data name="Ship_Retreat" xml:space="preserve">
+    <value>退避</value>
+  </data></root>

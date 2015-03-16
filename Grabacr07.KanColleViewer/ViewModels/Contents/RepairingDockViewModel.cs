@@ -43,7 +43,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 		{
 			get { return this.source.State; }
 		}
-		
+
 		public RepairingDockViewModel(RepairingDock source)
 		{
 			this.source = source;

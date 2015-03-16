@@ -59,7 +59,7 @@ namespace Grabacr07.KanColleWrapper
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
-			return GetEnumerator();
+			return this.GetEnumerator();
 		}
 
 		public int Count
