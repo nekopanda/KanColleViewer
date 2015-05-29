@@ -65,7 +65,7 @@ namespace Grabacr07.KanColleWrapper
 			FiddlerApplication.Startup(proxy, FiddlerCoreStartupFlags.ChainToUpstreamGateway);
 			FiddlerApplication.BeforeRequest += this.SetUpstreamProxyHandler;
 
-			SetIESettings("localhost:" + proxy);
+			SetIESettings( "127.0.0.1:" + proxy );
 
 			this.compositeDisposable.Add(this.connectableSessionSource.Connect());
 			this.compositeDisposable.Add(this.apiSource.Connect());
