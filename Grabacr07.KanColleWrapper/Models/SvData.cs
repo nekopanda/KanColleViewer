@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Collections.Specialized;
-using Fiddler;
 using Grabacr07.KanColleWrapper.Models.Raw;
 using Grabacr07.KanColleWrapper.Internal;
+using Titanium.Web.Proxy.Models;
 
 namespace Grabacr07.KanColleWrapper.Models
 {
@@ -58,19 +58,19 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		#region Parse methods (generic)
 
-		public static SvData<T> Parse<T>(Session session)
+		public static SvData<T> Parse<T>( SessionData session )
 		{
 			var bytes = Encoding.UTF8.GetBytes(session.GetResponseAsJson());
 			var serializer = new DataContractJsonSerializer(typeof(svdata<T>));
 			using (var stream = new MemoryStream(bytes))
 			{
 				var rawResult = serializer.ReadObject(stream) as svdata<T>;
-				var result = new SvData<T>(rawResult, session.GetRequestBodyAsString());
+				var result = new SvData<T>(rawResult, session.RequestUri.Query);
 				return result;
 			}
 		}
 
-		public static bool TryParse<T>(Session session, out SvData<T> result)
+		public static bool TryParse<T>( SessionData session, out SvData<T> result )
 		{
 			try
 			{
@@ -90,19 +90,19 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		#region Parse methods (non generic)
 
-		public static SvData Parse(Session session)
+		public static SvData Parse( SessionData session )
 		{
 			var bytes = Encoding.UTF8.GetBytes(session.GetResponseAsJson());
 			var serializer = new DataContractJsonSerializer(typeof(svdata));
 			using (var stream = new MemoryStream(bytes))
 			{
 				var rawResult = serializer.ReadObject(stream) as svdata;
-				var result = new SvData(rawResult, session.GetRequestBodyAsString());
+				var result = new SvData( rawResult, session.RequestUri.Query );
 				return result;
 			}
 		}
 
-		public static bool TryParse(Session session, out SvData result)
+		public static bool TryParse( SessionData session, out SvData result )
 		{
 			try
 			{

@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FiddlerCore4">
-      <HintPath>..\..\assemblies\FiddlerCore4.dll</HintPath>
-    </Reference>
     <Reference Include="Livet, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b0b1d3f711ef38cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\LivetCask.1.1.0.0\lib\net45\Livet.dll</HintPath>
@@ -138,6 +135,10 @@
     <ProjectReference Include="..\..\MetroRadiance\MetroRadiance\MetroRadiance.csproj">
       <Project>{0af0b9ff-d981-4d0f-a41f-c3ab6fe2f16d}</Project>
       <Name>MetroRadiance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Titanium\Titanium.Web.Proxy\Titanium.Web.Proxy.csproj">
+      <Project>{8d73a1be-868c-42d2-9ece-f32cc1a02906}</Project>
+      <Name>Titanium.Web.Proxy</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

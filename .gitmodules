@@ -1,3 +1,6 @@
 [submodule "MetroRadiance"]
 	path = MetroRadiance
 url=https://github.com/Grabacr07/MetroRadiance
+[submodule "Titanium"]
+	path = Titanium
+	url = https://github.com/nekopanda/Titanium.git

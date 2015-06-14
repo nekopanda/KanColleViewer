@@ -6,29 +6,31 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Fiddler;
 using Grabacr07.KanColleWrapper.Win32;
 using Livet;
+using Titanium.Web.Proxy;
+using Titanium.Web.Proxy.Models;
+using System.Net;
 
 namespace Grabacr07.KanColleWrapper
 {
 	public partial class KanColleProxy
 	{
-		private readonly IConnectableObservable<Session> connectableSessionSource;
-		private readonly IConnectableObservable<Session> apiSource;
+		private readonly IConnectableObservable<SessionData> connectableSessionSource;
+		private readonly IConnectableObservable<SessionData> apiSource;
 		private readonly LivetCompositeDisposable compositeDisposable;
 
-		public IObservable<Session> SessionSource
+		public IObservable<SessionData> SessionSource
 		{
-		    get { return this.connectableSessionSource.AsObservable(); }
+			get { return this.connectableSessionSource.AsObservable(); }
 		}
 
-	    public IObservable<Session> ApiSessionSource
-	    {
-	        get { return this.apiSource.AsObservable(); }
-	    }
+		public IObservable<SessionData> ApiSessionSource
+		{
+			get { return this.apiSource.AsObservable(); }
+		}
 
-	    public IProxySettings UpstreamProxySettings { get; set; }
+		public IProxySettings UpstreamProxySettings { get; set; }
 
 
 		public KanColleProxy()
@@ -36,16 +38,16 @@ namespace Grabacr07.KanColleWrapper
 			this.compositeDisposable = new LivetCompositeDisposable();
 
 			this.connectableSessionSource = Observable
-				.FromEvent<SessionStateHandler, Session>(
-					action => new SessionStateHandler(action),
-					h => FiddlerApplication.AfterSessionComplete += h,
-					h => FiddlerApplication.AfterSessionComplete -= h)
+				.FromEvent<EventHandler<SessionEventArgs>, SessionData>(
+					h => (sender, e) => h(new SessionData(e)),
+					h => ProxyServer.BeforeResponse += h,
+					h => ProxyServer.BeforeResponse -= h)
 				.Publish();
 
 			this.apiSource = this.connectableSessionSource
-				.Where(s => s.PathAndQuery.StartsWith("/kcsapi"))
-				.Where(s => s.oResponse.MIMEType.Equals("text/plain"))
-				#region .Do(debug)
+				.Where(s => s.RequestUri.AbsolutePath.StartsWith("/kcsapi"))
+				.Where(s => s.ContentType.Equals("text/plain"))
+			#region .Do(debug)
 #if DEBUG
 .Do(session =>
 				{
@@ -56,16 +58,16 @@ namespace Grabacr07.KanColleWrapper
 				})
 #endif
 			#endregion
-				.Publish();
+			.Publish();
 		}
 
 
 		public void Startup(int proxy = 37564)
 		{
-			FiddlerApplication.Startup(proxy, FiddlerCoreStartupFlags.ChainToUpstreamGateway);
-			FiddlerApplication.BeforeRequest += this.SetUpstreamProxyHandler;
+			ProxyServer.Start(IPAddress.Parse("127.0.0.1"), proxy);
+			ProxyServer.BeforeRequest += this.SetUpstreamProxyHandler;
 
-			SetIESettings( "127.0.0.1:" + proxy );
+			SetIESettings("127.0.0.1:" + proxy);
 
 			this.compositeDisposable.Add(this.connectableSessionSource.Connect());
 			this.compositeDisposable.Add(this.apiSource.Connect());
@@ -75,8 +77,8 @@ namespace Grabacr07.KanColleWrapper
 		{
 			this.compositeDisposable.Dispose();
 
-			FiddlerApplication.BeforeRequest -= this.SetUpstreamProxyHandler;
-			FiddlerApplication.Shutdown();
+			ProxyServer.BeforeRequest -= this.SetUpstreamProxyHandler;
+			ProxyServer.Stop();
 		}
 
 
@@ -103,7 +105,7 @@ namespace Grabacr07.KanColleWrapper
 		/// Fiddler からのリクエスト発行時にプロキシを挟む設定を行います。
 		/// </summary>
 		/// <param name="requestingSession">通信を行おうとしているセッション。</param>
-		private void SetUpstreamProxyHandler(Session requestingSession)
+		private void SetUpstreamProxyHandler(object sender, SessionEventArgs requestingSession)
 		{
 			var settings = this.UpstreamProxySettings;
 			if (settings == null) return;
@@ -111,12 +113,7 @@ namespace Grabacr07.KanColleWrapper
 			var useGateway = !string.IsNullOrEmpty(settings.Host) && settings.IsEnabled;
 			if (!useGateway || (IsSessionSSL(requestingSession) && !settings.IsEnabledOnSSL)) return;
 
-			var gateway = settings.Host.Contains(":")
-				// IPv6 アドレスをプロキシホストにした場合はホストアドレス部分を [] で囲う形式にする。
-				? string.Format("[{0}]:{1}", settings.Host, settings.Port)
-				: string.Format("{0}:{1}", settings.Host, settings.Port);
-
-			requestingSession["X-OverrideGateway"] = gateway;
+			requestingSession.UpstreamProxy = new ProxySetting(settings.Host, settings.Port);
 		}
 
 		/// <summary>
@@ -124,10 +121,12 @@ namespace Grabacr07.KanColleWrapper
 		/// </summary>
 		/// <param name="session">セッション。</param>
 		/// <returns>セッションが SSL 接続を使用する場合は true、そうでない場合は false。</returns>
-		internal static bool IsSessionSSL(Session session)
+		internal static bool IsSessionSSL(SessionEventArgs session)
 		{
 			// 「http://www.dmm.com:433/」の場合もあり、これは Session.isHTTPS では判定できない
-			return session.isHTTPS || session.fullUrl.StartsWith("https:") || session.fullUrl.Contains(":443");
+			return session.IsSecure ||
+				session.ProxyRequest.RequestUri.OriginalString.StartsWith("https:") ||
+				session.ProxyRequest.RequestUri.OriginalString.Contains(":443");
 		}
 	}
 }

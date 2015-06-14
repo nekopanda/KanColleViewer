@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
-using Fiddler;
 using Grabacr07.KanColleWrapper.Models;
+using Titanium.Web.Proxy.Models;
 
 namespace Grabacr07.KanColleWrapper
 {
@@ -14,9 +14,9 @@ namespace Grabacr07.KanColleWrapper
 		/// FiddlerCore でフックした <see cref="Session"/> オブジェクトの <see cref="Session.ResponseBody"/> データを
 		/// <typeparamref name="TResult"/> 型にパースします。
 		/// </summary>
-		public static IObservable<SvData<TResult>> TryParse<TResult>(this IObservable<Session> source)
+		public static IObservable<SvData<TResult>> TryParse<TResult>( this IObservable<SessionData> source )
 		{
-			Func<Session, SvData<TResult>> converter = session =>
+			Func<SessionData, SvData<TResult>> converter = session =>
 			{
 				SvData<TResult> result;
 				return SvData.TryParse(session, out result) ? result : null;
@@ -29,9 +29,9 @@ namespace Grabacr07.KanColleWrapper
 		/// FiddlerCore でフックした <see cref="Session" /> オブジェクトの <see cref="Session.ResponseBody" /> データを
 		/// <see cref="SvData" /> 型にパースします。
 		/// </summary>
-		public static IObservable<SvData> TryParse(this IObservable<Session> source)
+		public static IObservable<SvData> TryParse( this IObservable<SessionData> source )
 		{
-			Func<Session, SvData> converter = session =>
+			Func<SessionData, SvData> converter = session =>
 			{
 				SvData result;
 				return SvData.TryParse(session, out result) ? result : null;

@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Fiddler;
+using Titanium.Web.Proxy.Models;
 
 namespace Grabacr07.KanColleWrapper.Internal
 {
 	internal static class Extensions
 	{
-		public static string GetResponseAsJson(this Session session)
-		{
-			return session.GetResponseBodyAsString().Replace("svdata=", "");
+		public static string GetResponseAsJson( this SessionData session ) {
+			return session.ResponseString.Replace( "svdata=", "" );
 		}
 
 		public static void SafeDispose(this IDisposable resource)

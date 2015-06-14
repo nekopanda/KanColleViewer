@@ -10,11 +10,11 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Codeplex.Data;
-using Fiddler;
 using Grabacr07.KanColleWrapper.Internal;
 using Grabacr07.KanColleWrapper.Models;
 using Grabacr07.KanColleWrapper.Models.Raw;
 using Livet;
+using Titanium.Web.Proxy.Models;
 
 namespace Grabacr07.KanColleWrapper
 {
@@ -114,7 +114,7 @@ namespace Grabacr07.KanColleWrapper
 				.Subscribe(this.Update);
 		}
 
-		private static kcsapi_questlist Serialize(Session session)
+		private static kcsapi_questlist Serialize( SessionData session )
 		{
 			try
 			{
